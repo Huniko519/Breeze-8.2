@@ -1,0 +1,25 @@
+<div id="{$TEXT->temp-id}" class="block-box trans padding-20 bottom-divider {$TEXT->temp-color}">
+    <div class="blocks relative">
+        <div class="block-left left text-left margin-right line-1-5">
+            <a title="{$TEXT->temp-user_ttl}" href="{$TEXT->installation}/{$TEXT->temp-not_from}" onclick="aOverlow();loadProfile({$TEXT->temp-not_from});return false;">
+			    <img class="circle img-35" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-user_image}&fol=a&w=35&h=35" alt="" ></img>
+            </a>
+		</div>
+        <div class="block-middle left text-left line-1-5 padding-0-0-0-10">
+            <div class="clear h5 b2 serif tin-light-font-only">
+			    <span class="h7 b3 dark-font">
+					<a title="{$TEXT->temp-user_ttl}" href="{$TEXT->installation}/{$TEXT->temp-not_from}" onclick="aOverlow();loadProfile({$TEXT->temp-not_from});return false;">
+					    {$TEXT->temp-user_name_32}
+					</a>
+				</span>
+				{$TEXT->temp-text}
+			</div>
+			<span title="{$TEXT->temp-not_time}" class="h4 b1 tin-light-font-only block margin-5-0-0-0 timeago">
+				{$TEXT->temp-not_time}
+			</span>
+        </div>
+	    <div class="block-right right text-left line-1-5">
+            {$TEXT->temp-data}
+        </div>
+    </div>
+</div>

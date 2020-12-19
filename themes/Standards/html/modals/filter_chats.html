@@ -1,0 +1,36 @@
+<div id="RIGHT_CHAT_TYPE" class="block-container">
+
+	<div class="block-title">
+        <div class="h7 b3 dark-font-only padding-10">{$TEXT->_uni-Filter_chats}</div>
+    </div>
+	
+    <div class="padding-10 jelly-radios">
+	    <ul>
+		    <li class="tin-light-font">
+			    <input id="chat_radio5" value="5" onclick="loadChats(0,4,2);scrollToTop();" type="radio" name="radio_1">
+			    <label class="h5 b3">{$TEXT->_uni-All_chats}</label>
+			    <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+		    </li>
+		    <li class="tin-light-font" >
+			    <input id="chat_radio1" value="1" onclick="loadChats(0,1,2);scrollToTop();" type="radio" name="radio_1">
+			    <label class="h5 b3">{$TEXT->_uni-Grouped_chats}</label>
+			    <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+		    </li>
+		    <li class="tin-light-font">
+			    <input id="chat_radio2" value="2" onclick="loadChats(0,2,2);scrollToTop();" type="radio" name="radio_1">
+			    <label class="h5 b3">{$TEXT->_uni-Single_chats}</label>
+			    <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+		    </li>
+		    <li class="tin-light-font">
+			    <input id="chat_radio3" value="3" onclick="loadChats(0,3,2);scrollToTop();" type="radio" name="radio_1">
+			    <label class="h5 b3">{$TEXT->_uni-Started_you}</label>
+			    <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+		    </li>
+		    <li class="tin-light-font">
+			    <input checked id="chat_radio4" value="4" onclick="loadChats(0,0,2);scrollToTop();" type="radio" name="radio_1">
+			    <label class="h5 b3">{$TEXT->_uni-Recent_chats}</label>
+			    <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+		    </li>
+	    </ul>
+    </div>	
+</div>

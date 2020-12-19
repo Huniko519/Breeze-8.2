@@ -1,0 +1,30 @@
+<div id="{$TEXT->temp-unique_id}" class="block-box trans padding-20 bottom-divider">
+    <div class="blocks relative">
+        <div class="block-left left text-left margin-right line-1-5">
+            <a title="{$TEXT->temp-user_ttl}" href="{$TEXT->installation}/{$TEXT->temp-user_id}" onclick="aOverlow();loadProfile({$TEXT->temp-user_id});return false;">
+			    <img class="circle img-35" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-user_image}&fol=a&w=70&h=70" alt="" ></img>
+            </a>
+		</div>
+        <div class="block-middle left text-left line-1-5 padding-0-0-0-10">
+            <div class="clear h5 b2 serif tin-light-font-only">
+			    <span class="h7 b3 dark-font">
+					<a title="{$TEXT->temp-user_ttl}" href="{$TEXT->installation}/{$TEXT->temp-user_id}" onclick="aOverlow();loadProfile({$TEXT->temp-user_id});return false;">
+					    {$TEXT->temp-user_name_25}
+					</a>
+				</span>
+				{$TEXT->_uni-wants_to_join_group}
+			</div>
+			<span title="{$TEXT->temp-time}" class="h4 b1 tin-light-font-only block margin-5-0-0-0 timeago">
+				{$TEXT->temp-time}
+			</span>
+        </div>
+	    <div class="block-right right text-left line-1-5">
+            <div class="btn btn-inline btn-small btn-x-theme" onclick="groupRequests({$TEXT->temp-group_id},0,0,'{$TEXT->temp-user_id}','{$TEXT->temp-unique_id}',1)">
+		        {$TEXT->_uni-Confirm}
+		    </div>
+            <button class="btn btn-inline btn-small btn-light" onclick="groupRequests({$TEXT->temp-group_id},0,0,'{$TEXT->temp-user_id}','{$TEXT->temp-unique_id}',0)">
+			    {$TEXT->_uni-Not_now}
+		    </button>
+        </div>
+    </div>
+</div>

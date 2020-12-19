@@ -1,0 +1,38 @@
+<div class="h7 b3 dark-font-only bottom-divider clear full inline-in noflow">
+	<div class="padding-10 noflow" >{$TEXT->_uni-Remove_members}</div>
+	<div onclick="loadModal(0);" class="hvr-opacity trans padding-10 right noflow btn-dark pointer">X</div>                    
+	<div id="modal-toggle-scroll" onclick="scrollFull('.mi-modal-inner',1);" class="modal-scroll margin-10 transparent right dark-svg noflow btn-light pointer"><img src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/buttons/expand.svg" class="svg img-14"></div>                    
+</div>
+
+<div class="nicescrollit noflow mi-modal-inner">
+
+<div id="new-modal-inner-content" class="clear padding-10 noflow nicescrollit" style="width:100%;height:200px;">
+</div>				
+
+<div class="center inline-in dual-divider padding-20 noflow full">
+    <span class="left" style="width:10%;"><img class="svg img-25" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/misc/search.svg"></span>
+	<input id="new-modal-input" style="width:90%;" class="input left no-border padding-10 h6 b1 tin-light-font full" placeholder="{$TEXT->_uni-Remove_members_ttl}">
+</div>				
+
+<div class="clear padding-20 left full">
+    <div class="h5 b1 tin-light-font-only">{$TEXT->_uni-Remove_members_ttl2}</div>   		
+</div>			
+		
+</div>
+
+</div>
+
+<script>
+var typingTimer;
+var typingInterval = 1000;
+$(document).on('keyup', '#new-modal-input', function(event) { 
+    $("#new-modal-inner-content").html('<div class="center padding-20"><img class="center load-tin" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/loader-small.svg"></img></div>');						
+    clearTimeout(typingTimer);						
+    if ($('#new-modal-input').val()) {
+        typingTimer = setTimeout(function() {ajaxProtocol(load_group_file,{$TEXT->temp-p_val},0,0,$("#new-modal-input").val(),0,0,0,0,0,0,0,0,"#new-modal-inner-content",5,0,1,13);}, typingInterval);
+    } else {
+        $("#new-modal-inner-content").html("");
+    }
+});	
+$('.nicescrollit').niceScroll();
+</script>

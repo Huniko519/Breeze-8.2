@@ -1,0 +1,31 @@
+<div id="ads-modal-{$TEXT->temp-id}" class="pop-modal clear">
+
+	<div id="ad-modal-content-{$TEXT->temp-id}" class="mi-modal white-color shadow noflow">
+ 
+		<div class="h7 b3 dark-font-only bottom-divider clear full inline-in noflow">
+			<div class="padding-10 noflow" >{$TEXT->_uni-Sponsored}</div>
+			<div onclick="$('#ads-modal-{$TEXT->temp-id}').fadeOut();" class=" hvr-opacity trans padding-10 right noflow btn-dark pointer">X</div>                    
+			<div id="modal-toggle-scroll" onclick="scrollFull('.mi-modal-inner',1);" class="modal-scroll margin-10 transparent right dark-svg noflow btn-light pointer"><img src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/buttons/expand.svg" class="svg img-14"></div>                    
+		</div>
+		
+		<div id="ad-modal-inner-{$TEXT->temp-id}" class="nicescrollit hide noflow mi-modal-inner">{$TEXT->temp-ad1}</div>
+
+	</div> 
+
+</div>
+
+<script>
+if($(window).width() > 600) {
+    $("#ad-modal-content-{$TEXT->temp-id}").animate({
+    width: '+=200px',height: '+=400px'
+    }, 600,function() {
+        $("#ad-modal-inner-{$TEXT->temp-id}").fadeOut(0).fadeIn();
+    });
+} else {
+    $("#ad-modal-content-{$TEXT->temp-id}").animate({
+        height: '+=200px'
+        }, 500,function() {
+            $("#new-modal-inner-{$TEXT->temp-id}").fadeOut(0).fadeIn();
+    });
+}
+</script>

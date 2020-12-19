@@ -1,0 +1,13 @@
+<div class="padding-10">
+    <div onclick="loadProfile({$TEXT->temp-id});" class="left noflow pointer padding-0-6">
+        <img class="circle img-25" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-image}&fol=a&w=100&h=100">
+    </div>
+    <span class="">
+        <div class="clear2 h5 b1 tin-light-font-only">
+            <div>
+                <a class="h5 b2 pointer dark-font" href="{$TEXT->installation}/{$TEXT->temp-id}" onclick="loadProfile({$TEXT->temp-id});return false;">{$TEXT->temp-name}</a>
+                <span title="{$TEXT->temp-info}" class="h4 b1 timeago pointer tin-light-font-only">{$TEXT->temp-info}</span>
+            </div>	
+        </div>
+    </span>
+</div>

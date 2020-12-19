@@ -1,0 +1,24 @@
+<div class="item-slider">
+    <div class="imgTitle relative article noflow">
+        <div class="h5 b1 blogTitle padding-10 clear background-0">          
+            <a class="white-font left" href="{$TEXT->installation}/blogs/{$TEXT->temp-id}">
+                {$TEXT->temp-name}
+			</a>
+        </div>
+		<div class="display-topleft padding-10"> 
+            <a title="{$TEXT->temp-title_user}" onclick="loadProfile({$TEXT->temp-user_id});return false;" href="{$TEXT->installation}/{$TEXT->temp-user_id}">
+			    <img src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-src_user}&fol=a&w=50&h=50" class="circle img-30 border-min shadow">
+			</a>
+		</div>
+        <img src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-src}&fol=blog&w=500&h=500" alt="" />
+	</div>
+    <div class="block-container white-color noflow clear round-in-bottom padding-10 h5 b1 dark-font-only">
+		<div class="h4 b0 black-font">
+		    {$TEXT->temp-title}
+		</div>
+		<div class="h5 tin-light-font b0 margin-5-0-0-0">
+		    <span class="right h3"><span class="h3">{$TEXT->_uni-By}</span> <a href="{$TEXT->installation}/{$TEXT->temp-user_id}" onclick="loadProfile({$TEXT->temp-user_id});return false;">@{$TEXT->temp-username}</a></span>
+		    <a class="theme-font b1" href="{$TEXT->installation}/blogs/{$TEXT->temp-id}" >{$TEXT->_uni-Read_more} <span class="h3 b0">></span></a>
+		</div>
+	</div>
+</div>

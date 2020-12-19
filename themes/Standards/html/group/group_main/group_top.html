@@ -1,0 +1,66 @@
+<style>
+#cover-container,#cover-container-loader {display: block;max-height: 250px!important;min-height:130px;width: 100%;margin: 0px auto;overflow: hidden;box-sizing: border-box;position: relative;}
+#cover-container img,#cover-container-loader img {left: 0;position: relative!important;}
+#cover-container-loader img{pointer-events: none!important;-moz-user-select: none!important;}
+#cover-containee {display: block;max-height: 250px!important;width: 100%;margin: 0px auto;overflow: hidden;box-sizing: border-box;position: relative;}
+.enabled{cursor:move;}
+.enabled img {left: 0;position: relative;top: 0;pointer-events: none;-moz-user-select: none;}
+</style>
+
+
+<div class="clear relative noflow no-border block-container-4">
+	<div id="cover-container" style="display:none">
+	</div>
+	
+    <div id="cover-containee" class="" >
+	    <img src="{$TEXT->installation}/uploads/groups/{$TEXT->temp-group_cover}" {$TEXT->temp-onclick} style="width:100%;min-height:130px!important;" id="group_view_cover_{$TEXT->temp-group_id}" class="relative center noflow full">                  
+	</div>	
+	
+    <div id="cover-container-loader" style="display:none">
+	</div>
+	
+	{$TEXT->temp-updateable}
+
+</div>
+
+<div class="white-color timeline-head noflow padding-10 block-container-4">
+    <div class="h12 b2 timeline-name inline">
+	    <a class="dark-font" href="{$TEXT->installation}/group/{$TEXT->temp-group_id}" onclick="loadGroup({$TEXT->temp-group_id},1,1);return false;">{$TEXT->temp-group_name}</a> 
+		<span class="h6 noselect padding-0-6 b1 tin-light-font-only inline"> 
+			<span class="hide-small left-divider"> </span>
+			<span class="padding-0-6">
+				<span class="hide-large"> {$TEXT->temp-group_head} - </span>
+				{$TEXT->temp-group_users} {$TEXT->_uni-Members}
+			</span>
+		</span>
+	</div>
+    <div class="right-big inline">
+	    {$TEXT->temp-join_button} {$TEXT->temp-feeds_button}
+	</div>
+
+</div>
+
+<div class="noselect block-container-4 top-divider timeline-desktop round-in-bottom">
+    <div class="background-x timeline center clear2 full round-in-bottom">  
+		<div class="right padding-0-6">
+			<div class="noflow inline inline-in">
+			    <a id="profile_view_tab_1" onclick="groupFeeds({$TEXT->temp-group_id},0,5);" class="activable-tab-white active-down b2 light-x-font padding-10" href="javascript:returnFalse();">{$TEXT->_uni-Discussions}</a>
+			    <a id="profile_view_tab_2" onclick="groupMembers({$TEXT->temp-group_id},0,5);" class="activable-tab-white light-x-font padding-10" href="javascript:returnFalse();">{$TEXT->_uni-Members}</a>
+			    {$TEXT->temp-timeline_ops}
+				<a id="profile_view_tab_6" title="{$TEXT->_uni-Create_a_group}" onclick="updateProfileTab(6);loadModal(1);loadGroup(0,14,32);" class="activable-tab-white light-x-font padding-10 left-divider right-divider hide-small" href="javascript:returnFalse();">{$TEXT->_uni-Create}</a>	    
+			</div>
+			<div class="drop-hover lesft-divider dark-svg inline">
+			    <img class="svg img-14 timeline-drop" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/buttons/expand.svg">
+				<div style="right:0;" class="drop-content h5 b2 tin-light-font padding-15-0 shadow text-left border rounded noflow">			
+                    {$TEXT->temp-add_members}
+					{$TEXT->temp-activity_log}
+					{$TEXT->temp-settings}
+					{$TEXT->temp-update_cover}
+					{$TEXT->temp-options}
+					<a onclick="copyToClipboard('{$TEXT->installation}/group/{$TEXT->temp-group_id}','{$TEXT->_uni-Group_URL_copied}');javascript:void(0);" class="padding-10 tin-light-font drop-item" href="javascript:void(0);">{$TEXT->_uni-Copy_URL_group}</a>
+				</div>				
+			</div>
+		</div>
+	</div>
+</div>
+{$TEXT->temp-browser_js}

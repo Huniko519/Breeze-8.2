@@ -1,0 +1,29 @@
+<div id="profile_about_c{$TEXT->temp-user_id}" class="brz-dettachable brz-detach-to-threequarter block-container noflow">
+    <div class="block-title">
+        <div class="h7 b3 dark-font-only padding-10"><img class="img-25" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/misc/intro.svg"> {$TEXT->_uni-Intro}</div>
+    </div>
+
+    <div id="profile_about_m{$TEXT->temp-user_id}" class="center h6 b2 white-font-only widget-intro">
+	    <div class="widget-scale widget-red text-shadow">
+	        {$TEXT->temp-user_bio}
+		</div>
+	</div>
+	
+    <div id="profile_about_m{$TEXT->temp-user_id}_2" class="no-border block-title">
+        {$TEXT->temp-add_user_profession}
+        {$TEXT->temp-add_user_education}
+        {$TEXT->temp-add_user_relation}
+        {$TEXT->temp-add_user_interests}
+        {$TEXT->temp-add_user_gender}
+        {$TEXT->temp-add_user_birthday}
+        {$TEXT->temp-add_user_hometown}
+        {$TEXT->temp-add_user_city}
+        {$TEXT->temp-add_user_website}
+    </div>
+</div>
+<script>
+    sizeElements();
+    if($('#profile_about_m{$TEXT->temp-user_id}').is(':empty') && $('#profile_about_m{$TEXT->temp-user_id}'+'_2').is(':empty')) {
+	    $('#profile_about_cs{$TEXT->temp-user_id}').remove();
+	}
+</script>

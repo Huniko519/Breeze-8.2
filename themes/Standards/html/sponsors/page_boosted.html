@@ -1,0 +1,22 @@
+<div id="page_{$TEXT->temp-page_id}" class="bottom-divider user-main block-container-2 white-color">
+    <div class="padding-10 bottom-divider tin-light-font-only h5 b2">{$TEXT->_uni-Sponsored}</div>
+	<div class="clear padding-10 inner-padding">
+        <div style="min-width:50px;min-height:50px;" onclick="loadPage({$TEXT->temp-page_id},1,1);" class="left search-picture noflow pointer">
+            <img class="circle" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-page_icon}&fol=pa&w=200&h=200">
+        </div>
+        <span class="">
+			<div class="search-padding">
+	            <div class="clear2">
+                    <div class="h6 b2">
+                        <a href="{$TEXT->installation}/page/{$TEXT->temp-page_id}" class="dark-font" onclick="loadPage({$TEXT->temp-page_id},1,1);return false;">{$TEXT->temp-page_name_25}</a>
+                        {$TEXT->temp-verified_batch}
+                    </div>
+                    <div class="tin-light-font-only b1 h4">
+                        <div class="light-font-only">{$TEXT->temp-page_category}<span class="tin-light-font-only padding-0-6">- {$TEXT->temp-page_likes}</span></div>
+                        <div class="hide-small">{$TEXT->temp-page_description}</div>
+                    </div>
+                </div>
+            </div>
+        </span>
+    </div>
+</div>

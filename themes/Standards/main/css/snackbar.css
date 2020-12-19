@@ -1,0 +1,60 @@
+.snack-wrap {
+  display:block;
+  position:fixed;
+  bottom:0px;
+  left:10px;
+  padding:0px;
+}
+
+.snackbar {
+  display:block;
+  background:#222;
+  border:#f2f2f2;
+  padding:10px 40px 10px 20px;
+  color:#fff;
+  font-family:Arial;
+  position:relative;
+  left:0px;
+  bottom:-70px;
+  transition: bottom 0.5s ease-in-out;
+  z-index:9;
+} 
+.snackclose, label {
+  bottom:-70px;
+  position:absolute;
+  border:0;
+}
+.snackclose {
+  display:none;
+  z-index:6;
+}
+label {
+  z-index:6;
+  display:block;
+  width:100%;
+  height:100%;
+  color:rgba(255,255,255,0.8);
+  cursor:pointer;
+}
+.animated {
+  animation-name: snackbar-show;
+  animation-duration: 5s;
+  animation-direction: forwards;
+  animation-timing-function: ease-in-out;
+  animation-delay:1s;
+  animation-fill-mode: forwards;
+}
+.snackclose:checked~.snackbar, .snackclose:checked, .snackclose:checked+label {
+  animation-name: snackbar-hide;
+  animation-delay:0s;
+}
+@keyframes snackbar-show {
+   0%{ bottom:-70px; }
+  90%, 95% {bottom:15px; }
+  92.5%, 100% {bottom:10px; }
+} 
+@keyframes snackbar-hide {
+   0%, 7.5% {bottom:10px; }
+  5%,10% {bottom:15px; }
+  100% {bottom:-70px; }
+}

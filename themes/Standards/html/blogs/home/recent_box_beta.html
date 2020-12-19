@@ -1,0 +1,52 @@
+<div class="" >
+    <div class="block-container-2">
+	    <div class="dark-font-only h9 b1 background-x bottom-divider padding-10">
+		    <span class="hide-small white-font-only noselect">...</span> {$TEXT->_uni-Recent_articles} {$TEXT->temp-add_name} 
+		</div>
+	    <div class="owl-carousel rece-carousel padding-10-0 owl-theme">
+	        {$TEXT->temp-add_recents}
+        </div>
+	</div>
+</div>
+
+<script>
+if (!$("link[href='{$TEXT->installation}/themes/{$TEXT->theme}/main/css/owl.carousel.css{$TEXT->REFRESH_CODE}']").length) {
+	$("head").append("<link>");
+	var css = $("head").children(":last");
+	css.attr({
+      	rel:  "stylesheet",
+      	type: "text/css",
+      	href: "{$TEXT->installation}/themes/{$TEXT->theme}/main/css/owl.carousel.css{$TEXT->REFRESH_CODE}"
+	});
+	
+	$("head").append("<link>");
+	var css = $("head").children(":last");
+	css.attr({
+      	rel:  "stylesheet",
+      	type: "text/css",
+      	href: "{$TEXT->installation}/themes/{$TEXT->theme}/main/css/owl.theme.css{$TEXT->REFRESH_CODE}"
+	});
+}
+
+$.getScript("{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.owl.js", function() {
+      var owl = $('.rece-carousel');
+      owl.owlCarousel({
+        margin: 10,
+        loop: {$TEXT->temp-loop},
+		nav:false,
+        dots:false,
+		stagePadding:30,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 1
+          },
+          1000: {
+            items: 2
+          }
+        }
+      })
+});
+</script>

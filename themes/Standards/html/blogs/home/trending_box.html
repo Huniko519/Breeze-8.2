@@ -1,0 +1,53 @@
+<div class="" >
+    <div class="block-container-4 rounded border white-color padding-10-0">
+	    <div class="dark-font-only h11 b0 padding-0-20">
+		    <img class="img-25" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/others/trending.png"> {$TEXT->_uni-Trending_last_month} {$TEXT->temp-extend_in}
+		</div>
+		<div class="owl-carousel trendin-carousel padding-10-0 owl-theme">
+		    {$TEXT->temp-add_trending}
+		</div>
+	</div>
+</div>
+
+<script>
+if (!$("link[href='{$TEXT->installation}/themes/{$TEXT->theme}/main/css/owl.carousel.css{$TEXT->REFRESH_CODE}']").length) {
+	
+	$("head").append("<link>");
+	var css = $("head").children(":last");
+	css.attr({
+      	rel:  "stylesheet",
+      	type: "text/css",
+      	href: "{$TEXT->installation}/themes/{$TEXT->theme}/main/css/owl.carousel.css{$TEXT->REFRESH_CODE}"
+	});
+	
+	$("head").append("<link>");
+	var css = $("head").children(":last");
+	css.attr({
+      	rel:  "stylesheet",
+      	type: "text/css",
+      	href: "{$TEXT->installation}/themes/{$TEXT->theme}/main/css/owl.theme.css{$TEXT->REFRESH_CODE}"
+	});
+}
+
+$.getScript("{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.owl.js", function() {
+      var owl = $('.trendin-carousel');
+      owl.owlCarousel({
+        margin: 10,
+        loop: false,
+		nav:false,
+        dots:false,
+		stagePadding:30,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          1000: {
+            items: 3
+          }
+        }
+      })
+});
+</script>

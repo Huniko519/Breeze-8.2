@@ -1,0 +1,25 @@
+<div id="role-id-{$TEXT->temp-pid}" class="bottom-divider user-main block-container-2 bottom-divider white-color">
+    <div class="clear padding-10 inner-padding">
+        <div style="min-width:50px;min-height:50px;" onclick="loadProfile({$TEXT->temp-user_id});return false;" class="left search-picture noflow pointer">
+            <img class="circle" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-user_image}&fol=a&w=200&h=200">
+        </div>
+        <span class="">
+			<div class="search-padding">
+	            <div class="clear2">
+					<div class="right">
+						{$TEXT->temp-del_btn}
+					</div>
+                    <div class="h6 b2">
+                        <a href="{$TEXT->installation}/{$TEXT->temp-id}" class="dark-font" onclick="loadProfile({$TEXT->temp-user_id});return false;">{$TEXT->temp-user_name_25}</a>
+                        {$TEXT->temp-user_verified_batch}
+                    </div>
+                    <div class="tin-light-font-only b1 h4">
+                        <div class="light-font-only">{$TEXT->temp-add_role}</div>
+                        <div>{$TEXT->temp-add_dat1}</div>
+                        <div class="hide-small">{$TEXT->temp-add_dat2}</div>
+                    </div>
+                </div>
+            </div>
+        </span>
+    </div>
+</div>

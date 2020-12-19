@@ -1,0 +1,18 @@
+<div id="suggestions_dynamic_view_{$TEXT->temp-user_id}" class="margin-5-0-0-0">
+        <div onclick="loadProfile({$TEXT->temp-user_id})" title="{$TEXT->temp-user_ttl}" class="left noflow pointer padding-0-6">
+            <img class="circle img-25" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-user_image}&fol=a&w=70&h=70">
+        </div>
+        <span class="">
+			<div class="clear2 h5 b1 tin-light-font-only">
+				<div class="right">
+				    {$TEXT->temp-button}
+				</div>
+                <div title="{$TEXT->temp-user_ttl}" class="h6 b2 dark-font">
+                    <a href="{$TEXT->installation}/group/{$TEXT->temp-id}" onclick="loadProfile({$TEXT->temp-user_id});return false;">{$TEXT->temp-user_name_25}</a>
+                    {$TEXT->temp-user_verified_batch}
+					<button class="btn btn-small btn-light right" onclick="inviteFriend({$TEXT->temp-invite_cnt},{$TEXT->temp-user_id});">{$TEXT->_uni-Invite}</button>
+                </div>
+				
+            </div>
+        </span>
+</div>

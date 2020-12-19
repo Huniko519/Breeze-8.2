@@ -1,0 +1,45 @@
+<div class="block-container crackable padding-10-0">
+    <div id="PAGE_NAV_SETTINGS" class="h6 b1">
+	
+	    <div id="PAGE_NAV_SETTINGS_1" onclick="updatePageSNav(1);loadPage({$TEXT->TEMP_PAGE_ID},8,5,1);scrollToTop();" class="pointer padding-10 b2 dark-font-only active-side">
+            <img class="img-22" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/gear.svg">
+	        <span class="padding-0-6">
+	            {$TEXT->_uni-General_Settings}
+	        </span>
+        </div>
+		
+	    <div id="PAGE_NAV_SETTINGS_2" onclick="updatePageSNav(2);loadPage({$TEXT->TEMP_PAGE_ID},11,5,2,0);scrollToTop();" class="pointer padding-10 tin-light-font">
+            <img class="img-22" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/checked.svg">
+	        <span class="padding-0-6">
+	            {$TEXT->_uni-Page_roles}
+	        </span>
+        </div>
+		
+	    <div id="PAGE_NAV_SETTINGS_3" onclick="updatePageSNav(3);loadPage({$TEXT->TEMP_PAGE_ID},8,5,3);scrollToTop();" class="pointer padding-10 tin-light-font">
+            <img class="img-22" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/link.svg">
+	        <span class="padding-0-6">
+	            {$TEXT->_uni-Page_username}
+	        </span>
+        </div>
+		
+	    <div id="PAGE_NAV_SETTINGS_4" onclick="updatePageSNav(4);loadPage({$TEXT->TEMP_PAGE_ID},8,5,4);scrollToTop();" class="pointer padding-10 tin-light-font">
+            <img class="img-22" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/add-button.svg">
+	        <span class="padding-0-6">
+	            {$TEXT->_uni-Assign_roles}
+	        </span>
+        </div>
+		
+	    <div id="PAGE_NAV_SETTINGS_5" onclick="updatePageSNav(5);pageLog({$TEXT->TEMP_PAGE_ID},0,5);scrollToTop();" class="pointer padding-10 tin-light-font">
+            <img class="img-22" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/wood.svg">
+	        <span class="padding-0-6">
+	            {$TEXT->_uni-Activity_log}
+	        </span>
+        </div>
+
+    </div>
+</div>
+<script>
+function updatePageSNav(id) {
+	$("#PAGE_NAV_SETTINGS_"+id).addClass("b2 dark-font-only active-side").removeClass("tin-light-font").siblings().removeClass("b2 dark-font-only active-side").addClass("tin-light-font");
+}
+</script>	

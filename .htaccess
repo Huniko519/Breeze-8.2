@@ -1,0 +1,29 @@
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+RewriteEngine on
+
+RewriteRule ^browse/([A-Za-z0-9-]+)/?$ index.php?browse=$1 [NC,L]
+RewriteRule ^browse/?$ index.php?browse=welcome [NC,L]
+
+RewriteRule ^profile/([A-Za-z0-9-]+)/?$ index.php?profile=$1 [NC,L]
+
+RewriteRule ^view/([A-Za-z0-9-]+)/?$ index.php?post=$1 [NC,L]
+
+RewriteRule ^blogs/?$ index.php?blogs=true [NC,L]
+RewriteRule ^blogs/([A-Za-z0-9-]+)/?$ index.php?blogs=true&view=$1 [NC,L]
+RewriteRule ^blogs/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)?$ index.php?blog=true&view=$1&v=$2 [NC,L]
+
+RewriteRule ^manage/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)?$ index.php?admin=true&view=$1&v=$2 [NC,L]
+RewriteRule ^manage/([A-Za-z0-9-]+)/?$ index.php?admin=true&view=$1 [NC,L]
+
+RewriteRule ^search/([A-Za-z0-9-]+)/([^/]+)?$ index.php?p=search&type=$1&v=$2 [NC,L]
+
+RewriteRule ^user/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)?$ index.php?p=$1&v=$2 [NC,L]
+RewriteRule ^user/([A-Za-z0-9-]+)/?$ index.php?p=$1 [NC,L]
+
+RewriteRule ^group/([A-Za-z0-9-]+)/?$ index.php?p=group&type=$1 [NC,L]
+
+RewriteRule ^page/([A-Za-z0-9-]+)/?$ index.php?p=page&type=$1 [NC,L]
+
+RewriteRule ^([A-Za-z0-9-]+)/?$ index.php?profile=$1 [NC,L]

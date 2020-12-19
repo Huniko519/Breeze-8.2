@@ -1,0 +1,130 @@
+<script>
+function checkAdminDynamics(t) {
+	if(t == 2) {							
+		$("#group_post_radio0").prop('disabled',true).next().addClass('disabled');
+		$("#group_post_radio1").prop('disabled',true).next().addClass('disabled');
+		$("#group_cover_radio0").prop('disabled',true).next().addClass('disabled');
+		$("#group_cover_radio1").prop('disabled',true).next().addClass('disabled');
+		$("#group_actvity_radio0").prop('disabled',true).next().addClass('disabled');
+		$("#group_actvity_radio1").prop('disabled',true).next().addClass('disabled');
+	} else {	
+		$("#group_post_radio0").prop('disabled',false).next().removeClass('disabled');
+		$("#group_post_radio1").prop('disabled',false).next().removeClass('disabled');
+		$("#group_cover_radio0").prop('disabled',false).next().removeClass('disabled');
+		$("#group_cover_radio1").prop('disabled',false).next().removeClass('disabled');
+		$("#group_actvity_radio0").prop('disabled',false).next().removeClass('disabled');	
+		$("#group_actvity_radio1").prop('disabled',false).next().removeClass('disabled');	
+	}
+};
+</script>
+<div class="block-box trans settings-20 bottom-divider">			
+	<div class="left full padding-10">			
+		<div class="input-title left h6 b1 dark-font-only">
+			{$TEXT->_uni-Posting}
+		</div>
+		<div class="input-container" style="margin-top:-20px;">
+			<div class="jelly-radios">
+	            <ul class="padding-10">
+			        <li class="tin-light-font" >
+			            <input type="radio" value="0" id="group_post_radio0"  name="group_post_radio">
+			            <label class="h5 b3">{$TEXT->_uni-Allow_if_ad_set}</label>
+			            <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+			        </li>
+			        <li class="tin-light-font" >
+			            <input type="radio" value="1" id="group_post_radio1"  name="group_post_radio">
+			            <label class="h5 b3">{$TEXT->_uni-Block_posting}</label>
+			            <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+			        </li>						
+	            </ul>	
+            </div>
+		</div>
+	</div>	
+</div>
+
+<div class="block-box trans settings-20 bottom-divider">			
+	<div class="left full padding-10">			
+		<div class="input-title left h6 b1 dark-font-only">
+			{$TEXT->_uni-Update_cover}
+		</div>
+		<div class="input-container" style="margin-top:-20px;">
+			<div class="jelly-radios">
+	            <ul class="padding-10">
+			        <li class="tin-light-font" >
+			            <input type="radio" value="0" id="group_cover_radio0"  name="group_cover_radio">
+			            <label class="h5 b3">{$TEXT->_uni-Allow_if_ad_set3}</label>
+			            <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+			        </li>
+			        <li class="tin-light-font" >
+			            <input type="radio" value="1" id="group_cover_radio1"  name="group_cover_radio">
+			            <label class="h5 b3">{$TEXT->_uni-Allow_if_ad_set2}</label>
+			            <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+			        </li>						
+	            </ul>	
+            </div>
+		</div>
+	</div>	
+</div>
+
+<div class="block-box trans settings-20 bottom-divider">			
+	<div class="left full padding-10">			
+		<div class="input-title left h6 b1 dark-font-only">
+			{$TEXT->_uni-Activity_log}
+		</div>
+		<div class="input-container" style="margin-top:-20px;">
+			<div class="jelly-radios">
+	            <ul class="padding-10">
+			        <li class="tin-light-font" >
+			            <input type="radio" value="0" id="group_actvity_radio0"  name="group_actvity_radio">
+			            <label class="h5 b3">{$TEXT->_uni-Allow_if_ad_set3}</label>
+			            <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+			        </li>
+			        <li class="tin-light-font" >
+			            <input type="radio" value="1" id="group_actvity_radio1"  name="group_actvity_radio">
+			            <label class="h5 b3">{$TEXT->_uni-Allow_if_ad_set4}</label>
+			            <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+			        </li>						
+	            </ul>	
+            </div>
+		</div>
+	</div>	
+</div>
+
+<div class="block-box trans settings-20 bottom-divider">			
+	<div class="left full padding-10">			
+		<div class="input-title left h6 b1 dark-font-only">
+			{$TEXT->_uni-Administration}
+		</div>
+		<div class="input-container" style="margin-top:-20px;">
+			<div class="jelly-radios">
+	            <ul class="padding-10">
+			        <li class="tin-light-font" onclick="checkAdminDynamics(1);">
+			            <input type="radio" value="1" id="group_admin_radio1"  name="group_admin_radio">
+			            <label class="h5 b3">{$TEXT->_uni-Grant_only_standard_user_rights}</label>
+			            <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+			        </li>
+			        <li class="tin-light-font" onclick="checkAdminDynamics(2);">
+			            <input type="radio" value="2" id="group_admin_radio2"  name="group_admin_radio">
+			            <label class="h5 b3">{$TEXT->_uni-Grant_adminstration_rights}</label>
+			            <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+			        </li>						
+	            </ul>	
+            </div>
+		</div>
+	</div>	
+</div>
+
+<div class="center" id="settings-content-space-2"></div>
+<div id="settings-content-mess-2"></div>
+	
+<div class="full noselect btn btn-dark h6 b3 center padding-10" id="settings-content-save-2" onclick="editGroupMemberPermissions({$TEXT->temp-group_id},{$TEXT->temp-v1},1);">
+	<span>{$TEXT->_uni-Save_changes}</span>
+</div>
+
+<script>
+$("#group_post_radio{$TEXT->temp-p_post}").prop('checked',true);
+$("#group_cover_radio{$TEXT->temp-p_cover}").prop('checked',true);
+$("#group_actvity_radio{$TEXT->temp-p_activity}").prop('checked',true);
+$("#group_admin_radio{$TEXT->temp-group_role}").prop('checked',true);
+checkAdminDynamics('{$TEXT->temp-p_post}');
+refreshElements();											
+</script>

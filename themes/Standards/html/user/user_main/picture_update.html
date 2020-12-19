@@ -1,0 +1,74 @@
+<script>$.getScript("{$TEXT->installation}/themes/{$TEXT->theme}/js/repositioner.js");</script>
+<div class="hide noselect" id="repos-ctrls">
+    <div class="display-topmiddle h4 padding-10 background-0">
+        <span id="drag_ttl_1" class="center">
+	        {$TEXT->_uni-Hold_Drag_rep_img}
+	    </span>
+        <span id="drag_ttl_next" class="center">
+	    </span>
+    </div>
+	<div style="margin-top:35px;" class="display-topright margin-top h4 padding-10 display-hover">
+        <span onclick="saveRepos();" class="btn btn-small btn-x-theme" >	
+		    <i class="fa fa-wrench"></i> &nbsp; 
+		    <span class="hide-small hide-medium">
+		        {$TEXT->_uni-Save_postn}
+		    </span>
+		</span>
+        <span onclick="saveRepos(1);" class="btn btn-small btn-x-theme" >	
+		    <i class="fa fa-refresh"></i> &nbsp; 
+		    <span class="hide-small hide-medium">
+		        {$TEXT->_uni-Original_chng}
+		    </span>
+		</span>
+		<span onclick="cancelRepos();" class="btn btn-small btn-x-theme" >	
+		    <i class="fa fa-times"></i> &nbsp; 
+		    <span class="hide-small hide-medium">
+		        {$TEXT->_uni-Cancel}
+		    </span>
+		</span>
+    </div>
+	<input id="code-y" class="hide" value=""></input>
+	<input id="rep_cvr_src" class="hide" value="/uploads/profile/covers/"></input>
+	<input id="rep_cvr_id" class="hide" value=""></input>
+    <input id="rep_cvr_page_id" class="hide" value=""></input>
+</div>
+
+<div class="hide noselect" id="saving-ctrls">
+    <div class="display-topmiddle small padding-10 background-0">
+        <span id="sav_ttl_1" class="center">
+	        {$TEXT->_uni-Pleas_wat_dtt}
+	    </span>
+		<span id="sav_ttl_2" class="center hide" >
+			{$TEXT->_uni-Saving_position}
+		</span>
+		<span id="sav_ttl_3" class="center hide" >
+			{$TEXT->_uni-Saving_position}
+		</span>
+    </div>
+</div>
+
+<div id="upload-ctrls" class="display-topleft noselect padding-10 display-hover">
+    <form id="uPc-2" name="uPc-2" action="{$TEXT->installation}/require/requests/update/cover_photo.php" onsubmit ="return false;" method="POST" enctype="multipart/form-data" target="uPc-t-2">   
+        <label id="btn-cover-chn" class="btn btn-small btn-x-theme" for="uPc-f-2" >	
+		    <i class="fa fa-camera"></i>
+		    <span class="hide-small hide-medium">
+		        &nbsp;{$TEXT->_uni-Update_cover}
+		    </span>
+		</label>
+		<span id="btn-cover-repositioner" onclick="startRepos();" class="hide-small btn btn-small btn-x-theme" >
+		    <i class="fa fa-arrows-v"></i> &nbsp;
+			<span>{$TEXT->_uni-Reposition}</span>
+		</span>								
+        <input style="display:none!important;" name="uPc-f-2" id="uPc-f-2" type="file"/>
+        <iframe id="uPc-t-2" name="uPc-t-2" src="" style="display: none"></iframe>
+    </form>	
+</div> 
+<div style="position:absolute;left:4%;bottom:7%;z-index:1;" class="display-bottom-left noselect hide-small display-hosver">
+    <form id="uPp-1" name="uPp-1" action="{$TEXT->installation}/require/requests/update/profile_photo.php" onsubmit ="return false;" method="POST" enctype="multipart/form-data" target="uPp-t-1">   
+        <label id="btn-photo-chn" class="btn btn-small btn-x-theme circle border-min" for="uPp-f-1" >
+		    <i class="fa fa-camera"></i>
+		</label>
+        <input style="display:none!important;" name="uPp-f-1" id="uPp-f-1" type="file"/>
+        <iframe id="uPp-t-1" name="uPp-t-1" src="" style="display: none"></iframe>
+    </form>
+</div>

@@ -1,0 +1,94 @@
+<script>
+function createGroup() {
+    contentLoader(1,3);
+    ajaxProtocol(load_group_file,0,0,0,0,$("#new-group-1").val(),$("input[name='new_group_post_radio']:checked").val(),$("input[name='new_group_type_radio']:checked").val(),0,0,0,0,0,3,16,0,1,30);
+}
+</script>
+
+<div class="h7 b3 dark-font-only bottom-divider clear full inline-in noflow">
+	<div class="padding-10 noflow" >{$TEXT->_uni-Create_group}</div>
+	<div onclick="loadModal(0);" class=" hvr-opacity trans padding-10 right noflow btn-dark pointer">X</div>                    
+	<div id="modal-toggle-scroll" onclick="scrollFull('.mi-modal-inner',1);" class="modal-scroll margin-10 transparent right dark-svg noflow btn-light pointer"><img src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/buttons/expand.svg" class="svg img-14"></div>                    
+</div>
+<div class="nicescrollit noflow mi-modal-inner">
+
+	<div class="block-box trans settings-20 bottom-divider">			
+		<div class="left full padding-10">			
+			<div class="input-title left h6 b1 dark-font-only">
+				{$TEXT->_uni-Group_name}
+			</div>
+			<div class="input-container">
+				<input id="new-group-1" class="h5 b1 light-font-only" value="">
+				<div class="input-description h4 b1 tin-light-font-only">
+					{$TEXT->_uni-Group_name_description}
+				</div>
+			</div>
+		</div>	
+	</div>
+
+<div class="block-box trans settings-20 bottom-divider">			
+	<div class="left full padding-10">			
+		<div class="input-title left h6 b1 dark-font-only">
+			{$TEXT->_uni-Posting}
+		</div>
+		<div class="input-container" style="margin-top:-20px;">
+			<div class="jelly-radios">
+	            <ul class="padding-10">
+			        <li class="tin-light-font" >
+			            <input type="radio" checked value="1" id="new_group_post_radio1"  name="new_group_post_radio">
+			            <label class="h5 b3">{$TEXT->_uni-Any_member_11}</label>
+			            <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+			        </li>
+			        <li class="tin-light-font" >
+			            <input type="radio" value="2" id="new_group_post_radio2"  name="new_group_post_radio">
+			            <label class="h5 b3">{$TEXT->_uni-Any_member_12}</label>
+			            <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+			        </li>						
+	            </ul>	
+            </div>
+		</div>
+	</div>	
+</div>
+
+	<div class="block-box trans settings-20 bottom-divider">			
+		<div class="left full padding-10">			
+			<div class="input-title left h6 b1 dark-font-only">
+				{$TEXT->_uni-Privacy}
+			</div>
+			<div class="input-container" style="margin-top:-20px;">
+				<div class="jelly-radios">
+	                <ul class="padding-10">
+			            <li class="tin-light-font" >
+			                <input type="radio" checked value="1" id="new_group_type_radio1"  name="new_group_type_radio">
+			                <label class="h5 b3">{$TEXT->_uni-Group_type_1}</label>
+			                <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+			            </li>
+			            <li class="tin-light-font" >
+			                <input type="radio" value="2" id="new_group_type_radio2"  name="new_group_type_radio">
+			                <label class="h5 b3">{$TEXT->_uni-Group_type_2}</label>
+			                <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+			            </li>	
+			            <li class="tin-light-font" >
+			                <input type="radio" value="3" id="new_group_type_radio3"  name="new_group_type_radio">
+			                <label class="h5 b3">{$TEXT->_uni-Group_type_3}</label>
+			                <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+			            </li>						
+	                </ul>	
+                </div>
+				<div class="input-description h4 b1 tin-light-font-only">
+					{$TEXT->_uni-Group_types_details}
+				</div>
+			</div>
+		</div>	
+	</div>
+
+<div class="center" id="settings-content-space-3"></div>
+<div id="settings-content-mess-3"></div>
+	
+<div class="full noselect btn btn-dark h6 b3 center padding-10" id="settings-content-save-3" onclick="createGroup();">
+	<span>{$TEXT->_uni-Create_group}</span>
+</div>
+
+</div>
+
+<script>refreshElements();</script>

@@ -1,0 +1,27 @@
+<div class="block-container-2 clear">
+	<div class="block-title">
+		<div class="h7 b3 dark-font-only padding-10">
+			{$TEXT->_uni-Available_backgrounds}
+		</div>
+	</div>
+</div>
+<div class="padding-10 block-container-2 clear noflow">
+    <div id="add_background_trigger" onclick="$('#add_background_file').click();" class="col padding-5 trans" style="width:20%;">
+        <img class="rounded filter-opacity trans" src="{$TEXT->installation}/thumb.php?src=add-image.png&fol=bb&w=252&h=192" style="width:100%;cursor:pointer">
+    </div>
+    {$TEXT->temp-content}
+</div>
+<form id="add_background" name="add_background" action="{$TEXT->installation}/require/requests/update/add-background.php" onsubmit ="return false;" method="POST" enctype="multipart/form-data" target="add_background_target">   
+    <input style="display:none!important;" name="add_background_file" id="add_background_file" type="file"/>
+    <iframe id="add_background_target" name="add_background_target" src="" style="display: none"></iframe>
+</form>
+<span id="addBackground_error"></span>
+<script>
+    $("#add_background_file").on('change', function(event){	
+        $(document).on('change', ':file', function () {
+            if($("#add_background_file").val()) {
+                addBackground();
+            }
+        }); 
+    });					
+</script>

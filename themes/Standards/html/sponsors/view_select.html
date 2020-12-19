@@ -1,0 +1,75 @@
+<div class="block-container-2 padding-10 noflow clear">
+    <input id="price_cc" class="hidden" value="{$TEXT->temp-cc_node}"></input>
+    <input id="content_id" class="hidden" value="{$TEXT->temp-c_id}"></input>
+    <input id="content_type" class="hidden" value="{$TEXT->temp-c_type}"></input>
+	<div class="block-box-2 trans settings-20 bottom-divider">			
+		<div class="left full padding-10">			
+			<div class="input-title left h6 b1 dark-font-only">
+				{$TEXT->_uni-Views}
+			</div>
+			<div class="input-container">
+				<input id="views-counter" class="h5 b1 light-font-only" value="0">
+				<div class="input-description h4 b1 tin-light-font-only">
+					{$TEXT->_uni-Views_boost_2}
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div class="block-box-2 trans settings-20 bottom-divider">			
+		<div class="left full padding-10">			
+			<div class="input-title left h6 b1 dark-font-only">
+				{$TEXT->_uni-Price}
+			</div>
+			<div class="input-container">
+				<div class="input-description h4 b0 tin-light-font-only">
+					<span id="price" class="font-green h9 b2">{$TEXT->temp-price}</span> {$TEXT->temp-currency}
+				</div>
+			</div>
+		</div>	
+	</div>
+	
+	<div class="block-box-2 trans settings-20">			
+		<div class="left full padding-10">			
+			<div class="input-title left h6 b1 dark-font-only">
+				{$TEXT->_uni-Terms}
+			</div>
+			<div class="input-container">
+				<div class="input-description h4 b0 tin-light-font-only">
+				    {$TEXT->_uni-Terms_ads}
+				</div>
+			</div>
+			
+			<div id="invoice-gen" style="display:none" class="padding-20 center">
+			    <button  onclick="createInvoice();" class="btn btn-medium btn-theme">{$TEXT->_uni-Checkout}</button>
+			</div>
+		</div>
+	</div>
+	
+</div>
+<script>
+$("#views-counter").on('input',function() {
+    proccessPrice();
+});
+
+function proccessPrice() {
+
+    if($("#views-counter").val() > 0) {
+	    $("#invoice-gen").slideDown();
+		var val = (parseInt($("#views-counter").val()) * $("#price_cc").val()).toFixed(2);
+	    $("#price").text(val);
+	} else {
+	    $("#invoice-gen").slideUp();
+		$("#price").text("0.0");
+	}
+}
+
+function createInvoice() {
+    scrollToTop();
+    var performed = ajaxProtocol(load_ads_file,0,0,'create_invoice',$("#content_id").val(),$("#content_type").val(),$("#views-counter").val(),0,0,0,0,0,0,0,0,0,1,5);
+    bodyLoader('threequarter');
+	
+}
+
+proccessPrice();
+
+</script>

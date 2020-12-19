@@ -1,0 +1,32 @@
+<div class="block-container-2 clear">
+	<div class="block-title">
+		<div class="h7 b3 dark-font-only padding-10">
+			{$TEXT->_uni-Page_username}
+		</div>
+	</div>
+</div>        
+
+<div class="block-container-2 clear">				
+
+	<div class="block-box-2 trans settings-20">			
+		<div class="left full padding-10">			
+			<div class="input-title left h6 b1 dark-font-only">
+				{$TEXT->_uni-Username}
+			</div>
+			<div class="input-container">
+				<input id="settings-page-1" class="h5 b1 light-font-only" placeholder="{$TEXT->_uni-Add_username}" value="{$TEXT->temp-page_username}">
+				<div class="input-description h4 b1 tin-light-font-only">
+					{$TEXT->_uni-Page_username_description}
+				</div>
+			</div>
+		</div>	
+	</div>
+	
+	<div class="center" id="settings-content-space-1"></div>
+	<div id="settings-content-mess-1"></div>
+	
+	<div class="full noselect btn btn-dark h6 b3 center padding-10 round-in-bottom" id="settings-content-save-1" onclick="savePage({$TEXT->temp-page_id},3);">
+		<span>{$TEXT->_uni-Save_changes}</span>
+	</div>
+	
+</div>

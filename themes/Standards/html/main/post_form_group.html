@@ -1,0 +1,340 @@
+<div id="present-post-modal" onclick="togglePostForm(0);" style="display:none;" class="pop-modal pop-modal-black"></div>
+
+<div id="POST_FORM" onclick="togglePostForm(1);" class="block-container-2 no-border tin-light-font-only">
+    
+	<div id="POST_FORM_VISIBLE">
+
+	    <form id="update-status-form-data" action="{$TEXT->installation}/require/requests/update/status.php" method="POST" target="update-status-form-target" method="POST"  enctype="multipart/form-data">	
+	  
+	    <div class="block-box trans" onclick="getFocus();">
+			
+			<!-- Simple post -->
+			<div id="USER_IMG" class="blocks padding-10-20 relative" style="min-height:55px;" >
+                <div class="block-left left text-left margin-right line-1-5">
+                    <a href="#" onclick="aOverlow();s23u89dssh();loadProfile({$TEXT->temp-user_id});return false;">
+			            <img class="circle img-35" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-image}&fol=a&w=70&h=70" alt="" ></img>
+                    </a>
+		        </div>
+	    	    
+				<div class="block-rest left text-left padding-0-0-0-10" style="max-width:80%;">
+                    
+					<div id="simple_post" class="">
+	        		    
+						<textarea id="update-status-form-text" name="update-status-form-text" style="min-width:100%;height:28px;" class="hide padding-6-0" placeholder="{$TEXT->_uni-whats_mind}"></textarea>
+	        				
+					    <div id="update-status-form-text-rep" style="width:100%;height:28px;" class="padding-6-0 h5 b2 small-imgs">{$TEXT->_uni-whats_mind}</div>
+	        			
+					    <div id="update-status-form-text-orig" class="outerContainer padding-6-0 hide dark-font-only b1" contenteditable="false">
+						    <div onpaste="return false;" ondrop="return false;" id="update-status-form-text-viewable" contentEditable="true" name="update-status-form-text" style="max-width:100%;min-height:28px;min-width:200px;max-height:400px;overflow:auto;" data-text="{$TEXT->_uni-whats_mind}" class="h5 b1 small-imgs"></div>
+				        </div>
+					
+				    </div>
+					
+					<div class="hide" contenteditable="false" id="update-status-form-text-viewable-2"></div>				
+					<input multiple="multiple" type="file" name="update-status-form-file[]" class="hide" id="update-status-form-file" />
+					<input id="post-status-feeling-input-type" name="post-status-feeling-input-type" class="hide" value="">
+					<input id="update-status-emoji-target" name="update-status-emoji-target" class="hide" value="#update-status-form-text-viewable">
+					<input id="update-status-emoji-target-back" name="update-status-emoji-target-back" class="hide" value="">
+	                <input id="GROUP_ID" name="GROUP_ID" value="{$TEXT->TEMP_GROUP_ID}" class="hide" > </input>
+				</div>
+				
+			</div>
+
+			<!-- Background post -->
+		    <div id="bb_post" style="max-width:100%;min-width:100%;height:260px;" class="full b3 h15 big-imgs round-in-top hide noflow relative white-font-only clear">		
+				<div class="outerContainer full center round-in-top display-middle noflow" contenteditable="false">
+					<div ondrop="return false;" style="width:100%;min-width:100%;min-height:28px;" onpaste="return false;" id="update-status-form-btext-viewable" contentEditable="true" name="update-status-form-text" data-text="{$TEXT->_uni-whats_mind}" class="brz-large brz-full brz-padding"></div>
+				</div>
+		    </div>
+	
+		</div>
+		
+		</form>
+	
+	</div>
+	
+	<!-- Hidden post options -->
+	<div id="POST_FORM_OPTIONS" class="hide">
+	    <div id="POST_FORM_SUB_OPTIONS" class="full hide clear margin-10-0-0-0">
+			<div style="min-height:30px;" id="background_select" style="padding:0px 12px 5px 15px;" class="block">	
+				<div id="background_select_close" style="position:absolute;left:12px;" onclick="toggleBackgroundSelect(0);" class="inline pointer">
+  					<div class="circle">
+      					<img class="img-22" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/others/left-arrow.svg">
+					</div>
+    			</div>
+				<div id="background_select_1" onclick="newBB('none',0);" style="position:absolute;left:38px;" class="brz-inline brz-editable">
+  					<div class="circle">
+      					<img class="circle bb-img border-white shadow" src="{$TEXT->installation}/thumb.php?src=white.png&fol=bb&w=46&h=46">
+    				</div>
+    			</div>		
+				<div id="background_select_2" onclick="newBB('{$TEXT->BACK_1}',2);" style="position:absolute;left:64px; " class="brz-inline brz-editable">
+  					<div class="circle">
+      					<img class="circle bb-img border-white shadow" src="{$TEXT->installation}/thumb.php?src={$TEXT->BACK_1}.jpg&fol=bb&w=46&h=46">
+    				</div>
+    			</div>
+				<div id="background_select_3" onclick="newBB('{$TEXT->BACK_2}',3);" style="position:absolute;left:90px; " class="brz-inline brz-editable">
+  					<div class="circle">
+      					<img class="circle bb-img border-white shadow" src="{$TEXT->installation}/thumb.php?src={$TEXT->BACK_2}.jpg&fol=bb&w=46&h=46">
+    				</div>
+    			</div>
+				<div id="background_select_4" onclick="newBB('{$TEXT->BACK_3}',4);" style="position:absolute;left:114px; " class="brz-inline brz-editable">
+  					<div class="circle">
+      					<img class="circle bb-img border-white shadow" src="{$TEXT->installation}/thumb.php?src={$TEXT->BACK_3}.jpg&fol=bb&w=46&h=46">
+    				</div>
+    			</div>	
+				<div id="background_select_5" onclick="newBB('{$TEXT->BACK_4}',5);" style="position:absolute;left:138px; " class="brz-inline brz-editable">
+  					<div class="circle">
+      					<img class="circle bb-img border-white shadow" src="{$TEXT->installation}/thumb.php?src={$TEXT->BACK_4}.jpg&fol=bb&w=46&h=46">
+    				</div>
+    			</div>
+				<div id="background_select_6" onclick="newBB('{$TEXT->BACK_5}',6);" style="position:absolute;left:162px; " class="brz-inline brz-editable">
+  					<div class="circle">
+      					<img class="circle bb-img border-white shadow" src="{$TEXT->installation}/thumb.php?src={$TEXT->BACK_5}.jpg&fol=bb&w=46&h=46">
+    				</div>
+    			</div>
+				<div id="background_select_7" onclick="newBB('{$TEXT->BACK_6}',7);" style="position:absolute;left:186px; " class="brz-inline brz-editable">
+  					<div class="circle">
+      					<img class="circle bb-img border-white shadow" src="{$TEXT->installation}/thumb.php?src={$TEXT->BACK_6}.jpg&fol=bb&w=46&h=46">
+    				</div>
+    			</div>						
+				<div id="background_select_8" onclick="newBB('{$TEXT->BACK_7}',8);" style="position:absolute;left:210px; " class="brz-inline brz-editable">
+  					<div class="circle">
+      					<img class="circle bb-img border-white shadow" src="{$TEXT->installation}/thumb.php?src={$TEXT->BACK_7}.jpg&fol=bb&w=46&h=46">
+    				</div>
+    			</div>
+				<div id="background_select_9" onclick="newBB('{$TEXT->BACK_8}',9);" style="position:absolute;left:234px; " class="brz-inline brz-editable">
+  					<div class="circle">
+      					<img class="circle bb-img border-white shadow" src="{$TEXT->installation}/thumb.php?src={$TEXT->BACK_8}.jpg&fol=bb&w=46&h=46">
+    				</div>
+    			</div>
+				<div id="background_select_10" onclick="newBB('{$TEXT->BACK_9}',10);" style="position:absolute;left:258px; " class="brz-inline brz-editable">
+  					<div class="circle">
+      					<img class="circle bb-img border-white shadow" src="{$TEXT->installation}/thumb.php?src={$TEXT->BACK_9}.jpg&fol=bb&w=46&h=46">
+    				</div>
+    			</div>
+				<div id="background_select_11" onclick="newBB('{$TEXT->BACK_10}',11);" style="position:absolute;left:282px; " class="brz-inline brz-editable">
+  					<div class="circle">
+      					<img class="circle bb-img border-white shadow" src="{$TEXT->installation}/thumb.php?src={$TEXT->BACK_10}.jpg&fol=bb&w=46&h=46">
+    				</div>
+    			</div>						
+				<div id="background_select_open" style="position:absolute;left:12px;" onclick="toggleBackgroundSelect(1);" class="brz-inline hide pointer">
+  					<div class="circle">
+      					<img class="circle bb-img" src="{$TEXT->installation}/thumb.php?src=chooser.png&fol=bb&w=46&h=46">
+    				</div>
+    			</div>	
+ 
+				<span id="post-form-emoji-trigger" class="drop-clicked right padding-0-6" >
+                    <div onclick="$('#post-form-emoji-drop').toggleClass('brz-show');getContent('emoji-selecter','#content-emoji-all','#get-post-form-emoji-selecter');" class="brz-text-bold brz-large brz-text-grey">
+						<img class="img-22" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/others/feeling.svg">
+					</div>
+                    <div id="post-form-emoji-drop" class="drop-content transparent" style="right:0;width:350px;">  
+						<div style="height:12px;">
+							<img style="position:absolute;top:0px;right:5px;max-height:200px;overflow:auto" class="brz-img-drop-down-cat" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAeAQMAAABUn9+/AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAAxJREFUeNpjYBhZAAAA8AABOGlaUQAAAABJRU5ErkJggg==">
+						</div>				
+						<div id="get-post-form-emoji-selecter" data-add-emoji-id="" class="white-color center clear getContent padding-10 shadow border">
+						    <span class="brz-padding-jumbo" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/search_loader.gif">
+							    {$TEXT->_uni-Loading...}
+							</span>
+                        </div>
+					</div>
+                </span>	
+  			</div>
+		</div>
+
+        <div class="clear top-divider" style="padding:10px 12px 5px 12px;">
+			<span class="half">
+				<label id="post-file-1" for="update-status-form-file" class="post-form-btn btn full text-left h6 b2 dark-font-only noselect">
+					<img class="nav-item-inverse brz-img-add-photo" alt="" src="{$TEXT->DATA-IMG-12}"></img> {$TEXT->_uni-Add_photo}
+				</label>
+			</span>
+		</div>
+		<div class="round-in-bottom">
+	        <div id="POST_BUTTON1" onclick="upStatus();" class="full padding-10 white-font-only center h7 trans b3 clear round-in-bottom pointer theme-color-hvr">
+			    <div id="update-status-form-submit" name="update-status-form-submit" style="width:100%">
+                    {$TEXT->_uni-Make_post}
+                </div>
+	        </div>
+	    </div>			
+	</div>
+	
+	<iframe id="update-status-form-target" name="update-status-form-target" src="" style="display: none"></iframe>
+	
+</div>
+
+<!-- END FORM GROUP -->
+
+<script>
+var form = $('#POST_FORM'),
+	options = $('#POST_FORM_OPTIONS'),
+	sub_options = $('#POST_FORM_SUB_OPTIONS'),
+	input = $('#update-status-form-text-viewable'),
+	input_big = $('#update-status-form-btext-viewable'),
+	background_post = $("#bb_post"),
+	emoji_target = $("#update-status-emoji-target"),
+	simple_post = $("#USER_IMG, #simple_post"),
+	file_input = $("#update-status-form-file")
+	;
+
+// Manage window on scroll
+$(window).on('scroll', function() {                
+	if($("#POST_FORM").hasClass("ACTIVE-FORM")) {
+		var scrollTop = $(this).scrollTop();
+		var topDistance = $("#update-status-form-submit").offset().top + 100;
+		if ( (topDistance+100) < scrollTop ) {
+			$("#present-post-modal").click();
+		}					
+	}
+});	
+	
+file_input.on('change', function(event){	
+	$(document).on('change', ':file', function () {
+		if(file_input.val()) {
+			$('#post-file-1').addClass('green-selected').html('<img class="nav-item-inverse brz-img-add-photo" alt="" src="{$TEXT->DATA-IMG-12}"></img>&nbsp;'+file_input[0].files.length +' {$TEXT->_uni-Selected}');
+		} else {
+		    $('#post-file-1').removeClass('green-selected').html('<img class="nav-item-inverse brz-img-add-photo" alt="" src="{$TEXT->DATA-IMG-12}"></img>&nbsp; {$TEXT->_uni-Add_photo}');
+		}
+	}); 
+});
+
+// Check content length
+input_big.on('keydown', function() {
+	checkContent();
+});
+
+// Handle pasted data
+input.on("paste", function(e){
+	var nbr20 = e.originalEvent.clipboardData.getData('text');
+	document.getElementById('update-status-form-text-viewable').focus(); 
+	pasteHtmlAtCaret(nbr20);
+} );
+
+function getFocus() {
+    $(emoji_target.val()).focus();
+}
+
+// Check content length and other properties
+function checkContent() {
+	
+	// Get html
+	var container = $('<div>').html(input_big.html());
+	container.find("span,br").remove();
+	myhtml = container.html();
+	
+	var imgs = $("#update-status-form-btext-viewable img").length;
+	
+	// Remove tags
+	myhtml = myhtml.replace(/<!--.*?-->/g, "").replace(/&nbsp;/g,''); 
+	
+	var chars = myhtml.length;
+	
+	// Switch post type if chars exceeds
+	if(((5*imgs) + chars) > 80) {
+		newBB('none',0);			
+	}
+}
+	
+function togglePostForm(t) {
+
+    if((form.hasClass("ACTIVE-FORM") && t == 1) || (!form.hasClass("ACTIVE-FORM") && t == 0)) {return false;}
+
+	// Toggle content input
+	sub_options.slideUp(0);
+    $('#update-status-form-text-orig, #update-status-form-text-rep').toggle();
+
+	if(t == 0) {    
+        form.removeClass('ACTIVE-FORM').prev().fadeOut(300,function(){form.css('z-index', '').css('position', '')});
+		simple_post.show();
+		background_post.hide();
+	} else {
+		form.addClass('ACTIVE-FORM').css('z-index', '3').css('position', 'relative').prev().fadeIn(300);
+		input.animate({ 'min-height': "80px" },300).focus();
+		sub_options.slideDown();
+    }
+	
+	// Toggle content options
+    options.slideToggle();
+	
+}
+
+function newBB(bb,id) {
+    $("#background_select .border-bold").removeClass("border-bold");
+    $("#background_select_"+id+" img").addClass("border-bold");
+    if(id==0) {
+        switchBB();	
+    } else {
+        simple_post.hide();
+        background_post.css("background","url({$TEXT->installation}/thumb.php?src="+bb+".jpg&fol=bb&w=600&h=260) center no-repeat").show();	
+        emoji_target.val("#update-status-form-btext-viewable");
+        $("#update-status-emoji-target-back").val(bb);
+    }		
+}
+    
+function switchBB() {
+    toggleBackgroundSelect(0);
+    simple_post.show();
+    background_post.hide(); 
+    emoji_target.val("#update-status-form-text-viewable");
+	input.html(input_big.html()).focus();
+    input_big.html("");
+}
+
+
+function toggleBackgroundSelect(t) {
+    if(t==0){
+        $("#background_select .brz-editable").css("position","absolute");
+        $("#background_select .brz-editable").animate({left: '12px',opacity: '0.5'},300,function(){$("#background_select .brz-editable .circle img").removeClass("shadow").hide();});
+        $("#background_select_open").fadeIn();$("#background_select_close").hide();
+    } else {
+        $("#background_select .brz-editable .circle img").addClass("shadow").show();
+        $("#background_select_open").hide();$("#background_select_close").show();
+        $("#background_select_close").animate({left: '12px',opacity: '1'},200);
+        $("#background_select_1").animate({left: '38px',opacity: '1'},200);
+        $("#background_select_2").animate({left: '64px',opacity: '1'},200);
+        $("#background_select_3").animate({left: '90px',opacity: '1'},200);
+        $("#background_select_4").animate({left: '114px',opacity: '1'},200);
+        $("#background_select_5").animate({left: '138px',opacity: '1'},200);
+        $("#background_select_6").animate({left: '162px',opacity: '1'},200);
+        $("#background_select_7").animate({left: '186px',opacity: '1'},200);
+        $("#background_select_8").animate({left: '210px',opacity: '1'},200);
+        $("#background_select_9").animate({left: '234px',opacity: '1'},200); 
+        $("#background_select_10").animate({left: '258px',opacity: '1'},200);
+        $("#background_select_11").animate({left: '282px',opacity: '1'},200);
+    }	
+}
+
+function toggleFeeling() {
+	$("#post-form-feeling-drop").toggleClass('brz-show');
+}
+
+function resetPostform() {
+    $("#POST_REMOVE1").click();
+    $("#POST_REMOVE2").click();
+    $("#present-post-modal").click();
+}	
+
+function loadFeelings(t,addIcon,placeholder,va) {
+
+    // Open feeling wizard
+    $('#post-status-feeling-wizard').show();
+    
+    // Remove all icons
+    $('#post-status-feeling-input-value').attr('class','input no-border input-icon2 light-font-only brz-transparent padding-6-0 ' + addIcon);
+    
+    // Update input icon and placeholder
+    $('#post-status-feeling-input-value').attr('placeholder',placeholder + '').val(va).show().focus();
+    
+    // Add feeling type
+    $('#post-status-feeling-input-type').val(t);
+    
+    // Add active class
+    $('#post-form-profile-id-feeling').addClass('yellow-selected');
+    
+    toggleFeeling();			
+    $('html, body').animate({scrollTop: $("#POST_FORM").offset().top - 60}, 500);
+    return false;
+    
+}
+
+// Reload placeholder plugin if IE<10
+$("#POST_FORM").find('input, textarea').placeholder({customClass:'my-placeholder'});
+</script>

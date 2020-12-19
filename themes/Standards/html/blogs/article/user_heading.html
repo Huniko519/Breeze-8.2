@@ -1,0 +1,26 @@
+<div class="block-container-2 transparent no-border noflow">
+
+	<div class="bottom-big">
+	    <div onclick="loadBlogData(0,7,1);" class="inline blog-navigation pointer padding-5-15 active-down">
+            <div class="h6 b2 dark-font-only padding-10">
+		        {$TEXT->_uni-My_posts}
+		    </div>
+		</div>
+	    <div onclick="blogAricles(0,0,5);" class="inline blog-navigation pointer padding-5-15">
+            <div class="h6 b2 dark-font-only padding-10">
+		        {$TEXT->_uni-Recent}
+		    </div>
+		</div>
+	    <a href="{$TEXT->installation}/blogs" class="inline blog-navigation padding-5-15">
+            <div class="h6 b2 dark-font-only padding-10">
+		        {$TEXT->_uni-Explore}
+		    </div>
+		</a>
+    </div>
+
+</div>
+<script>
+$('.blog-navigation').on('click',function() {
+    $('.blog-navigation').addClass('active-down').not(this).removeClass('active-down');
+});
+</script>

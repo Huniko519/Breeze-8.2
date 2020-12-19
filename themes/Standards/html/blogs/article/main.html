@@ -1,0 +1,81 @@
+<div align="center" class="block-container-2 white-color border round-in-bottom padding-20 center noflow">
+	<div align="center" class="padding-0-15 center-div text-left win-700">
+		<div>
+		<button onclick="locate('{$TEXT->installation}/blogs/category/{$TEXT->temp-cat_id}')"class="btn btn-small btn-x-theme">{$TEXT->temp-blog_category}</button>
+		{$TEXT->temp-like_btn}
+		</div>
+		<div class="padding-10-0"><a class="h15 b3 dark-font" href="{$TEXT->installation}/blogs/{$TEXT->temp-blog_id}/{$TEXT->temp-blog_href}">{$TEXT->temp-blog_heading}</a></div>
+        <div class="padding-10-0 top-divider"><img class="circle vertical-middle img-20" src="{$TEXT->installation}/thumb.php?fol=a&w=50&h=50&src={$TEXT->temp-user_image}"> <span class="h6 b1 vertical-middle tin-light-font-only vertical-align"><a class="h7 b1 dark-font" href="{$TEXT->installation}/{$TEXT->temp-user_id}">{$TEXT->temp-user_name}</a>, <span class="timeago" title="{$TEXT->temp-time}">{$TEXT->temp-time}</span></span></div>
+	    <div class="clear2 " style="margin-top:40px;">
+		    <img class="full rounded border-min shadow trans" src="{$TEXT->installation}/thumb.php?fol=blog&w=800&h=300&src={$TEXT->temp-blog_image}">
+		</div>
+		<div class="padding-10-0 bottom-divider margin-5-0-0-0 h7 b1 light-font-only">
+		    <div class="padding-10-0 text-left blog">{$TEXT->temp-blog_text}</div>
+		</div>
+	    <div class="h6 b1 tin-light-font-only padding-10-0">
+		    <div class="text-left"><div id="share-btns" class="right h5"></div> {$TEXT->temp-blog_likes} {$TEXT->_uni-likes} <span class="padding-0-6">&middot;</span> {$TEXT->temp-blog_views} {$TEXT->_uni-views}</div>
+		    <div class="text-left">
+		    <div class="user-main block-container-3 white-color">
+    		    <div class="clear padding-10 inner-padding">
+        		    <div style="min-width:50px;min-height:50px;" class="left search-picture noflow pointer">
+            		    <img class="circle" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-user_image}&fol=a&w=200&h=200">
+        		    </div>
+        		    <span class="">
+					    <div class="search-padding">
+	            		    <div class="clear2">
+							    <div class="right">
+								    {$TEXT->temp-r_btn}
+							    </div>
+                   		    <div class="h6 b2">
+                        		    <a href="{$TEXT->installation}/{$TEXT->temp-user_id}" class="dark-font" >{$TEXT->temp-user_name}</a>
+                        		    {$TEXT->temp-v_bt}
+                    		    </div>
+                    		    <div class="tin-light-font-only b1 h4">
+                        		    <div class="light-font-only">{$TEXT->temp-ab1}</div>
+                        		    <div>{$TEXT->temp-ab2}</div>
+                        		    <div class="hide-small">{$TEXT->temp-ab3}</div>
+                    		    </div>
+                		    </div>
+            		    </div>
+        		    </span>
+    		    </div>
+		    </div>	
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+$.getScript("{$TEXT->installation}/themes/{$TEXT->theme}/js/jssocials.min.js", function() {
+	$("#share-btns").jsSocials({
+    	showLabel: false,
+    	showCount: false,
+    	shares: ["email", "twitter", "facebook", "googleplus", "linkedin", "pinterest", "stumbleupon", "whatsapp"]
+	});
+});
+if (!$("link[href='{$TEXT->installation}/themes/{$TEXT->theme}/main/css/jssocials.css{$TEXT->REFRESH_CODE}']").length) {
+	$("head").append("<link>");
+	var css = $("head").children(":last");
+	css.attr({
+      	rel:  "stylesheet",
+      	type: "text/css",
+      	href: "{$TEXT->installation}/themes/{$TEXT->theme}/main/css/jssocials.css{$TEXT->REFRESH_CODE}"
+	});
+	
+	$("head").append("<link>");
+	var css = $("head").children(":last");
+	css.attr({
+      	rel:  "stylesheet",
+      	type: "text/css",
+      	href: "{$TEXT->installation}/themes/{$TEXT->theme}/main/css/jssocials-theme-plain.css{$TEXT->REFRESH_CODE}"
+	});
+	
+	$("head").append("<link>");
+	var css = $("head").children(":last");
+	css.attr({
+      	rel:  "stylesheet",
+      	type: "text/css",
+      	href: "{$TEXT->installation}/themes/{$TEXT->theme}/main/css/tables.css{$TEXT->REFRESH_CODE}"
+	});
+}
+</script>

@@ -1,0 +1,36 @@
+<div class="block-container noflow">
+	<div class="h5 b2 padding-10z dark-font-only">
+    	<img class="img-22" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/intro/flag-color.svg">
+		<span class="h6 b2 padding-0-6 dark-font-only">
+	    	{$TEXT->temp-add_cat_in}
+		</span>
+    </div>
+</div>
+
+<div class="block-container noflow">
+    
+	<div class="h5 b2 padding-10 dark-font-only">
+        <img class="img-22" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/intro/heart.svg">
+	    <span class="b1 padding-0-6 tin-light-font-only">
+	        {$TEXT->temp-page_likes} {$TEXT->_uni-likes_this}
+	    </span>
+    </div>
+	
+	<div class="h5 b2 padding-10 dark-font-only">
+        <img class="img-22" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/intro/followers.svg">
+	    <span class="b1 padding-0-6 tin-light-font-only">
+	        {$TEXT->temp-page_followers} {$TEXT->_uni-following_this}
+	    </span>
+    </div>
+
+	<div class="h5 b2 padding-10 dark-font-only">
+        <img class="img-22" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/intro/menu-button.svg">
+	    <span class="b1 padding-0-6 noselect tin-light-font-only">
+	        {$TEXT->_uni-See} 
+			<span onclick="pageFeeds({$TEXT->temp-page_id},0,5,22);" class="light-font pointer">{$TEXT->_uni-all_page_feeds}</span>, 
+            <span onclick="pageFeeds({$TEXT->temp-page_id},0,5,1);" class="light-font pointer">{$TEXT->_uni-Photos}</span>,
+            <span onclick="pageFeeds({$TEXT->temp-page_id},0,5,2);" class="light-font pointer">{$TEXT->_uni-Videos}</span>
+	    </span>
+    </div>
+	
+</div>

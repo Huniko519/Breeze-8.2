@@ -1,0 +1,42 @@
+<div onclick="userDescription('artists_cats-all');"  class="block-container-2 clear">
+	<div class="block-title pointer">
+		<div class="h7 b3 dark-font-only padding-10">
+			{$TEXT->_uni-Page_categories-Public_Figure}
+		</div>
+	</div>
+</div>
+
+<div id="artists_cats-all" style="display:none" class="padding-10 block-container-2 clear noflow">
+    
+	{$TEXT->temp-artists}
+	
+    <div class="padding-10 clear">
+
+        <div class="center" onclick="$(this).slideUp(100,function(){$(this).next().slideDown(100);})" >
+            <span class="btn btn-small btn-light">
+                {$TEXT->_uni-Add_a_category}
+            </span>
+		</div>
+
+		<div class="center hide" id="open_wizard_4">
+			<div class="block-box-2 trans settings-20 bottom-divider">			
+				<div class="left full padding-10">			
+					<div class="input-title left text-left h6 b1 dark-font-only">
+						{$TEXT->_uni-lang_index}
+					</div>
+					<div class="input-container text-left">
+						<input id="add_cat_4" class="h5 b1 light-font-only" value="">
+						<div class="input-description h4 b1 tin-light-font-only">
+							{$TEXT->_uni-Add_category_eg}
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="right padding-10-0-0-0 noflow">
+				<span onclick="addCat(4);" class="btn btn-small btn-dark">
+					{$TEXT->_uni-Add_category}
+				</span>
+			</div>
+		</div>
+    </div>
+</div>

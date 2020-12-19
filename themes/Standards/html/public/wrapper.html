@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6 ie"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 ie"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 ie"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9 ie"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=""> <!--<![endif]-->
+ 
+<head>
+
+<!-- Set META DATA -->
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+<!-- Attach FAVICON -->
+<link rel="shortcut icon" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/favicon.ico">
+
+<!-- Website title -->
+<title>{$TEXT->title}</title>
+<meta name="description" content="Connect with friends, family and other people you know. Share photos and videos, send messages and get updates.">
+<meta name="keyword" content="social network,social site,friends,family,photos,lifestyle,photo sharing">
+
+<!-- EXT_SLOT_SHEET_1 -->
+
+<!-- Import RESET CSS sheet -->
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/reset.css{$TEXT->REFRESH_CODE}">
+
+<!-- Import Main CSS sheets -->
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/fonts.css{$TEXT->REFRESH_CODE}">
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/main.css{$TEXT->REFRESH_CODE}">
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/colors.css{$TEXT->REFRESH_CODE}">
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/CSS-sprites.css{$TEXT->REFRESH_CODE}">
+
+<!-- Import Included CSS sheets -->
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/font-awesome.css{$TEXT->REFRESH_CODE}">
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/slick.css{$TEXT->REFRESH_CODE}">
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/slick-theme.css{$TEXT->REFRESH_CODE}">
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/jelly-radios.css{$TEXT->REFRESH_CODE}">
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/nice-select.css{$TEXT->REFRESH_CODE}">
+
+<!-- EXT_SLOT_SHEET_2 -->
+
+<!-- Import important language strings for later use -->
+<script>
+function importLang() {
+    return lang = ["{$TEXT->_uni-You_and}", "{$TEXT->_uni-You_liked_this}"
+	               ,"{$TEXT->_uni-Like}", 
+				   "{$TEXT->_uni-Liked}", 
+				   "{$TEXT->_uni-read_more}", 
+				   "{$TEXT->_uni-show_less}",
+				   "{$TEXT->_uni-Profile_URL_copied}",
+				   "{$TEXT->_uni-Save_changes}",
+				   "{$TEXT->DATA-IMG-7}",
+				   "{$TEXT->DATA-IMG-5}",
+				   "{$TEXT->_uni-Be_fir_like}",   
+				   ];
+}
+var seconds = "{$TEXT->_uni_time-seconds}",a_minute = "{$TEXT->_uni_time-a_minute}",minutes = "%d {$TEXT->_uni_time-minutes}",
+an_hour = "{$TEXT->_uni_time-an_hour}",hours = "%d {$TEXT->_uni_time-hours}",a_day = "{$TEXT->_uni_time-a_day}",
+days = "%d {$TEXT->_uni_time-days}",a_month = "{$TEXT->_uni_time-a_month}",months = "%d {$TEXT->_uni_time-months}",
+a_year = "{$TEXT->_uni_time-a_year}",years = "%d {$TEXT->_uni_time-years}";
+</script>
+
+<!-- EXT_SLOT_JS_1 -->
+
+<!-- Import main open source projects -->
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.timeago.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/nice-select.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.slick.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.initialize.min.js"></script>
+
+<!-- EXT_SLOT_JS_2 -->
+
+<!-- Import Navigation -->
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/navigation.js{$TEXT->REFRESH_CODE}"></script>
+<!-- Import Main script -->
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/feeds.js{$TEXT->REFRESH_CODE}"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/public.js{$TEXT->REFRESH_CODE}"></script>
+<!-- Import Emoji script -->
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/emoji.js{$TEXT->REFRESH_CODE}"></script>
+
+<!-- EXT_SLOT_JS_3 -->
+
+<!-- Apply font  -->
+<style>
+html,body{font-size:{$TEXT->FONT_SIZE}px;}
+.brz-img-pre-loader{margin-top:5px;min-width:100%;min-height:20px;background:url('{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/loader-small.gif') no-repeat center center;}
+.brz-img-pre-loader_cc{margin-top:5px;min-width:100%;min-height:20px;background:url('{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/cc_loader.gif') no-repeat center center;}
+.brz-img-pre-loader-cover{margin-top:5px;min-width:100%;min-height:130px;background:url('{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/loader-small.gif') no-repeat center center;}
+.search-icon{background-image:url('{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/img_search.png')}
+.search-icon-loading{background-image:url('{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/search_loader.gif')}
+.attending-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Attending} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.celebrating-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Celebrating} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.listening-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Listening} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.looking-for-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Looking-for} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.managing-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Managing} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.meeting-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Meeting} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.reading-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Reading} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.thinking-about-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Thinking-about} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.checked-in-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-At} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.traveling-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Traveling_to} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.feeling-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Feeling} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.watching-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Watching} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.playing-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Playing} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.add-celebrating-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Celebrating} ...</text></svg>') no-repeat;font: 12px "Arial";}
+.add-saving-icon{background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="90" height="30"><text x="5" y="17" style="font: bold 12px Arial;">{$TEXT->_uni-Saving} ...</text></svg>') no-repeat;font: 12px "Arial";}
+</style>
+
+<!-- Set view port -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+    <!-- Installation URl-->	
+    <input id="installation_select" class="hidden" value="{$TEXT->installation}"></input>
+
+    <!-- Active theme directory-->
+    <input id="theme_select" class="hidden" value="{$TEXT->theme}"></input>
+
+    <div class="centered-body" id="body-center" style="max-width:900px!important;">
+	
+        <div id="body-start"></div>
+		
+        <!-- VIA PHP -->
+        {$TEXT->page_navigation}
+		
+        <!-- Mark down -->
+        <div class="clear"></div>
+
+		<!-- Extra element which helps you adding class || style || property to entire page -->
+		<div id="entire-page" class="brz-full">
+
+			<div id="new-modal" class="pop-modal hide clear">
+		
+				<!-- Modal content -->
+				<div id="new-modal-content" class="mi-modal white-color shadow noflow">
+		    
+
+				</div> 
+				
+			</div>			
+			
+			<div id="languages" class="pop-modal hide clear">
+				<div class="simple-modal white-color shadow noflow">
+					<div class="block padding-20 h7 b2 dark-font-only">
+			 		    {$TEXT->_uni-Languages}
+					</div>
+						
+						<div class="full left padding-20 dual-divider">
+						    {$TEXT->TEMP-available-languages}
+						</div>
+						
+						
+					<div class="clear block noflow inline-in full h6 b2">
+						<div onclick="$('#languages').fadeOut();" class="right full pointer center padding-15-10 background-x tin-light-font">{$TEXT->_uni-Cancel}</div>
+					</div>	
+				</div>
+			</div>
+			
+
+		
+		
+		<!-- Entire page -->
+		</div>
+
+        <!-- Clipboard -->
+        <input id="clipboard" class="hidden" value=""></input>
+
+        <!-- To execute AJAX JS responses  -->
+        <span id="execute_responses" name="execute_responses"></span>
+
+        <!-- Generates through PHP-->
+        <div id="body_all clear2">
+            
+			{$TEXT->page_mainbody}
+			
+			<div id="threequarter" class="half-alfa left margin-10-0-0-0">
+    
+		    	{$TEXT->left_content}
+	
+	        	<br class="hide-small">
+            	<br class="hide-small">
+            	<br class="hide-small">
+       		</div>
+			
+		    <div id="right_content" class="half-beta right margin-10-0-0-0">
+    	
+		        {$TEXT->right_content}
+				
+				{$TEXT->content}
+	
+				<div id="RIGHT_LANGUAGE" style="margin:0px 10px 15px 0px;" class="">
+		
+					<div class="block-container full h5 b2 noflow padding-10">
+		    
+		    			<span class="tin-light-font-only">
+							<img class="img-25 vertical-middle" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/others/translate.svg"> &nbsp; {$TEXT->TEMP-active_lang} - 
+						</span>
+		    			<span class="light-font pointer" onclick="$('#languages').fadeIn();">
+							{$TEXT->_uni-Change} 
+						</span>
+			
+					</div>
+		
+					<div class="block-container white-pages full h4 b2 padding-0-6 noflow transparent noselect">
+		    
+						{$TEXT->temp-i_pages}
+			
+						<span href="#" class="inline tin-light-font-only" onclick="return false;"> &copy; {$TEXT->web_name}</span>
+		
+					</div>
+		
+					<br>
+		
+					<div id="RIGHT_SCROLL_FINISH" class="brz-hide-small">
+	    			</div>
+		
+				</div>
+	
+				<div id="RIGHT_FIXED" style="position:fixed;top:55px;">
+				</div>
+
+			</div>
+			<script>addCrack();</script>
+        </div>
+
+
+        <script>
+            // Reload placeholder plugin For IE9
+            $('input, textarea').placeholder({customClass:'my-placeholder'});
+        </script>
+    
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<div {$TEXT->temp-container_style_tags} class="relative">
+    
+	<img id="profile_view_per_cover_{$TEXT->temp-user_id}" style="min-height:130px!important;" class="relative full center rounded" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-user_cover}&fol=b&w=600&h=300">
+    
+	<div class="left clear padding-15-10">
+        <div class="clear">
+            <a onclick="loadProfile({$TEXT->temp-user_id});" class="h5 b2 dark-font block">
+                {$TEXT->temp-user_name_50}<span class="padding-0-6">{$TEXT->temp-user_verified_batch}</span>
+            </a>
+            <div class="h4 b1 tin-light-font-only">
+                {$TEXT->temp-user_profession} {$TEXT->temp-user_followers}
+            </div>
+        </div>
+        <div class="padding-6-0">
+            <button id="fo32{$TEXT->temp-co_id}" class="btn btn-small btn-theme" onclick="follow({$TEXT->temp-user_id},'fo32{$TEXT->temp-co_id}','{$TEXT->_uni-Follow}','{$TEXT->_uni-Following}');">
+			    {$TEXT->_uni-Follow}
+			</button>
+        </div>
+    </div>
+    <span style="padding:30px 4px 30px 4px;margin-top:25px;" class="BUTTON_ONE pointer display-hover-mob display-topright round-in-left background-x">
+        <i class="fa fa-chevron-right h5 b2 "></i>
+    </span>
+    <span style="padding:30px 4px 30px 4px;margin-top:25px;" class="BUTTON_TWO pointer display-hover-mob display-topleft round-in-right background-x">
+        <i class="fa fa-chevron-left h5 b2 "></i>
+    </span>			
+</div>

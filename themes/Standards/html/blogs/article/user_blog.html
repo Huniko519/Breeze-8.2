@@ -1,0 +1,17 @@
+<div class="block-container-2 padding-20 noflow clear">
+	<div class="relative noflow left">
+	    <a href="{$TEXT->installation}/blogs/{$TEXT->temp-blog_id}/{$TEXT->temp-blog_href}"><img class="hover-greyscale blog-icon trans" src="{$TEXT->installation}/thumb.php?fol=blog&w=600&h=500&src={$TEXT->temp-blog_image}"></a>
+	    <div class="padding-10 full hide-small background-0 b0 display-bottomleft">
+		    <div class="h4 b2 white-font">
+			    <a href="{$TEXT->installation}/blogs/category/{$TEXT->temp-cat_id}" >{$TEXT->temp-blog_category}</a>
+			</div>
+	    </div>
+	</div>
+	<div class="padding-0-15 noflow">
+        <div><a class="h11 b3 dark-font" href="{$TEXT->installation}/blogs/{$TEXT->temp-blog_id}/{$TEXT->temp-blog_href}">{$TEXT->temp-blog_heading}</a></div>
+        <div class="padding-6-0 top-divider"><span class="h6 b1 vertical-middle tin-light-font-only vertical-align"><span class="timeago" title="{$TEXT->temp-time}">{$TEXT->temp-time}</span></span></div>
+        <div class="padding-6-0 h6 b1 tin-light-font-only">{$TEXT->temp-blog_text}</div>
+	    <a href="{$TEXT->installation}/blogs/{$TEXT->temp-blog_id}/{$TEXT->temp-blog_href}" class="btn btn-small btn-small-inline btn-light">{$TEXT->_uni-Read_more}</a>
+	    <span onclick="loadBlogData({$TEXT->temp-blog_id},9,1);"class="btn btn-small btn-small-inline btn-light pointer" onclick="">{$TEXT->_uni-Delete}</a>
+	</div>
+</div>

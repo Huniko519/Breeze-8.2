@@ -1,0 +1,13 @@
+<div class="block background-x left margin-20 rounded shadow bottom-divider relative" style="max-width:135px;margin-left:15px!important;">
+    <img onclick="loadLogin('{$TEXT->temp-user_username}','{$TEXT->temp-user_name_35}');"  class="round-in-top" id="R_LOGIN_IMG_NAME_{$TEXT->temp-user_username}" style="width:100%;" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-user_image}&fol=a&w=400&h=400">
+    <div class="block center border-sides padding-5">
+        <div class="h5 b1 dark-font-only">
+            {$TEXT->temp-user_name_35}
+        </div>
+    </div>
+    
+    <div onclick="$(this).parent().remove();clearLogin({$TEXT->temp-user_id});" class="display-topleft tin-light-font shadow background-x pointer hover-shadow display-hover animate-zoom-fast circle background-x" style="padding: 5px 8px;margin:-8px auto auto -8px;"><i class="fa fa-times"></i></div>
+    
+	{$TEXT->temp-add_read}
+
+ </div>

@@ -1,0 +1,18 @@
+<div id="info-page-vss-{$TEXT->temp-page_id}" {$TEXT->temp-node_display} class="full pages-with-infos block">
+    <div onclick="loadPage({$TEXT->temp-page_id},1,1);return false;" class="clear2">
+	    <div class="" >
+	        <img src="{$TEXT->installation}/uploads/pages/covers/{$TEXT->temp-page_cover}" style="width:100%;min-height:80px!important;" class="relative center rounded noflow full">                  
+	    </div>
+        <div align="center" class="block">
+            <div style="margin-top:-60px;" align="center" class="relative">
+                <div style="max-width:90px;" class="rounded noflow circle center">
+                    <img style="width:100%;" class="border-bold circle" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-page_icon}&fol=pa&w=200&h=200">
+                </div>
+            </div>
+        </div>
+	</div>
+    <div class="padding-5 center">
+		<a href="{$TEXT->installation}/page/{$TEXT->temp-page_id}" onclick="loadPage({$TEXT->temp-page_id},1,1);return false;" class="h7 b2 dark-font">{$TEXT->temp-page_name}</a>
+    </div>
+	{$TEXT->temp-page_full_info}
+</div>

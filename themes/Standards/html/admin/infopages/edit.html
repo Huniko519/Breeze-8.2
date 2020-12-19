@@ -1,0 +1,37 @@
+<div class="block-container-2 clear">
+	<div class="block-title">
+		<div class="h7 b3 dark-font-only padding-10">
+			{$TEXT->temp-heading}
+		</div>
+	</div>
+</div>
+
+<div class="block-container-2 clear">
+
+    <input id="am-val-6" class="hide"></input>
+    <input id="am-val-7" class="hide"></input>
+	
+    {$TEXT->temp-addinputs}
+	
+	<div id="errors-eb"></div>
+	
+	<div id="errors-eb"></div>
+	    <div class="block-box-2 trans settings-20 {$TEXT->temp-seprator}">			
+		<div class="left full padding-10">			
+			<div class="input-title left h6 b1 dark-font-only">
+				{$TEXT->_uni-Delete}
+			</div>
+			<div class="input-container">
+				<span onclick="$('#am-val-7').val('{$TEXT->temp-id}');_admin(67,0,0,'save','dellinfopage',1,1);" class="btn btn-small btn-x-theme">{$TEXT->_uni-Delete_page}</span>
+			    <div class="input-description h4 b1 tin-light-font-only">
+					{$TEXT->_uni-Delete_pagettl}
+				</div>
+			</div>
+		</div>	
+	</div>
+	
+	<div class="full noselect btn btn-dark h6 b3 center padding-10 round-in-bottom" id="update-status-form-submit" onclick="$('#am-val-6').val('{$TEXT->temp-id}');_admin(66,0,0,'save','saveinfopage',0,7);">
+		<span>{$TEXT->temp-headingbtn}</span>
+	</div>
+	
+</div>

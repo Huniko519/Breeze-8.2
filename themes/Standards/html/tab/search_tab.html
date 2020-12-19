@@ -1,0 +1,13 @@
+<div class="search-tab twothird border h6 b1 white-color" >
+  <span id="search_bar_0" class="search-tab-item tin-light-font pointer" onclick="moveSearch(0);">{$TEXT->_uni-Top}</span>
+  <span id="search_bar_1" class="search-tab-item tin-light-font pointer" onclick="moveSearch(1);">{$TEXT->_uni-People}</span>
+  <span id="search_bar_7" class="search-tab-item tin-light-font pointer" onclick="moveSearch(7);">{$TEXT->_uni-Pages}</span>
+  <span id="search_bar_2" class="search-tab-item tin-light-font pointer" onclick="moveSearch(2);">{$TEXT->_uni-Groups}</span>
+  <span id="search_bar_3" class="search-tab-item tin-light-font pointer" onclick="moveSearch(3);">{$TEXT->_uni-Tags}</span>
+  <span id="search_bar_4" class="search-tab-item tin-light-font pointer" onclick="moveSearch(4);">{$TEXT->_uni-Photos}</span>
+  <span id="search_bar_6" class="search-tab-item tin-light-font pointer" onclick="moveSearch(6);">{$TEXT->_uni-Videos}</span> 
+  <span id="search_bar_5" class="search-tab-item tin-light-font pointer" style="display:none!important;" onclick="moveSearch(5);">{$TEXT->_uni-Me}</span>
+</div> 
+<script>
+$("#search_bar_{$TEXT->TEMP_TAB_ID}").removeClass('tin-light-font').addClass('active-down b2 dark-font-only');
+</script>

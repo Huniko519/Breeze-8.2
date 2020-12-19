@@ -1,0 +1,29 @@
+<div id="comment-id-{$TEXT->temp-comment_id}" class="full inline-in top-divider padding-20">
+    
+	<div class="comment-heading full inline-in">	    
+		<div class="user-img left">
+			<a href="{$TEXT->installation}{$TEXT->temp-href}" onclick="{$TEXT->temp-onclick}return false;" >
+				<img class="circle img-25" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-user_img}&w=50&h=50">
+			</a>
+		</div>
+		<div class="user-description rest">
+			<a class="h6 b2 dark-font line-1" href="{$TEXT->installation}{$TEXT->temp-href}" onclick="{$TEXT->temp-onclick}return false;" >
+				{$TEXT->temp-user_name}
+			</a>
+			<div class="time line-1-2">
+				<span title="{$TEXT->temp-time}" class="h4 b1 tin-light-font-only block timeago">
+					{$TEXT->temp-time}
+				</span>
+			</div>
+		</div>	
+	</div>
+	
+	<div class="margin-5-0 full tin-light-font-only h6 b1 block">
+	    {$TEXT->temp-comment}
+    </div>
+	
+	<div class="block tin-light-font-only full h4 b2 inline-in">
+	    {$TEXT->temp-comment_btns}
+    </div>
+	
+</div>

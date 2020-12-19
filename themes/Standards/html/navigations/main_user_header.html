@@ -1,0 +1,88 @@
+<!-- Add CSS styles for search -->
+<style>
+.search-icon{background-image:url('{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/img_search.png')}
+.search-icon-loading{background-image:url('{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/search_loader.gif')}
+body{background:#fff !important;background-color:#fff !important;background-image:#fff !important;}
+</style>   
+<ul class="brz-navbar brz-pink-hd-2 brz-card-3 brz-top brz-left-align brz-medium" style="border-radius:0px !important;height:43px !important;z-index:10 !important;">    
+    <div class="brz-clear"> 	
+        <a class="brz-hide-small brz-hide-medium brz-left brz-padding" href="{$TEXT->installation}">
+		    <img  style="margin:3px 0px auto 20px;width:27.5px;height:27px;" alt="{$TEXT->web_name}" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/brz.png{$TEXT->REFRESH_CODE}">
+		</a>	
+        <span class="brz-left" onclick="window.open('{$TEXT->installation}');" style="margin:9px 10px auto 0px;"> 
+		    <form id="345234123" name="345234123" onsubmit="return submitSearch(event);" >
+			    <input id="swsef89u3hj89sd" autocomplete="off" class="swsef89u3hj89sd brz-serch-main brz-left brz-input brz-animate-input brz-hover-white brz-text-grey brz-small input-icon search-icon" placeholder="{$TEXT->temp-Search_placeholder}" type="search"></input>
+			</form>
+		</span>	
+		
+		<div class="brz-margin-w brz-text-shad brz-right-desk">
+            
+			<img id="profile-avatar-top" style="margin:9px -12px 0px 0px;width:26px;height:26px;" title="{$TEXT->_uni-Profile_load_text3}"  src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-image}&fol=a&w=30&h=30" alt="..." onclick="window.open('{$TEXT->installation}/{$TEXT->temp-username}')" class="brz-round brz-hide-medium brz-hide-small">
+			
+			<span class="brz-right" style="margin:9px 10px 0px 10px;">	
+  			    
+				<span class="brz-cursor-pointer brz-hide-medium brz-hide-small" onclick="window.open('{$TEXT->installation}/{$TEXT->temp-username}');">  
+				    <span class="brz-text-white brz-small nav-item-text-inverse brz-padding brz-hover-dark-it brz-text-bold">{$TEXT->temp-Name_navigation_30}</span> <span class="brz-text-shad nav-item-text-inverse brz-opacity">|</span>	     
+		        </span>
+				
+			    <span title="{$TEXT->_uni-Home}" class="brz-cursor-pointer brz-hide-medium brz-hide-small" onclick="window.open('{$TEXT->installation}');">  
+				    <span class="brz-text-white brz-small nav-item-text-inverse brz-padding brz-hover-dark-it brz-text-bold">{$TEXT->_uni-Home}</span> <span class="brz-text-shad nav-item-text-inverse brz-opacity">|</span>	     
+		        </span>
+				
+			    <span title="{$TEXT->_uni-Trending_now}" class="brz-cursor-pointer brz-padding-right brz-hide-medium brz-hide-small" onclick="window.open('{$TEXT->installation}/user/trends');">  
+				    <span class="brz-text-white brz-small nav-item-text-inverse brz-padding brz-hover-dark-it brz-text-bold">{$TEXT->_uni-Trending}</span>     
+		        </span>
+				
+			    <span title="{$TEXT->_uni-Home}" class="brz-cursor-pointer brz-hide-large" onclick="window.open('{$TEXT->installation}');">  
+				    <i id="brz-class-home" class="fa fa-home brz-padding-right brz-large-min2 brz-text-white brz-main-actiable brz-class-home" ></i>	     
+		        </span>
+			
+                <span title="{$TEXT->_uni-Trending_now}" class="brz-cursor-pointer brz-hide-large brz-no-image" onclick="window.open('{$TEXT->installation}/user/trends');">
+				    <i id="brz-class-trending" class="fa brz-padding-right fa-star brz-large-min2 brz-text-shad brz-main-actiable brz-class-trending"></i>
+		        </span>
+				
+                <span title="{$TEXT->_uni-Messenger}" class="brz-cursor-pointer brz-display-container" onclick="window.open('{$TEXT->installation}/user/chats');">
+					<span id="INBOX_COUNTER" style="margin:-10px 15px auto auto;" class="brz-display-topright brz-noselect brz-round brz-tiny-3 brz-red"></span>
+				    <i id="brz-class-chats" class="fa brz-padding-right fa-inbox brz-large-min2 brz-text-shad brz-main-actiable brz-class-chats"></i>      
+		        </span> 
+				
+                <span title="{$TEXT->_uni-Notifications}" class="brz-cursor-pointer brz-display-container brz-no-image" onclick="window.open('{$TEXT->installation}/user/notifications');">
+				    <img style="position:fixed;top:35px;width:22px;height:10px;" class="brz-hide-small" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/box-top-edge.png">
+					<span id="dfbhne78342jsdf" style="margin:-10px 15px auto auto;" class="brz-display-topright brz-noselect brz-round brz-tiny-3 brz-red"></span>
+				    <i id="brz-class-notifications" class="fa brz-padding-right fa-globe brz-large-min2 brz-text-shad brz-main-actiable brz-class-notifications"></i>      
+		        </span> 
+		    </span>
+	    </div>
+	</div>
+</ul>
+
+<div id="languages" style="display:none;" class="brz-modal">
+	<div class="brz-modal-content2 brz-animate-zoom brz-clear brz-card-8" style="height:auto;">
+		<div class="brz-border brz-border-pink">
+			<div class="brz-pink-light brz-clear brz-padding brz-medium brz-text-bold brz-full">
+			    <span class="brz-left">{$TEXT->_uni-Languages}</span>
+			</div>
+			<div style="max-height:250px;overflow:auto;" class="brz-white nicescrollit brz-clear brz-padding brz-small brz-full">
+			    <span class="brz-left">{$TEXT->TEMP-available-languages}</span>
+			</div>
+			<div class="brz-super-grey brz-clear brz-border-top brz-padding brz-small brz-full">
+			    <div onclick="$('#languages').fadeOut();" class="brz-tag brz-blue brz-hover-blue-hd brz-padding brz-cursor-pointer brz-right brz-text-white brz-text-bold brz-small">{$TEXT->_uni-CLOSE}</div>
+			</div>
+		</div>	
+	</div>
+</div>
+<div id="NO_EXPRESS"></div>
+<script>
+$(document).ready(function(){
+
+    $('.brz-page-type').on('click', function(e) { 
+	    	
+		$(this).find('.brz-body-it-3').slideUp(450,function() {$(this).next().addClass("brz-page-ride-overflow");});
+
+		$(this).parent().siblings().find('.brz-body-it-3').next().removeClass("brz-page-ride-overflow");			
+			
+	    $(this).parent().siblings().find('.brz-body-it-3').slideDown(450);   
+    });
+	
+});
+</script>

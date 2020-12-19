@@ -1,0 +1,643 @@
+<!-- Add CSS styles for search -->
+<style>
+.search-icon{background-image:url('{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/img_search.png')}
+.search-icon-loading{background-image:url('{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/search_loader.svg')}
+</style>
+ 
+<div id="nav-for-mob" class="header header-color hide-large">  
+	<div id="mb-main-nav" onclick="scrollToTop();" >
+		<div class="header-mob-icon left" onclick="mobSearch(0);$(this).toggleClass('header-mob-icon-active').siblings().removeClass('header-mob-icon-active');sidenav_open();" >
+            <i class="fa fa-bars brz-nav-opener"></i>
+        </div>
+		<div class="header-mob-icon left" onclick="mobSearch(0);$(this).toggleClass('header-mob-icon-active').siblings().removeClass('header-mob-icon-active');loadHome();" >
+		    <span id="FEEDS_COUNTER_MB" class="noselect"></span>
+			<i class="fa fa-newspaper-o"></i>
+        </div>
+		<div id="mb_search" class="header-mob-icon left" onclick="mobSearch(1);" >
+            <i class="fa fa-search"></i>
+        </div>
+		<div class="header-mob-icon left" onclick="mobSearch(0);$(this).toggleClass('header-mob-icon-active').siblings().removeClass('header-mob-icon-active');loadChats(0,0,1);" >
+		    <span id="INBOX_COUNTER_MB" class="noselect"></span>
+            <i class="fa fa-envelope-o"></i>
+        </div>
+		<div class="header-mob-icon left" onclick="mobSearch(0);$(this).toggleClass('header-mob-icon-active').siblings().removeClass('header-mob-icon-active');sidenav_close();loadNotifications();" >
+		    <span id="NOTIFS_COUNTER_MB" class="noselect"></span>
+            <i class="fa fa-globe"></i>
+        </div>
+    </div>
+	
+	<div class="full left" style="display:none">
+	    <span id="mb_search_container" class="header-search header-search-mob left">
+		
+		</span>
+		<div class="header-mob-icon left" onclick="mobSearch(0);" >
+            <i class="fa fa-times brz-nav-opener"></i>
+        </div>
+	</div>
+
+</div>
+
+<ul class="header header-color hide-small">    
+	
+	<div class="clear win-1400 win-height-nav"> 
+
+		<div class="left pri-nav-toggler" style="margin-left:25px;">
+			<a style="line-height:45px!important;" class="header-fonts header-icon-container" onclick="sidenav_open();return false;">  
+				<img class="svg header-icon activeable class-trending" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/menu.svg">
+			</a>
+		</div>
+
+        <span id="345234123_cnt" class="header-search left" style="margin-left:25px;"> 
+		    <form id="345234123" name="345234123" class="header-search-form" onsubmit="return submitSearch(event);" >
+			    <input id="swsef89u3hj89sd" autocomplete="off" class="swsef89u3hj89sd input header-search-input h4 b1 white-font-only input-icon search-icon" placeholder="{$TEXT->temp-Search_placeholder}" type="search"></input>
+			</form>
+		</span>
+		
+		<div class="header-right">
+           
+			<span class="right">
+
+				<a class="hide-medium header-icon-container-small noflow left" title="{$TEXT->_uni-Profile_load_text3}" href="{$TEXT->installation}/{$TEXT->temp-username}" onclick="loadProfile({$TEXT->temp-user_id});return false;">  
+				   <img id="profile-avatar-top" width="30px;" class="no-opacity circle" title="{$TEXT->_uni-Profile_load_text3}" onclick="aOverlow();s23u89dssh();loadProfile({$TEXT->temp-user_id});" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-image}&fol=a&w=70&h=70" alt="">
+		        </a>
+
+				<a class="hide-medium header-fonts white-font" title="{$TEXT->_uni-Profile_load_text3}" href="{$TEXT->installation}/{$TEXT->temp-username}" onclick="loadProfile({$TEXT->temp-user_id});return false;">  
+				    <span>{$TEXT->temp-Name_navigation_30}</span> 	     
+		        </a>
+				
+				<a class="hide-medium header-fonts white-font" title="{$TEXT->_uni-Home}" href="{$TEXT->installation}/user/feeds" onclick="loadHome();return false;">  
+				    <span>{$TEXT->_uni-Home}</span>	     
+		        </a>
+				
+				<a class="hide-medium header-fonts white-font" title="{$TEXT->_uni-Trending_now}" href="{$TEXT->installation}/user/trends" onclick="loadTrending(0,0,1);return false;">  
+				    <span>{$TEXT->_uni-Trending}</span>	     
+		        </a>
+				
+				<a title="{$TEXT->_uni-Home}" style="line-height:45px!important;" class="hide-large header-fonts header-icon-container" href="{$TEXT->installation}/user/feeds" onclick="loadHome();return false;">  
+				    <img class="svg header-icon activeable class-home" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/home.svg">
+		        </a>
+				
+				<a title="{$TEXT->_uni-Trending_now}" style="line-height:45px!important;" class="hide-large header-fonts header-icon-container" href="{$TEXT->installation}/user/trends" onclick="loadTrending(0,0,1)();return false;">  
+				    <img class="svg header-icon activeable class-trending" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/star2.svg">
+		        </a>
+				
+				<a title="{$TEXT->_uni-Messenger}" style="line-height:45px!important;" class="header-fonts header-icon-container relative" href="{$TEXT->installation}/user/chats" onclick="loadChats(0,0,1);return false;">  
+					<img class="svg header-icon activeable class-chats" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/messenger.svg">
+					<span id="INBOX_COUNTER" class="noselect"></span>
+		        </a>
+				
+				<a id="NOTIFICATIONS_WIDGET" style="line-height:45px!important;" class="header-fonts header-icon-container drop-hover relative" href="{$TEXT->installation}/user/notifications" onmouseenter="checkNewNots();" onclick="return false;">  
+                    <img id="NOTIFICATIONS_DESK_CARRET" class="no-opacity drop-img carret-down carret-notifications" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/misc/drop-down-traingle.png">
+				    <img class="svg header-icon activeable class-notifications" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/bell.svg">
+					<span id="dfbhne78342jsdf" class="noselect"></span>
+					
+					<div id="NOTIFICATIONS_DESK" style="right:0;" onclick="" class="drop-content shadow inactive arrow noflow round-bottom">
+					
+					    <div style="width:380px;height:430px;" class="hide-small noflow">
+				            
+							<!-- Notifications heading -->
+							<div class="drop-inner-heading h2 b3 bottom-divider border-sides" style="height:25px;" >
+								<span class="dark-font pointer right padding-0-6" title="" onclick="refreshNots();">
+								    {$TEXT->_uni-REFRESH}
+								</span>
+								<span class="dark-font pointer right padding-0-6" title="" onclick="getSettings(4);">
+								    {$TEXT->_uni-SETTINGS}
+								</span>	
+								<span class="tin-light-font-only padding-0-6">
+									{$TEXT->_uni-NOTIFICATIONS}
+								</span>
+							</div>
+
+	                        <!-- Notifications container -->
+                            <div id="43if89" style="margin: 0px;height:375px;width:380px;" class="nicescrollit border-sides"></div>
+                            
+		                    <!-- Notifications functions-->
+	                        <div id="4389zj-u549" onclick="loadNotifications();" class="drop-bottom h5 b3 pointer hvr-opacity trans btn-dark">
+			                    <span id="3423534w" class=""  style="width:100%">
+		                            {$TEXT->_uni-See_all_notifications}
+		                        </span>
+	                            <span style="width:100%;display:none" id="fdg54sdr" class="">
+		                            {$TEXT->_uni-No_more_notifications}
+		                        </span>
+	                        </div>
+	                    </div>	
+					</div>	
+		        </a>
+				
+                <span style="margin-left:10px;line-height:45px!important;" title="{$TEXT->_uni-Help_center}" class="header-fonts header-icon-container drop-hover hide-small hide-medium relative">
+				    <img style="display:none;" class="no-opacity drop-img carret-down carret-help" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/misc/drop-down-traingle.png">
+				    <img class="svg header-icon activeable class-help" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/info.svg">
+					<div id="HELP_DESK" style="right:0;" class="drop-content border shadow">
+		                <div style="width:200px;" class="hide-small hide-medium">     
+				            <div class="drop-inner-heading h2 b2 bottom-divider">
+								<span class="tin-light-font-only">
+									{$TEXT->_uni-HELP_CENTER}
+								</span>
+							</div>
+							<div class="h5 b2 full drop-items">
+				                {$TEXT->temp-i_pages}
+								<a title="{$TEXT->_uni-Browse}" href="{$TEXT->installation}/browse/14w24" onclick="window.open('{$TEXT->installation}/browse/welcome');return false;" >{$TEXT->_uni-Browse}</a>
+				            </div>
+					   </div>
+                    </div>	
+				</span>	
+
+                <span title="{$TEXT->_uni-Navigate}" style="line-height:45px!important;" class="header-fonts header-icon-container drop-hover hide-small hide-medium relative" onmouseenter="angleIt('#SVG_ARR',180);" onmouseleave="angleIt('#SVG_ARR',360);">
+                    <img id="SVG_ARR" class="svg header-icon expand-icon activeable class-me" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/down-arr.svg"> 
+				    <div id="MY_DESK" class="drop-content border shadow" style="right:0;">
+		                <div style="width:200px;" class="hide-small hide-medium">     
+				            <div class="drop-inner-heading h2 b2 bottom-divider">
+								<span class="tin-light-font-only">
+									{$TEXT->_uni-NAVIGATE_TO}
+								</span>
+							</div>
+							<div class="h5 b2 full">
+				                <a class="padding-10 tin-light-font drop-item" title="{$TEXT->_uni-News_feeds}" href="{$TEXT->installation}/user/feeds" onclick="loadHome();return false;" >
+									{$TEXT->_uni-News_feeds}
+								</a>
+				                <a class="padding-10 tin-light-font drop-item" title="{$TEXT->_uni-Notifications}" href="{$TEXT->installation}/user/notifications" onclick="loadNotifications();return false;" >
+									{$TEXT->_uni-Notifications}
+								</a>								
+				                <a class="padding-10 tin-light-font drop-item" title="{$TEXT->_uni-Messenger}" href="{$TEXT->installation}/user/chats" onclick="loadChats(0,0,1);return false;" >
+									{$TEXT->_uni-Messenger}
+								</a>
+				                <a class="padding-10 tin-light-font drop-item" title="{$TEXT->_uni-Trending_now}" href="{$TEXT->installation}/user/trends" onclick="loadTrending(0,0,1);return false;" >
+									{$TEXT->_uni-Trending_now}
+								</a>
+							</div>
+							<div class="drop-inner-heading h2 b2 dual-divider tin-light-font-only" >
+   							    {$TEXT->_uni-PROFILE}
+							</div>							
+							<div class="h5 b2 full">
+								<a class="padding-10 tin-light-font drop-item" title="{$TEXT->_uni-Profile_load_text3}" href="{$TEXT->installation}/{$TEXT->temp-username}" onclick="updateTopbar('brz-class-account');loadProfile({$TEXT->temp-user_id});updateNavigation('p');return false;" >
+									{$TEXT->temp-Name_navigation_14}
+								</a>
+				                <a class="padding-10 tin-light-font drop-item" title="{$TEXT->_uni-Settings}" href="{$TEXT->installation}/user/edit" onclick="updateTopbar('NULL');sidenav_close();getSettings(1);return false;" >
+									{$TEXT->_uni-Settings}
+								</a>
+				                <a class="padding-10 tin-light-font drop-item" title="{$TEXT->_uni-Log_out}" href="#" onclick="updateTopbar('NULL');user_logOut();return false;" >
+									{$TEXT->_uni-Log_out}
+								</a>
+							</div>			
+                        </div> 			
+                    </div>
+				</span>
+		    </span>
+	    </div>	
+	</div>
+</ul>
+
+<div class="main-user-nav" onclick="scrollToTop();">
+
+	<div id="pri-nav" class="pri-nav pri-nav-hide-mass hide-small hide-medium white-color">
+	
+		<div class="nav-item-pri theme-x-color">
+			<div class="padding-10">
+				<div class="img-wrap"><img class="full" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/brz-white.png{$TEXT->REFRESH_CODE}"></img></div>
+			</div>
+		</div>
+		
+		<div class="nav-parent dark-font-only">
+			
+			<div class="nav-child noselect">
+
+				<div id="" class="nav-item nav-it pointer theme-x-svg" onclick="sidenav_close();sidenav_open();" >
+					<div class="nav-item-max"><img class="img-20 nav-it-svg svg" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/menu.svg{$TEXT->REFRESH_CODE}"></img></div>
+				</div>
+				
+				<div id="nav-item-1" class="nav-item nav-item-1 nav-it pointer theme-x-svg" onclick="sidenav_close();loadHome();" title="{$TEXT->_uni-ttl_news_feeds_all}" >
+					<div class="nav-item-max"><img class="img-20 nav-it-svg svg" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/newsfeeds.svg{$TEXT->REFRESH_CODE}"></img></div>
+				</div>
+				
+				<div id="nav-item-populer" class="nav-item nav-item-populer nav-it pointer theme-x-svg" onclick="sidenav_close();loadDiscover();" title="{$TEXT->_uni-Popular}" >
+					<div class="nav-item-max"><img class="img-20 nav-it-svg svg" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/star.svg{$TEXT->REFRESH_CODE}"></img></div>
+				</div>		
+				
+				<div id="nav-item-TREN" class="nav-item nav-item-TREN nav-it pointer theme-x-svg" onclick="sidenav_close();loadTrending(0,0,1);" title="{$TEXT->_uni-Trending_now}" >
+					<div class="nav-item-max"><img class="img-20 nav-it-svg svg" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/star2.svg{$TEXT->REFRESH_CODE}"></img></div>
+				</div>
+				
+				<div id="nav-item-PA" class="nav-item nav-item-PA nav-it pointer theme-x-svg" onclick="sidenav_close();pageFeeds(0,0,1);" title="{$TEXT->_uni-ttl_load_page_feeds}" >
+					<div class="nav-item-max"><img class="img-20 nav-it-svg svg" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/flag.svg{$TEXT->REFRESH_CODE}"></img></div>
+				</div>
+				
+				<div id="nav-item-GR" class="nav-item nav-item-GR nav-it pointer theme-x-svg" onclick="sidenav_close();groupFeeds(0,0,1);" title="{$TEXT->_uni-ttl_load_group_feeds}" >
+					<div class="nav-item-max"><img class="img-20 nav-it-svg svg" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/group.svg{$TEXT->REFRESH_CODE}"></img></div>
+				</div>
+				
+				<div id="nav-item-2" class="nav-item nav-item-2 nav-it pointer theme-x-svg" onclick="sidenav_close();loadNotifications();" title="{$TEXT->_uni-ttl_notiications_history}" >
+					<div class="nav-item-max"><img class="img-20 nav-it-svg svg" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/bell.svg{$TEXT->REFRESH_CODE}"></img></div>
+				</div>	
+				
+				<div id="nav-item-6" class="nav-item nav-item-6 nav-it pointer theme-x-svg" onclick="sidenav_close();loadChats(0,0,1);" title="{$TEXT->_uni-Messenger}" >
+					<div class="nav-item-max"><img class="img-20 nav-it-svg svg" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/messenger.svg{$TEXT->REFRESH_CODE}"></img></div>
+				</div>
+				
+				<div id="nav-item-blogs" class="nav-item nav-item-blogs nav-it pointer theme-x-svg" onclick="sidenav_close();loadBlogData(0,7,1);store('/user/blogs');" title="{$TEXT->_uni-Articles}" >
+					<div class="nav-item-max"><img class="img-20 nav-it-svg svg" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/article.svg{$TEXT->REFRESH_CODE}"></img></div>
+				</div>
+
+				<div id="nav-item-PH" class="nav-item nav-item-PH nav-it pointer theme-x-svg" onclick="sidenav_close();updateNavigation('PH');$('#swsef89u3hj89sd').val('{$TEXT->temp-username}');moveSearch(4);" title="{$TEXT->_uni-Photos}" >
+					<div class="nav-item-max"><img class="img-20 nav-it-svg svg" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/photos.svg{$TEXT->REFRESH_CODE}"></img></div>
+				</div>	
+				
+				<div id="nav-item-4" class="nav-item nav-item-4 nav-it pointer theme-x-svg" onclick="sidenav_close();loadRelatives(0);" title="{$TEXT->_uni-ttl_followers_ppl}" >
+					<div class="nav-item-max"><img class="img-20 nav-it-svg svg" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/follower.svg{$TEXT->REFRESH_CODE}"></img></div>
+				</div>
+				
+				<div id="nav-item-5" class="nav-item nav-item-5 nav-it pointer theme-x-svg" onclick="sidenav_close();loadRelatives(1);" title="{$TEXT->_uni-ttl_followings_ppl}" >
+					<div class="nav-item-max"><img class="img-20 nav-it-svg svg" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/following.svg{$TEXT->REFRESH_CODE}"></img></div>
+				</div>
+
+				<div id="nav-item-ads" class="nav-item nav-item-ads nav-it pointer theme-x-svg" onclick="sidenav_close();loadAdsManager();" title="{$TEXT->_uni-Manage_Ads}" >
+					<div class="nav-item-max"><img class="img-20 nav-it-svg svg" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/advertising.svg{$TEXT->REFRESH_CODE}"></img></div>
+				</div>
+				
+				<div id="nav-item-e" class="nav-item nav-item-e nav-it pointer theme-x-svg" onclick="sidenav_close();getSettings(1);" title="{$TEXT->_uni-ttl_edit_profile}" >
+					<div class="nav-item-max"><img class="img-20 nav-it-svg svg" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/cog.svg{$TEXT->REFRESH_CODE}"></img></div>
+				</div>
+				
+				<div id="nav-item-logout" class="nav-item nav-item-logout nav-it pointer theme-x-svg" onclick="sidenav_close();user_logOut();" title="{$TEXT->_uni-ttl_logout}" >
+					<div class="nav-item-max"><img class="img-20 nav-it-svg svg" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/power.svg{$TEXT->REFRESH_CODE}"></img></div>
+				</div>
+				
+				<br><br><br>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div id="sec-nav" class="sec-nav hide white-color right-divider">
+	
+		<div class="nav-item-sec theme-x-color">
+			<div class="padding-10">
+				<div class="h9 b2 white-font-only">{$TEXT->_uni-NAVIGATION}</div>
+			</div>
+		</div>
+		
+		<div class="nav-parent dark-font-only">
+			
+			<div class="nav-child noselect">
+ 
+				<div align="center" style="margin-bottom:10px;" class="clear2 padding-10-0 bottom-divider hide-large">
+					<div align="center" class="block">
+						<div align="center" class="relative">
+							<div style="max-width:60px;" class="rounded noflow circle center">
+								<img id="profile-avatar-navigation" style="width:100%;" class="border-bold circle" onclick="aOverlow();s23u89dssh();loadProfile({$TEXT->temp-user_id});" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-image}&fol=a&w=200&h=200">
+							</div>
+						</div>
+					</div>
+					
+					<div class="padding-5 center hide-large">
+						<a href="{$TEXT->installation}/{$TEXT->temp-user_id}" onclick="aOverlow();s23u89dssh();loadProfile({$TEXT->temp-user_id});return false;" class="h7 b2 dark-font">{$TEXT->temp-Name_navigation_30}</a>
+					</div>
+				
+				</div>
+				
+				<div class="nav-item nav-it pointer block full x-tin-light-font theme-x-svg" onclick="sidenav_close();" title="{$TEXT->_uni-Collapse_Navigation}" >
+					<div class="noflow nav-item-max">
+						<img class="img-20 nav-it-svg svg inline left" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/close.svg{$TEXT->REFRESH_CODE}"></img>
+						<span class="h6 b2 inline left"><div class="nav-title">{$TEXT->_uni-Collapse_Navigation}</div></span>
+					</div>
+				</div>
+				
+				<div id="nav-item-1" class="nav-item nav-item-1 nav-it pointer block full x-tin-light-font theme-x-svg" onclick="sidenav_close();loadHome();" title="{$TEXT->_uni-ttl_news_feeds_all}">
+					<div class="noflow nav-item-max">
+						<img class="img-20 nav-it-svg svg inline left" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/newsfeeds.svg{$TEXT->REFRESH_CODE}"></img>
+						<span class="h6 b2 inline left"><div class="nav-title">{$TEXT->_uni-News_feeds}</div></span>
+					</div>
+				</div>
+				
+				<div id="nav-item-populer" class="nav-item nav-item-populer nav-it pointer block full x-tin-light-font theme-x-svg" onclick="sidenav_close();loadDiscover();" title="{$TEXT->_uni-Popular}">
+					<div class="noflow nav-item-max">
+						<img class="img-20 nav-it-svg svg inline left" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/star.svg{$TEXT->REFRESH_CODE}"></img>
+						<span class="h6 b2 inline left"><div class="nav-title">{$TEXT->_uni-Popular}</div></span>
+					</div>
+				</div>
+				
+				<div id="nav-item-TREN" class="nav-item nav-item-TREN nav-it pointer block full x-tin-light-font theme-x-svg" onclick="sidenav_close();loadTrending(0,0,1);" title="{$TEXT->_uni-Trending_now}">
+					<div class="noflow nav-item-max">
+						<img class="img-20 nav-it-svg svg inline left" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/star2.svg{$TEXT->REFRESH_CODE}"></img>
+						<span class="h6 b2 inline left"><div class="nav-title">{$TEXT->_uni-Trending}</div></span>
+					</div>
+				</div>	
+				
+				<div id="nav-item-PA" class="nav-item nav-item-PA nav-it pointer block full x-tin-light-font theme-x-svg" onclick="sidenav_close();pageFeeds(0,0,1);" title="{$TEXT->_uni-ttl_load_page_feeds}">
+					<div class="noflow nav-item-max">
+						<img class="img-20 nav-it-svg svg inline left" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/flag.svg{$TEXT->REFRESH_CODE}"></img>
+						<span class="h6 b2 inline left"><div class="nav-title">{$TEXT->_uni-Page_feeds}</div></span>
+					</div>
+				</div>
+				
+				<div id="nav-item-GR" class="nav-item nav-item-GR nav-it pointer block full x-tin-light-font theme-x-svg" onclick="sidenav_close();groupFeeds(0,0,1);" title="{$TEXT->_uni-ttl_load_group_feeds}">
+					<div class="noflow nav-item-max">
+						<img class="img-20 nav-it-svg svg inline left" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/group.svg{$TEXT->REFRESH_CODE}"></img>
+						<span class="h6 b2 inline left"><div class="nav-title">{$TEXT->_uni-Group_feeds}</div></span>
+					</div>
+				</div>
+				
+				<div id="nav-item-2" class="nav-item nav-item-2 nav-it pointer block full x-tin-light-font theme-x-svg" onclick="sidenav_close();loadNotifications();" title="{$TEXT->_uni-ttl_notiications_history}">
+					<div class="noflow nav-item-max">
+						<img class="img-20 nav-it-svg svg inline left" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/bell.svg{$TEXT->REFRESH_CODE}"></img>
+						<span class="h6 b2 inline left"><div class="nav-title">{$TEXT->_uni-Notifications}</div></span>
+					</div>
+				</div>
+				
+				<div id="nav-item-6" class="nav-item nav-item-6 nav-it pointer block full x-tin-light-font theme-x-svg" onclick="sidenav_close();loadChats(0,0,1);" title="{$TEXT->_uni-Messenger}">
+					<div class="noflow nav-item-max">
+						<img class="img-20 nav-it-svg svg inline left" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/messenger.svg{$TEXT->REFRESH_CODE}"></img>
+						<span class="h6 b2 inline left"><div class="nav-title">{$TEXT->_uni-Messenger}</div></span>
+					</div>
+				</div>	
+				
+				<div id="nav-item-blogs" class="nav-item nav-item-blogs nav-it pointer block full x-tin-light-font theme-x-svg" onclick="sidenav_close();loadBlogData(0,7,1);store('/user/blogs');" title="{$TEXT->_uni-Articles}">
+					<div class="noflow nav-item-max">
+						<img class="img-20 nav-it-svg svg inline left" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/article.svg{$TEXT->REFRESH_CODE}"></img>
+						<span class="h6 b2 inline left"><div class="nav-title">{$TEXT->_uni-Articles}</div></span>
+					</div>
+				</div>	
+				
+				<div id="nav-item-PH" class="nav-item nav-item-PH nav-it pointer block full x-tin-light-font theme-x-svg" onclick="sidenav_close();updateNavigation('PH');$('#swsef89u3hj89sd').val('{$TEXT->temp-username}');moveSearch(4);" title="{$TEXT->_uni-Photos}">
+					<div class="noflow nav-item-max">
+						<img class="img-20 nav-it-svg svg inline left" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/photos.svg{$TEXT->REFRESH_CODE}"></img>
+						<span class="h6 b2 inline left"><div class="nav-title">{$TEXT->_uni-Photos}</div></span>
+					</div>
+				</div>
+				
+				<div id="nav-item-4" class="nav-item nav-item-4 nav-it pointer block full x-tin-light-font theme-x-svg" onclick="sidenav_close();loadRelatives(0);" title="{$TEXT->_uni-ttl_followers_ppl}">
+					<div class="noflow nav-item-max">
+						<img class="img-20 nav-it-svg svg inline left" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/following.svg{$TEXT->REFRESH_CODE}"></img>
+						<span class="h6 b2 inline left"><div class="nav-title">{$TEXT->_uni-Followers}</div></span>
+					</div>
+				</div>
+				
+				<div id="nav-item-5" class="nav-item nav-item-5 nav-it pointer block full x-tin-light-font theme-x-svg" onclick="sidenav_close();loadRelatives(1);" title="{$TEXT->_uni-ttl_followings_ppl}">
+					<div class="noflow nav-item-max">
+						<img class="img-20 nav-it-svg svg inline left" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/following.svg{$TEXT->REFRESH_CODE}"></img>
+						<span class="h6 b2 inline left"><div class="nav-title">{$TEXT->_uni-Followings}</div></span>
+					</div>
+				</div>
+				
+				<div id="nav-item-ads" class="nav-item nav-item-ads nav-it pointer block full x-tin-light-font theme-x-svg" onclick="sidenav_close();loadAdsManager();" title="{$TEXT->_uni-Manage_Ads}">
+					<div class="noflow nav-item-max">
+						<img class="img-20 nav-it-svg svg inline left" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/advertising.svg{$TEXT->REFRESH_CODE}"></img>
+						<span class="h6 b2 inline left"><div class="nav-title">{$TEXT->_uni-Manage_Ads}</div></span>
+					</div>
+				</div>	
+				
+				<div id="nav-item-e" class="nav-item nav-item-e nav-it pointer block full x-tin-light-font theme-x-svg" onclick="sidenav_close();getSettings(1);" title="{$TEXT->_uni-ttl_edit_profile}">
+					<div class="noflow nav-item-max">
+						<img class="img-20 nav-it-svg svg inline left" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/cog.svg{$TEXT->REFRESH_CODE}"></img>
+						<span class="h6 b2 inline left"><div class="nav-title">{$TEXT->_uni-Edit_Profile}</div></span>
+					</div>
+				</div>
+
+				<div id="nav-item-logout" class="nav-item nav-item-logout nav-it pointer block full x-tin-light-font theme-x-svg" onclick="sidenav_close();user_logOut();" title="{$TEXT->_uni-ttl_logout}">
+					<div class="noflow nav-item-max">
+						<img class="img-20 nav-it-svg svg inline left" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/power.svg{$TEXT->REFRESH_CODE}"></img>
+						<span class="h6 b2 inline left"><div class="nav-title">{$TEXT->_uni-Log_out}</div></span>
+					</div>
+				</div>
+				
+				<div class="full block padding-10">
+					<div class="h7 b2 dark-font-only">
+					
+						<span class="h6 b2 block margin-5-0-0-0 padding-0-0-0-10" >
+							<div class="nav-item-max noflow">{$TEXT->_uni-Create}</div>
+						</span>
+
+						<div class="block h5 b1 padding-10">
+							<div class="nav-item-max noflow">
+								<span onclick="loadAdsManager();" class="pointer x-tin-light-font">{$TEXT->_uni-Ads}</span> -
+								<span onclick="locate('{$TEXT->installation}/?new=page');" class="pointer x-tin-light-font">{$TEXT->_uni-Page}</span> -
+								<span onclick="loadModal(1);loadGroup(0,14,32);" class="pointer x-tin-light-font">{$TEXT->_uni-Group}</span>
+							</div>
+						</div>
+					
+					</div>
+				</div>
+				
+				<br><br><br>
+			</div>
+			
+		</div>
+	
+	</div>
+	
+</div>
+
+<nav class="sidenav animate-left noselect" onclick="scrollToTop();" id="SIDE_NAVIGATION">
+	<div id="P_NAV_LEFT" class="sidenav-child padding-10-0-0-0" > 
+	
+		<div class="block-container white-color">
+			<div class="h7 b2 dark-font-only">
+				<div id="rec-pages" >
+					<div class="center" style="padding:40px 0px;">
+						<img class="img-35" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/loader.svg" width="50" height="50"></img>
+					</div>
+					<script>getContent('rec-pages','#rec-pages','#rec-pages');</script>
+				</div>
+			</div>
+		</div>
+		
+		<div class="block-container white-color">
+			<div class="h7 b2 dark-font-only">
+				<div class="h6 b2 block padding-10-0 bottom-divider" >
+					<div class="padding-0-0-0-10">{$TEXT->_uni-Recommended}</div>
+				</div>
+				<div id="rec-articles" class="block h5 b1 clear2 padding-10">
+					<div class="center" style="padding:40px 0px;">
+						<img class="img-35" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/loader.svg" width="50" height="50"></img>
+					</div>
+					<script>getContent('rec-articles','#rec-articles','#rec-articles');</script>
+				</div>
+			</div>
+		</div>
+		
+		<div class="block-container white-color">
+			<div class="h7 b2 dark-font-only">
+				<div class="h6 b2 block padding-10-0 bottom-divider" >
+					<div class="padding-0-0-0-10">{$TEXT->_uni-Create}</div>
+				</div>
+				<div class="block h5 b1 padding-10">
+					<div class="nav-item-max noflow">
+						<span onclick="loadAdsManager();" class="pointer x-tin-light-font">{$TEXT->_uni-Ads}</span> -
+						<span onclick="locate('{$TEXT->installation}/?new=page');" class="pointer x-tin-light-font">{$TEXT->_uni-Page}</span> -
+						<span onclick="loadModal(1);loadGroup(0,14,32);" class="pointer x-tin-light-font">{$TEXT->_uni-Group}</span>
+					</div>
+				</div>
+					
+			</div>
+		</div>
+		
+		<br><br><br>
+		
+	</div>	
+	<div id="S_NAV_LEFT" class="sidenav-child hide-small hide-medium">
+	</div>	
+</nav>
+
+<script>
+
+// Setup websocket server connection
+var socket;
+
+var socketInterval;
+
+var disconnected = false;
+
+function initSocketServer(newsocket) {
+
+	var newsocket = (newsocket !== undefined) ? newsocket : 0;
+
+	// If socket is not created then create one
+	if(!socket || newsocket) {
+
+		console.log("SYS-Websockets: INIT");
+
+		// Stop the other socket server request, works in case of reconnect interval
+		quit();
+
+		try {
+
+			socket = new WebSocket(host);
+
+			socket.onopen = function(e) { 
+				clearInterval(socketInterval);
+				console.log("SYS-Websockets: CONNECTED");
+			}
+
+			socket.onmessage = function(e) { 
+			
+				var response = JSON.parse(e.data);
+
+				// Parse stuff
+				var msg_formid = response.formid;
+				var msg_userid = response.userid;
+				var msg_type = response.type;
+				var msg_content = response.content;
+				var msg_imgsrc = $(".chat-icon-"+msg_formid).attr("src");
+
+				switch(msg_type) {
+
+					// Unexpected Error, Connection related, server DOWN
+					case "ERROR" : socketError("Failed to connect with Server : Error Code(G102)");break;
+						
+					// Some one started typing
+					case "TYPING" : addTyping(msg_formid, msg_imgsrc); break;
+
+					// User stopped typing
+					case "NOTYPING" : $(".typing-"+msg_formid).remove();break;
+						
+					// A new message detect
+					case "MESSAGE" : doLiveChat(msg_formid, websocketserver); break;
+				
+					// Double tab
+					case "ERROR1" : log("Your previous window has been disconnected. New messages will appear here now");
+
+					// Dispose
+					default: $(".messages-container-"+msg_formid).append(response.type);
+						
+				}
+				
+			};
+
+		} catch(ex){ 
+			console.log(ex); 
+		}
+		
+		socket.onclose = function(e) { 
+
+			socketError("Connection lost, please reload the page to reconnect");
+			console.log("SYS-Websockets: LOST");
+			
+			disconnected = true;
+
+			// socketInterval = setInterval(function() {initSocketServer()}, 2000);
+	
+		};
+
+		socket.onerror = function(e) { 
+
+			socketError("Connection closed");
+			console.log("SYS-Websockets: CLOSED");
+
+			disconnected = true;
+
+			// socketInterval = setInterval(function() {initSocketServer(1)}, 2000);
+
+		};
+
+	} else {
+		console.log("SYS-Websockets: REFRESHED");
+		if(disconnected) {
+			socketError('Connection lost, please reload the page to reconnect');
+		}
+	}
+		
+}
+
+function socketNewMessage(m_formid, m_userid, m_type, m_content) {
+
+	if(websocketserver) {
+
+		initSocketServer();
+
+		// Request message
+		var req_message = {
+			formid: m_formid,
+			userid: m_userid,
+			type: m_type,
+			content: m_content
+		};
+
+		socket.send(JSON.stringify(req_message));		
+
+	}
+	
+}
+
+// Function to add typing indicator
+function addTyping(msg_formid, msg_imgsrc) {
+	
+	// Remove previous loaders
+	$(".typing-"+msg_formid).remove();
+	
+	$(".messages-container-"+msg_formid).each(function() {
+		
+		$(this).append('<div id="typing-"'+msg_formid+' class="typing-'+msg_formid+' full trans noflow inline-in padding-6-0"><div class="left padding-2-6"><img class="circle img-25 border-min" src="'+msg_imgsrc+'"></div><div class="left white-color border message padding-4-8 h5 b1 tin-light-font-only"><img src="'+$("#installation_select").val()+'/themes/'+$("#theme_select").val()+'/img/icons/chatloader.svg" width="35px"></div></div>');
+		scrollFull(this);
+		
+	});
+
+}
+
+function scrollFullClass(mclass) {
+	
+	$(mclass).each(function() {
+		scrollFull(this);
+	});
+
+}
+
+ function quit(){
+	if (socket != null) {
+		socket.close();
+		socket = null;
+	}
+ }
+
+function socketError(msg) { 
+	$(".messages-container-select, .messages-container").html('<div class="full trans noflow body-color inline-in padding-6-0"><div class="left body-color full message padding-4-8 h5 b1 tin-light-font-only">'+msg+'</div></div>');
+	scrollFullClass(".messages-container-select");
+}
+
+// Run Socket connection to server
+$(document).ready(function() {
+	if(websocketserver) initSocketServer();
+});
+
+</script>
+
+<div class="overlay hide-large animate-left" onclick="sidenav_close()" style="cursor: pointer; display: none;" id="OVERLAY_NAV"></div>

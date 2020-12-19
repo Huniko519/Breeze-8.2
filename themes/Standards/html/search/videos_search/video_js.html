@@ -1,0 +1,19 @@
+<script>
+	$.getJSON('https://noembed.com/embed',
+		{format: 'json', url: '{$TEXT->temp-post_content}'}, function (data) {
+		    
+			if(data.error) {							
+				$('#MAIN_SEARCH_IMG_TT1_{$TEXT->temp-post_id}').html(data.error);
+				$('#MAIN_SEARCH_IMG_T1_{$TEXT->temp-post_id}').html('');									
+			} else {
+				loadImage(data.thumbnail_url.replace(/hqdefault/g, 'sddefault'),'#MAIN_SEARCH_IMG_{$TEXT->temp-post_id}');
+				$('#MAIN_SEARCH_IMG_TT1_{$TEXT->temp-post_id}').html(data.title);
+				$('#MAIN_SEARCH_IMG_T1_{$TEXT->temp-post_id}').html(data.author_name);	
+			}
+		
+			loadImage(data.thumbnail_url.replace(/hqdefault/g, 'sddefault'),'#MAIN_SEARCH_IMG_{$TEXT->temp-post_id}');
+			$('#MAIN_SEARCH_IMG_TT1_{$TEXT->temp-post_id}').html(data.title);
+			$('#MAIN_SEARCH_IMG_T1_{$TEXT->temp-post_id}').html(data.author_name);
+		
+	});	
+</script>

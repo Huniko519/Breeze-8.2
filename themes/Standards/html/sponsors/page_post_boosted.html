@@ -1,0 +1,93 @@
+<div id="post_view_{$TEXT->temp-id}" class="block-container-2 sponsored user-post clear">
+    
+	<!-- White Part -->
+	<div class="padding-20">	    
+		<div class="post-heading clear2">	    
+			<div class="user-img left">
+				<a href="{$TEXT->installation}/page/{$TEXT->temp-page_link}" onclick="loadPage({$TEXT->temp-page_id});return false;" >
+					<img class="circle img-42" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-page_icon}&fol=pa&w=90&h=90">
+				</a>
+			</div>
+			<div class="user-description">
+				<span class="options-drop drop-hover brz-show dark-svg right">
+			        <img class="svg img-14 post-options hide" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/buttons/expand.svg">
+				    <div style="right:0;" class="drop-content h5 b2 tin-light-font padding-15-0 shadow border rounded noflow">			
+                        {$TEXT->temp-dropoptions}
+				    </div>				
+			    </span>
+				<span class="h5 b2 tin-light-font-only">
+				    {$TEXT->temp-heading}
+				</span>
+				<div class="time">
+					<span title="{$TEXT->temp-time}" class="h5 b1 tin-light-font-only block timeago">
+						{$TEXT->temp-time}
+					</span>
+				</div>
+			</div>	
+		</div>
+	
+		<div id="post_view_text_{$TEXT->temp-id}" class="post-text h6 b1 dark-font-only">
+			<div class="hide">{$TEXT->temp-pt_ns}</div>
+			<div class="brz-c-text"></div>
+			<div class="hide">{$TEXT->temp-p_t}</div>
+		</div>
+	
+		<div class="post-content">
+	        {$TEXT->temp-p_con}
+		</div>
+	
+		<div class="post-meta top-divider inline-in tin-light-font-only padding-15-0-0-0">
+
+			<div class="margin-0-10-0-0">
+	  		  	{$TEXT->temp-likebtn}
+			</div>
+			
+			<div class="post-likers hide-small">
+                {$TEXT->temp-post_likers}
+			</div>
+			
+			<div id="post_view_is_like_{$TEXT->temp-id}" class="margin-0-10-0-0 h4 max-137">
+	    		{$TEXT->temp-liketext}
+			</div>
+		
+			<div class="margin-0-10-0-0 right theme-svg">
+			    <div id="post_view_share_{$TEXT->temp-id}" onclick="share({$TEXT->temp-id},1);" class="dark-font like-btn pointer b2"><img class="img-22 svg" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/buttons/share.svg"></div>
+			</div>
+			
+			<div class="margin-0-10-0-0 right theme-svg">
+	    		{$TEXT->temp-commentbtn} 
+			</div>		
+		
+		</div>
+	</div>
+	
+	<!-- Comment container --->
+	<div id="comments-view-{$TEXT->temp-id}" class="hide background-x noflow top-divider">
+	
+	    <div id="comments-loader-1-{$TEXT->temp-id}" class="center"></div> 
+		
+	    <div id="comments-{$TEXT->temp-id}" class="top-items"></div>
+		
+	    <div id="comments-loader-2-{$TEXT->temp-id}" class="center"></div> 
+	    
+		<div class="full inline-in top-divider white-color padding-20">
+	
+	        <div class="left margin-0-10-0-0">
+				<a href="#" onclick="{$TEXT->temp-user_load_href}return false;" >
+                	<img class="circle img-25" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-user_img_c_c}&w=50&h=50">
+	            </a>
+		    </div>
+
+	        <div class="noflow wp-80">
+                <div style="" class="full margin-0-10-0-0">
+                    <form id="form-add-comment-{$TEXT->temp-id}" class="full" onsubmit="return submitComment(event,{$TEXT->temp-id});">
+                        <input id="form-add-comment-text-{$TEXT->temp-id}" style="padding: 0px !important;" class="input full transparent padding-10 h5 b1 tin-light-font-only" placeholder="{$TEXT->_uni-Write_a_comment}">
+                    </form>
+                </div>
+            </div>
+			
+        </div>
+
+	</div>
+	
+</div>

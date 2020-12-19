@@ -1,0 +1,19 @@
+<div id="PA_FEED_{$TEXT->temp-page_id}" onclick="$('#RIGHT_PAGES_C').find('div.active-side').removeClass('active-side');$(this).addClass('active-side');pageFeeds({$TEXT->temp-page_id},0,5);" class="block-box trans padding-10 bottom-divider">
+    <div class="blocks relative">
+        <div class="block-left left text-left margin-right line-1-5">
+            <img class="rounded img-35" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-page_icon}&fol=pa&w=70&h=70">
+		</div>
+	    <div class="block-rest left text-left padding-0-0-0-10">
+            <div class="clear h4 b2 serif tin-light-font-only">
+			    <span class="h6 b3 dark-font-only line-1-2 block">
+					{$TEXT->temp-page_name}
+				</span>
+				<span class="tin-light-font line-1">
+				   	<a href="{$TEXT->installation}/page/{$TEXT->temp-page_id}">
+					    {$TEXT->_uni-See_page}
+					</a> 
+				</span>
+			</div> 
+		</div>
+    </div>
+</div>

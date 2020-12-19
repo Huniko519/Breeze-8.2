@@ -1,0 +1,19 @@
+<div id="GR_FEED_{$TEXT->temp-group_id}" onclick="$('#RIGHT_GROUPS_C').find('div.active-side').removeClass('active-side');$(this).addClass('active-side');groupFeeds({$TEXT->temp-group_id},0,5);" class="block-box trans padding-10 bottom-divider">
+    <div class="blocks relative">
+        <div class="block-left left text-left margin-right line-1-5">
+            <img class="rounded img-35" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-group_cover}&fol=f&w=70&h=70"></img>
+		</div>
+	    <div class="block-rest left text-left padding-0-0-0-10">
+            <div class="clear h4 b2 serif tin-light-font-only">
+			    <span class="h6 b3 dark-font pointer line-1-2 block">
+					{$TEXT->temp-group_name}
+				</span>
+				<span class="tin-light-font line-1">
+				   	<a href="{$TEXT->installation}/group/{$TEXT->temp-group_id}">
+					    {$TEXT->_uni-See_group}
+					</a> 
+				</span>
+			</div> 
+		</div>
+    </div>
+</div>

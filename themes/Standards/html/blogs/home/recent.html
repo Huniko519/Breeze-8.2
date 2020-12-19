@@ -1,0 +1,11 @@
+<div class="item relative margin-5 trans pointer" >
+    <a href="{$TEXT->installation}/blogs/{$TEXT->temp-blog_id}/{$TEXT->temp-blog_href}" >
+        <img class="hover-greyscale trans" src="{$TEXT->installation}/thumb.php?fol=blog&w=600&h=500&src={$TEXT->temp-blog_image}">
+        <div class="padding-10 h7 full background-0 b0 display-bottomleft">
+	        <a class="white-font" href="{$TEXT->installation}/blogs/{$TEXT->temp-blog_id}/{$TEXT->temp-blog_href}">{$TEXT->temp-blog_heading}</a>
+		    <div class="h4 b2 white-x-font">
+			    <a href="{$TEXT->installation}/blogs/category/{$TEXT->temp-cat_id}" onclick="loadBlogData({$TEXT->temp-cat_id},1,1);return false;">{$TEXT->temp-blog_category}</a>
+			</div>
+	    </div>
+	</a>
+</div>

@@ -1,0 +1,61 @@
+<script>
+$(document.body).on({
+    
+	mouseenter: function() {
+        if(!$(this).hasClass("fa")) {
+		        $(this).animate({'padding-right':10},30);
+		}
+    },
+	
+    mouseleave: function(e) {
+        if(!$(this).hasClass("fa")) {
+		    $(this).animate({'padding-right':4},30);
+		}
+    }
+	
+    }, ".BUTTON_ONE").on({
+	
+        mouseenter: function() {
+            if(!$(this).hasClass("fa")) {
+			    $(this).animate({'padding-left':10},30);
+			}
+        }, 
+		
+        mouseleave: function(e) {
+            if(!$(this).hasClass("fa")) {
+			    $(this).animate({'padding-left':4},30);
+			}
+        }
+		
+    }, ".BUTTON_TWO");
+	
+$(document).on("click", ".BUTTON_ONE", function() {
+    
+	if($(this).parent().next('.relative').length) {
+        $(this).parent().hide().removeClass("brz-showing").next().show().addClass("brz-showing");
+    } else {
+        if($(this).parent().prev('.relative').length) {
+            $(this).parent().hide().removeClass("brz-showing");
+            $("#PERSONALITIES_SHOW_BOX .relative:first-child").show().addClass("brz-showing");
+        } else {
+            $(this).hide().next().hide();
+        }
+    }
+	
+});	
+
+$(document).on("click", ".BUTTON_TWO", function() {
+    
+	if($(this).parent().prev('.relative').length) {
+        $(this).parent().hide().removeClass("brz-showing").prev().show().addClass("brz-showing");
+    } else {
+        if($(this).parent().next('.relative').length) {
+            $(this).parent().hide().removeClass("brz-showing");
+            $("#PERSONALITIES_SHOW_BOX .relative:last-child").show().addClass("brz-showing");
+        } else {
+            $(this).hide().prev().hide();
+        }
+    }
+	
+});		
+</script>

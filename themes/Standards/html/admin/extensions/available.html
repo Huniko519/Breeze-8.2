@@ -1,0 +1,48 @@
+<div class="block-container-2 clear">
+	<div class="block-title">
+		<div class="h7 b3 dark-font-only padding-10">
+			{$TEXT->_uni-Available_extensions}
+		</div>
+	</div>
+</div>
+<div id="AVA_EXTS" class="block-container-2 noflow clear">
+    
+	<div class="noflow padding-10">
+	
+		<div onclick="$('#EXTENSION').click();" class="padding-5 pointer left trans">
+        	<img src="{$TEXT->installation}/uploads/posts/backgrounds/add-image.png" class="brounded filter-opacity trans" width="60"></i>
+    	</div>
+
+    	<div onclick="$('#EXTENSION').click();" class="">
+        	<div class="noflow line-1-5">
+           	 	<div class="padding-10-0-0-0">
+                	<span class="theme-font h6 b2">
+                   	 	<span class="">{$TEXT->_uni-Upload_extensions}</span>
+                	</span>
+            	</div>	
+            	<span class=""> 
+                	<span class="h5 b1 tin-light-font-only">{$TEXT->_uni-ext-format}</span>
+            	</span>										
+        	</div>
+    	</div>
+	
+    </div>
+	
+	{$TEXT->temp-available}
+	
+</div>
+
+<form id="EXT_FORM" name="EXT_FORM" action="{$TEXT->installation}/require/requests/update/upload-extension.php" onsubmit ="return false;" method="POST" enctype="multipart/form-data" target="EXT_FORM_TARGET">   
+    <input style="display:none!important;" name="EXTENSION" id="EXTENSION" type="file"/>
+    <iframe id="EXT_FORM_TARGET" name="EXT_FORM_TARGET" src="" style="display: none"></iframe>
+</form>
+<script>
+    $("#EXTENSION").on('change', function(event){	
+        $(document).on('change', ':file', function () {
+            if($("#EXTENSION")[0].files.length) {
+                uploadExtension();
+                //$("EXTENSION_SELF").val($("#EXTENSION").val());
+            }
+        }); 
+    });					
+</script>

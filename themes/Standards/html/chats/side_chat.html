@@ -1,0 +1,127 @@
+	<div data-userid="{$TEXT->temp-user_id}" class="inline white-color chat-form shadow chat-form-{$TEXT->temp-form_id} text-right">
+				
+		<div class="chat-form-header header-color full padding-5 right noflow">
+
+			<span class="left margin-5">
+				<a onclick="aOverlow();s23u89dssh();loadChat({$TEXT->temp-form_id});return false;">
+					<img class="circle img-20 chat-icon-{$TEXT->temp-form_id} chat-name-{$TEXT->temp-form_id}" src="{$TEXT->temp-icon}" alt="">
+				</a>
+			</span>
+
+			<input id="active-form-side-{$TEXT->temp-form_id}" class="active-form-{$TEXT->temp-form_id} hide" value="{$TEXT->temp-form_id}" >
+			<input id="latest-message-side-{$TEXT->temp-form_id}" class="latest-message-{$TEXT->temp-form_id} hide" value="0"></input>
+			<input id="typing-form-side-{$TEXT->temp-form_id}" class="typing-form-{$TEXT->temp-form_id} hide" value="0">
+
+			<a onclick="aOverlow();s23u89dssh();loadChat({$TEXT->temp-form_id});return false;" class="left h5 b1 padding-6-0 white-font-only chat-name-{$TEXT->temp-form_id}">{$TEXT->temp-chat_name}</a>
+
+			<span onclick="removeChatForm({$TEXT->temp-form_id});" class="right margin-5 theme-svg">
+				<img class="img-14 svg margin-5-0-0-0" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/cancel.svg{$TEXT->REFRESH_CODE}"></img>
+			</span>
+			
+		</div>
+
+		<div class="text-right right full white-color noflow chat-bin">
+
+			<div class="right nicescrollit full side-messages-container body-color messages-container messages-container-{$TEXT->temp-form_id}">
+				{$TEXT->temp-messages}
+			</div>
+
+			<div id="add-message-loader-side-{$TEXT->temp-form_id}" class="load top-divider add-message-loader-class" ></div>
+
+			<div class="right full side-message-form">
+				<form id="chat-form-side-{$TEXT->temp-form_id}" onsubmit="return submitMessage(event, {$TEXT->temp-form_id}, 'side');">
+					<input id="add-message-text-side-{$TEXT->temp-form_id}" class="input add-message-text-side-{$TEXT->temp-form_id} transparent no-border full h6 b1 tin-light-font" placeholder="Type a message"></input>
+				</form>
+			</div>
+		</div>
+
+		<div class="hide data-item" data-id="{$TEXT->temp-form_id}"></div> 
+		
+		<script>
+
+			if(websocketserver) {
+	
+				initSocketServer();
+	
+				// Registration message
+				var register_message = {
+					formid: "{$TEXT->temp-form_id}",
+					userid: "{$TEXT->temp-user_id}",
+					type: "REGISTER",
+					content: "NULL"
+				};
+	
+				socket.send(JSON.stringify(register_message));		
+	
+			}
+	
+			doLiveChat({$TEXT->temp-form_id}, {$TEXT->temp-user_id}, websocketserver);
+	
+			scrollFullClass(".side-message-container-{$TEXT->temp-form_id}");
+	
+			// Adding real time functionality
+			$(document).ready(function() {
+	
+				// If websockets are enabled
+				if(websocketserver == 1) {
+	
+					// Universal search typing timer
+					var typingTimer;
+					
+					var typing = false;
+	
+					// Time to wait for user typing response
+					var typingInterval = 800;
+					
+					// Live search General 
+					$(document).on('keyup', '#add-message-text-side-{$TEXT->temp-form_id}', function(event) { 
+						
+						// Clear timer
+						clearTimeout(typingTimer);
+						
+						var typing_message = {
+							formid: "{$TEXT->temp-form_id}",
+							userid: "{$TEXT->temp-user_id}",
+							type: "TYPING",
+							content: "NULL"
+						}
+	
+						var notyping_message = {
+							formid: "{$TEXT->temp-form_id}",
+							userid: "{$TEXT->temp-user_id}",
+							type: "NOTYPING",
+							content: "NULL"
+						}
+	
+						// If some typing response from user found
+						if ($('#add-message-text-side-{$TEXT->temp-form_id}').val()) {
+	
+							$(".typing-form-{$TEXT->temp-form_id}").val("1");
+							
+							if(!typing) {
+								socket.send(JSON.stringify(typing_message));
+								typing = true;
+							}
+	
+							// Add timer to trigger for end
+							typingTimer = setTimeout(function() {socket.send(JSON.stringify(notyping_message));typing = false;}, typingInterval);
+							
+						} else {
+	
+							if($(".typing-form-{$TEXT->temp-form_id}").val() == "1") {
+								socket.send(JSON.stringify(notyping_message));
+								$(".typing-form-{$TEXT->temp-form_id}").val("0");
+							}
+							
+							typing = false;
+						
+						}
+					});
+	
+				}
+	
+			});
+	
+		</script>
+
+	</div>

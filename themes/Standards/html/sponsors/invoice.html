@@ -1,0 +1,40 @@
+<div class="block-container-2 padding-10 noflow clear">
+	<form action="{$TEXT->installation}/includes/paypal/process.php" method="post">	
+
+		<div class="block-box-2 trans settings-20 bottom-divider">			
+			<div class="left full padding-10">			
+				<div class="input-title left h6 b1 dark-font-only">
+					{$TEXT->_uni-Price}
+				</div>
+				<div class="input-container">
+					<div class="input-description h4 b0 tin-light-font-only">
+						<span id="price" class="font-green h9 b2">{$TEXT->temp-price}</span> {$TEXT->temp-cc}
+					</div>
+				</div>
+			</div>	
+		</div>
+	
+		<div class="block-box-2 trans settings-20">			
+			<div class="left full padding-10">			
+				<div class="input-title left h6 b1 dark-font-only">
+					{$TEXT->_uni-Checkout}
+				</div>
+				<div class="input-container">
+					<div class="input-description h4 b0 tin-light-font-only">
+				    	{$TEXT->_uni-Terms_ads}
+					</div>
+				</div>
+			</div>
+		</div> 
+   	
+        <input type="hidden" name="payment_id" value="{$TEXT->temp-payment_id}">
+
+		<div class="center">
+            <input type="image" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/misc/paypal.png" style="width:200px;" alt="PayPal">
+       	</div>
+		
+	    <div id="invoice-gen" name="submit" class="padding-20 center">
+			<input type="submit" class="btn btn-medium btn-theme" value="{$TEXT->_uni-Pay_now}"></input>
+		</div>   
+    </form>
+</div>

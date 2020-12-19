@@ -1,0 +1,98 @@
+<div id="RIGHT_GROUP_LIV" class="trans-container">
+	<div class="block-title">
+        <div class="h6 b3 dark-font-only">{$TEXT->_uni-Location}</div>
+    </div>
+	<div class="jelly-radios">
+	    <ul class="padding-10">
+			<li class="tin-light-font" >
+			    <input type="radio" checked id="filter-people-liv-1" value="" onclick="search(0,25,2);scrollToTop();"  name="filter-people-liv">
+			    <label class="h5 b3">{$TEXT->_uni-Anycity}</label>
+			    <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+			</li>
+			<div class="hide" id="add-liv-keys-root"></div>
+	    </ul>	
+    </div>
+	<div class="brz-hover-new_clr noflow clear">
+		<div class="h5 b2 clear pointer padding-0-12">
+			    
+			<div class="left clear noflow line-1-9 padding-0-6">	
+				<img class="img-14 " src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/misc/plus.svg"></img>
+			</div>
+				
+			<div class="">
+				<div class="noflow">
+					<input id="add-liv-keys" class="input clear inline no-border transparent hover-opacity" placeholder="{$TEXT->_uni-Add_keywords}"></input>
+					<button style="display:none;" class="btn btn-small btn-light right" onclick="addKeys('liv',2);">
+					    {$TEXT->_uni-Add}
+			        </button>
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
+
+<div id="RIGHT_GROUP_EDU" class="trans-container">
+	<div class="block-title">
+        <div class="h6 b3 dark-font-only">{$TEXT->_uni-Description}</div>
+    </div>
+	<div class="jelly-radios">
+	    <ul class="padding-10">
+			<li class="tin-light-font" >
+			    <input type="radio" checked id="filter-people-edu-1" value="" onclick="search(0,25,2);scrollToTop();"  name="filter-people-edu">
+			    <label class="h5 b3">{$TEXT->_uni-Anydesc}</label>
+			    <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+			</li>
+			<div class="hide" id="add-edu-keys-root"></div>
+	    </ul>	
+    </div>
+	<div class="brz-hover-new_clr noflow clear">
+		<div class="h5 b2 clear pointer padding-0-12">    
+			<div class="left clear noflow line-1-9 padding-0-6">	
+				<img class="img-14 " src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/misc/plus.svg"></img>
+			</div>
+				
+			<div class="">
+				<div class="noflow">
+					<input id="add-edu-keys" class="input clear inline no-border transparent hover-opacity" placeholder="{$TEXT->_uni-Add_keywords}"></input>
+					<button style="display:none;" class="btn btn-small btn-light right" onclick="addKeys('edu',2);">
+					    {$TEXT->_uni-Add}
+			        </button>
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
+
+<div id="RIGHT_GROUP_DATE" class="trans-container">
+	<div class="block-title">
+        <div class="h6 b3 dark-font-only">{$TEXT->_uni-Group_type}</div>
+    </div>
+	<div class="jelly-radios">
+	    <ul class="padding-10">
+			<li class="tin-light-font" >
+			    <input type="radio" checked value="3" id="filter-group-type-3" onclick="search(0,25,2);scrollToTop();"  name="filter-group-type">
+			    <label class="h5 b3">{$TEXT->_uni-G_TYPE_3}</label>
+			    <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+			</li>
+			<li class="tin-light-font" >
+			    <input type="radio" value="1" id="filter-group-type-1" onclick="search(0,25,2);scrollToTop();"  name="filter-group-type">
+			    <label class="h5 b3">{$TEXT->_uni-G_TYPE_1}</label>
+			    <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+			</li>
+			<li class="tin-light-font" >
+			    <input type="radio" value="2" id="filter-group-type-2" onclick="search(0,25,2);scrollToTop();"  name="filter-group-type">
+			    <label class="h5 b3">{$TEXT->_uni-G_TYPE_2}</label>
+			    <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+			</li>			
+	    </ul>	
+    </div>	
+</div>
+
+<script>
+// Allow addin dynamic filters
+$(document).ready(function() {   
+	$(document).on('keyup', '#add-liv-keys',  function() { getKeys('liv');  });
+	$(document).on('keyup', '#add-edu-keys',  function() { getKeys('edu');  });
+});
+
+</script>

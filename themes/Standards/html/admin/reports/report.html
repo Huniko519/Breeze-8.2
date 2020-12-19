@@ -1,0 +1,77 @@
+<div id="report_{$TEXT->temp-rid}" class="bottom-divider user-main block-container-2 white-color">
+    <div class="clear padding-10 noflow inner-padding">
+        <div class="left noflow pointer" style="height:46px;padding:6px 6px 0px 6px;">
+            <img class="img-40 circle" src="{$TEXT->temp-img1}">
+        </div>
+        <span class="">
+			<div class="search-padding">
+	            <div class="clear2">
+					<div onclick="userDescription('{$TEXT->temp-rid}_c23asd78');" class="right tin-light-font padding-10 h6 b2" >
+						<i class="fa fa-chevron-down"></i>
+					</div>
+                    <div class="h6 b2">
+                        <a onclick="$('#am-val-1').val('{$TEXT->temp-idu1}');_admin(45,0,0,'load','edituser',1,5);return false;" class="dark-font">{$TEXT->temp-name1} {$TEXT->temp-verfied_batch1}</a>
+                    </div>
+                    <div class="tin-light-font-only b1 h4">
+                        <div class="tin-light-font-only" title="{$TEXT->temp-heading}" >{$TEXT->temp-heading}</div>
+                    </div>
+                </div>
+            </div>
+        </span>
+    </div>
+	
+    <div id="{$TEXT->temp-rid}_c23asd78" class="background-x padding-10 top-divider clear2 hide">
+        
+		<div class="center">										
+            <div class="round padding-10">
+                <div class="h9 b2 dark-fontonly center">
+				    {$TEXT->_uni-Report}
+				</div>
+                <div class="h5 b1 tin-light-font-only">
+				{$TEXT->_uni-Pending_reports_ttl} <span class="timeago" title="{$TEXT->temp-time}">{$TEXT->temp-time}</span>
+				</div>
+            </div>			
+        </div>
+		
+		<br>
+
+		<div class="h5 b1 top-divider dark-font-only padding-10">
+		    {$TEXT->temp-val1}
+		    {$TEXT->temp-val2}
+		    {$TEXT->temp-val3}
+		    {$TEXT->temp-val4}
+		</div>	
+
+		<br>
+		
+		<div class="h6 b1 padding-10">
+			<span class="dark-font-only">{$TEXT->_uni-Reported_content}</span> : <span class="h5 tin-light-font-only">{$TEXT->temp-heading2}</span>
+		</div>
+			
+		<div class="dual-divider">
+            {$TEXT->temp-report_content}
+        </div>		
+
+        <div class="left padding-10-0">
+            <img class="img-35 rounded" onclick="$('#am-val-1').val('{$TEXT->temp-idu2}');_admin(45,0,0,'load','edituser',1,5);" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-img2}&fol=a&w=70&h=70">
+        </div>									
+	    <div class="">
+		    <div class="noflow padding-10-0">
+			    <div class="line-1" style="padding:2px 6px;">
+					<span onclick="$('#am-val-1').val('{$TEXT->temp-idu2}');_admin(45,0,0,'load','edituser',1,5);" class="pointer h6 b2 dark-font">
+						{$TEXT->temp-name2} {$TEXT->temp-verfied_batch2}
+					</span>
+				</div>
+				<span style="padding:0px 6px;">
+					<span class="h5 b1 tin-light-font-only">{$TEXT->_uni-Content_owner}</span>
+				</span>	                               
+		    </div>
+        </div>	
+
+		<div class="top-divider padding-10 center">									
+			<button class="btn btn-small btn-small-inline btn-light" onclick="$('#report_{$TEXT->temp-rid}').remove();$('#{$TEXT->temp-rid}_c23asd78').remove();executeReport({$TEXT->temp-rid},1)">{$TEXT->_uni-Mark_safe}</button>								    
+			<button class="btn btn-small btn-small-inline btn-dark" onclick="$('#report_{$TEXT->temp-rid}').remove();$('#{$TEXT->temp-rid}_c23asd78').remove();executeReport({$TEXT->temp-rid},0)">{$TEXT->_uni-Delete_content}</button>									        
+		</div> 
+		<div class="center h4 b1 tin-light-font-only">{$TEXT->_uni-Report_t_notice}</div>
+    </div>
+</div>

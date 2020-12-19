@@ -1,0 +1,27 @@
+<div class="block-container clear2">
+    <div class="block-title">
+        <div class="h7 b3 dark-font-only padding-10">{$TEXT->_uni-Add_filter}</div>
+    </div>
+	
+    <div class="h6 b2">
+        <div class="admin-filter-item tin-light-font padding-10 bottom-divider pointer" filter-key="1" ><i class="fa fa-check img-14"></i> <span class="">{$TEXT->_uni-Verified_users}</span></div>
+        <div class="admin-filter-item tin-light-font padding-10 bottom-divider pointer" filter-key="2" ><i class="fa fa-credit-card img-14"></i> <span class="">{$TEXT->_uni-Verified_e}</span></div>
+        <div class="admin-filter-item tin-light-font padding-10 bottom-divider pointer" filter-key="3" ><i class="fa fa-minus-square-o img-14"></i> <span class="">{$TEXT->_uni-Search_a_emails}</span></div>
+        <div class="admin-filter-item tin-light-font padding-10 bottom-divider pointer" filter-key="4" ><i class="fa fa-trash-o img-14"></i> <span class="">{$TEXT->_uni-Search_s_emails}</span></div>
+        <div class="admin-filter-item tin-light-font padding-10 bottom-divider pointer" filter-key="5" ><i class="fa fa-exclamation-circle img-14"></i> <span class="">{$TEXT->_uni-Search_v_n_emails}</span></div>
+        <div class="admin-filter-item tin-light-font padding-10 bottom-divider pointer" filter-key="6" ><i class="fa fa-question-circle-o img-14"></i> <span class="">{$TEXT->_uni-Without_ip}</span></div>
+        <div class="admin-filter-item tin-light-font padding-10 bottom-divider pointer" filter-key="7" ><i class="fa fa-universal-access img-14"></i> <span class="">{$TEXT->_uni-Marked_safe}</span></div>
+        <div class="admin-filter-item tin-light-font padding-10 bottom-divider pointer" filter-key="8" ><i class="fa fa-user-times img-14"></i> <span class="">{$TEXT->_uni-Not_verified}</span></div>
+        <div class="admin-filter-item tin-light-font padding-10 bottom-divider pointer" filter-key="9" ><i class="fa fa-sort-alpha-desc img-14"></i> <span class="">{$TEXT->_uni-View_older}</span></div>
+        <div class="admin-filter-item tin-light-font padding-10 bottom-divider pointer" filter-key="10" ><i class="fa fa-user img-14"></i> <span class="">{$TEXT->_uni-Switch_all_users_2}</span></div>
+        <div class="admin-filter-item tin-light-font padding-10 bottom-divider pointer" filter-key="11" ><i class="fa fa-calendar-o img-14"></i> <span class="">{$TEXT->_uni-Switch_all_users}</span></div>
+    </div>
+</div>
+
+<script>
+$('.admin-filter-item').on('click',function() {
+    scrollToTop();
+	_admin(44,$(this).attr('filter-key'),0,'load','users',1,5);
+    $(this).removeClass('tin-light-font').addClass('dark-font-only active-side').siblings().removeClass('dark-font-only active-side').addClass('tin-light-font');
+})
+</script>

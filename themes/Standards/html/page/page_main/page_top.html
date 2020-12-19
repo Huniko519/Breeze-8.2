@@ -1,0 +1,135 @@
+<style>
+#cover-container,#cover-container-loader {display: block;max-height: 280px!important;min-height:130px;width: 100%;margin: 0px auto;overflow: hidden;box-sizing: border-box;position: relative;}
+.cover-container{display: block;max-height: 280px!important;min-height:130px;width: 100%;margin: 0px auto;overflow: hidden;box-sizing: border-box;position: relative;}
+#cover-container img,#cover-container-loader img {left: 0;position: relative!important;}
+#cover-container-loader img{pointer-events: none!important;-moz-user-select: none!important;}
+#cover-containee, .cover-containee {display: block;max-height: 280px!important;width: 100%;margin: 0px auto;overflow: hidden;box-sizing: border-box;position: relative;}
+.enabled{cursor:move;}
+.enabled img {left: 0;position: relative;top: 0;pointer-events: none;-moz-user-select: none;}
+</style>
+
+<div class="clear relative noflow no-border block-container-4">
+	
+	<div id="cover-container" class="cover-container" style="display:none">
+	</div>
+	
+    <div id="cover-containee" class="cover-containee" >
+	    <img src="{$TEXT->installation}/uploads/pages/covers/{$TEXT->temp-page_cover}" {$TEXT->temp-onclick} style="width:100%;min-height:130px!important;" id="page_view_cover_{$TEXT->temp-page_id}" class="relative center noflow full">                  
+	</div>	
+	
+    <div id="cover-container-loader" class="cover-container" style="display:none">
+	</div>
+
+	{$TEXT->temp-updateable}
+
+</div>
+
+<div class="white-color hide-large block-container-4">
+    <div align="center" class="block">
+        <div style="margin-top:-60px;" align="center" class="relative">
+            <div style="max-width:122px;" class="rounded noflow circle center">
+                <img style="width:100%;" id="profile_view_main_small_{$TEXT->temp-page_id}" class="border-bold circle" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-page_icon}&fol=pa&w=200&h=200">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="white-color timeline-head noflow padding-10 block-container-4">
+    <div class="h12 b2 timeline-name inline">
+	    <a class="dark-font" href="{$TEXT->installation}/page/{$TEXT->temp-page_id}" onclick="loadPage({$TEXT->temp-page_id},1,1);return false;">{$TEXT->temp-page_name}</a> 
+		<span class="h6 noselect padding-0-6 b1 tin-light-font-only inline"> 
+			<span class="hide-small left-divider"> </span>
+			<span class="padding-0-6">
+				<span class="hide-large"> {$TEXT->temp-page_category} - </span>
+				{$TEXT->temp-page_likes}
+			</span>
+		</span>
+	</div>
+    <div class="right-big inline">
+	    {$TEXT->temp-action_btns}
+	</div>
+</div>
+
+<div class="noselect block-container-4 top-divider timeline-desktop round-in-bottom">
+    <div class="background-x timeline center clear2 full round-in-bottom">  
+		<div class="right padding-0-6">
+			<div class="noflow inline inline-in">
+			    <a id="profile_view_tab_0" onclick="loadPage({$TEXT->temp-page_id},1,1);" class="activable-tab-white active-down b2 light-x-font padding-10" href="javascript:returnFalse();">{$TEXT->_uni-Home}</a>
+			    <a id="profile_view_tab_22" onclick="pageFeeds({$TEXT->temp-page_id},0,5,22);" class="activable-tab-white hide-small light-x-font padding-10" href="javascript:returnFalse();">{$TEXT->_uni-Recent}</a>
+			    <a id="profile_view_tab_1" onclick="pageFeeds({$TEXT->temp-page_id},0,5,1);" class="activable-tab-white light-x-font padding-10" href="javascript:returnFalse();">{$TEXT->_uni-Photos}</a>
+			    <a id="profile_view_tab_2" onclick="pageFeeds({$TEXT->temp-page_id},0,5,2);" class="activable-tab-white light-x-font padding-10" href="javascript:returnFalse();">{$TEXT->_uni-Videos}</a>
+			    {$TEXT->temp-timeline_ops}
+				<a id="profile_view_tab_6" title="{$TEXT->_uni-Create_a_page}" class="activable-tab-white light-x-font padding-10 left-divider right-divider hide-small" href="{$TEXT->installation}/?new=page">{$TEXT->_uni-Create}</a>	    
+			</div>
+			<div class="drop-hover lesft-divider dark-svg inline">
+			    <img class="svg img-14 timeline-drop" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/buttons/expand.svg">
+				<div style="right:0;" class="drop-content h5 b2 tin-light-font padding-15-0 shadow text-left border rounded noflow">			
+					{$TEXT->temp-activity_log}
+					{$TEXT->temp-settings}
+					{$TEXT->temp-update_cover}
+					{$TEXT->temp-options}
+					<a onclick="copyToClipboard('{$TEXT->installation}/page/{$TEXT->temp-page_id}','{$TEXT->_uni-Page_URL_copied}');javascript:void(0);" class="padding-10 tin-light-font drop-item" href="javascript:void(0);">{$TEXT->_uni-Copy_URL_page}</a>
+				</div>				
+			</div>
+		</div>
+	</div>
+</div>
+{$TEXT->temp-browser_js}
+
+
+
+<div class="brz-white brz-padding-8 hide brz-new-container-3 brz-hide-large brz-clear brz-display-containe brz-padding brz-border-bottom brz-border-super-grey" >
+    <div class="brz-center">
+        <div style="margin-top:-60px;display: inline-block;" class="brz-container brz-display-container">
+            <div style="max-width:105px;" class="brz-round brz-border-super-grey brz-border-bottom">
+                <img style="width:100%;" id="profile_view_main_small_{$TEXT->temp-page_id}" class="brz-border-white brz-border-bold2" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-page_icon}&fol=pa&w=200&h=200">
+            </div>
+        </div>
+    </div>
+    <div class="brz-center brz-responsive-xbig-styled brz-padding-8">
+        <span class="brz-text-boy-it">{$TEXT->temp-page_name}</span>
+    </div>
+ 
+    <div class="brz-border-top brz-center brz-border-super-grey">
+        <span id="page_like_fo32{$TEXT->temp-unique_id}" onclick="$('#fo32{$TEXT->temp-unique_id}_inner').click();" style="display: inline-block;padding:2px 8px 2px 8px;" class="brz-white brz-border-right brz-cursor-pointer brz-border-super-grey">
+            <div class=""> 
+			    <span class="brz-small brz-text-super-grey">
+			        {$TEXT->temp-page_likes}  
+			    </span>
+			</div>
+			{$TEXT->temp-like_acts}
+        </span>
+        <span id="page_follow_{$TEXT->temp-unique_id}" onclick="$('#fo3df_inner').click();" style="display: inline-block;padding:2px 8px 2px 8px;" class="brz-white brz-cursor-pointer">
+            <div class="">
+			    <span class="brz-small brz-text-super-grey">
+			        {$TEXT->temp-page_follows}
+			    </span>
+			</div>
+			{$TEXT->temp-slides}
+        </span>								
+    </div>
+</div>
+
+<div class="brz-white brz-hide-small hide brz-hide-medium brz-padding-8 brz-new-container-3 brz-clear brz-display-containe brz-padding brz-border-bottom brz-border-super-grey" >
+    <span class="brz-left brz-margin-4">
+        {$TEXT->temp-action_btns}							
+        <div class="brz-dropdown-click" onclick="$('#DROP_PAGE_FUNCTIONS{$TEXT->temp-page_id}').toggleClass('brz-show');">
+            <button class="brz-new_btn brz-round brz-padding-standard brz-text-bold brz-tiny-2 brz-text-grey">
+                <img class="nav-item-text-inverse-big brz-img-dropit" alt="" src="{$TEXT->DATA-IMG-2}">			
+            </button>
+            <div class="brz-dropdown-content brz-transparent" id="DROP_PAGE_FUNCTIONS{$TEXT->temp-page_id}" style="{$TEXT->temp-slide0}">  
+                <div style="height:12px;">
+					<img style="position:absolute;top:0px;{$TEXT->temp-slide1}" class="brz-img-drop-down-cat" src="{$TEXT->DATA-IMG-9}">
+				</div>
+                <div class="brz-white brz-border brz-padding-8 brz-card-2">
+					{$TEXT->temp-activity_log}
+					{$TEXT->temp-settings}
+					{$TEXT->temp-update_cover}
+					{$TEXT->temp-options}
+                    <hr style="margin:5px;">
+                    <a onclick="copyToClipboard('{$TEXT->installation}/pages/{$TEXT->temp-page_id}','{$TEXT->_uni-Page_URL_copied}');javascript:void(0);" href="javascript:void(0);" class="brz-tiny-2 brz-hover-blue-hd brz-cursor-pointer brz-hover-text-white">{$TEXT->_uni-Copy_URL_page}</a>
+                </div>
+            </div>
+        </div>
+    </span>
+</div>

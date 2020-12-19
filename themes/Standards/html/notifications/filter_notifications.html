@@ -1,0 +1,47 @@
+<div class="widget-container widget-notifications" >
+    <div class="widget-scale widget-red padding-15-10 clear">   
+		<div class="widget-inner">
+		    <div class="h12 b4 white-font-only line-2-5">
+			    {$TEXT->_uni-Ping_Ping}
+			</div>
+		    <div class="h4 b2 white-font-only line-1-2 padding-15-0">
+			    {$TEXT->_uni-Notification_wid_ttl}
+			</div>
+		    <div class="line-1-5">
+			    <div onclick="getSettings(4);"class="btn btn-medium btn-dark">{$TEXT->_uni-Setup}</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="RIGHT_NOTIFICATIONS_TYPE" class="block-container">
+
+	<div class="block-title">
+        <div class="h7 b3 dark-font-only padding-10">{$TEXT->_uni-Filter_notifications}</div>
+    </div>
+	
+    <div class="padding-10 jelly-radios">
+	    <ul>
+		    <li class="tin-light-font" >
+			    <input checked id="chat_radio1" value="1" onclick="sNX('1');scrollToTop();" type="radio" name="radio_1">
+			    <label class="h5 b3">{$TEXT->_uni-All} {$TEXT->_uni-notifications}</label>
+			    <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+		    </li>
+		    <li class="tin-light-font">
+			    <input id="chat_radio2" value="2" onclick="sNX('0');scrollToTop();" type="radio" name="radio_1">
+			    <label class="h5 b3">{$TEXT->_uni-Unreaded} {$TEXT->_uni-notifications}</label>
+			    <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+		    </li>
+		    <li class="tin-light-font">
+			    <input id="chat_radio3" value="3" onclick="sNX('2');scrollToTop();" type="radio" name="radio_1">
+			    <label class="h5 b3">{$TEXT->_uni-Requests}</label>
+			    <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+		    </li>
+		    <li class="tin-light-font">
+			    <input id="chat_radio4" value="4" onclick="sNX('3');scrollToTop();" type="radio" name="radio_1">
+			    <label class="h5 b3">{$TEXT->_uni-Followers}</label>
+			    <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+		    </li>
+	    </ul>
+    </div>	
+</div>

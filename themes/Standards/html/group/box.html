@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/owl.carousel.css{$TEXT->REFRESH_CODE}">
+<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/owl.theme.css{$TEXT->REFRESH_CODE}">
+
+<div id="{$TEXT->temp-data-id}" class="block-container crackable noflow">
+
+	<div class="block-title">
+        <div class="h7 b3 dark-font-only padding-10">{$TEXT->temp-data}</div>
+    </div>
+	    
+	<div id="{$TEXT->temp-data-id}_carousel" class="owl-carousel owl-theme">
+		{$TEXT->temp-content}
+    </div>
+
+</div>
+
+<script>
+$.getScript("{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.owl.js", function() {
+    $('#{$TEXT->temp-data-id}_carousel').owlCarousel({
+        stagePadding:30,
+        loop:{$TEXT->temp-loop},
+        nav:false,
+        dots:false,
+        responsiveRefreshRate:10,
+        margin:0,
+        width:200,
+        responsive:{
+            0:{
+                items:4
+            },
+            600:{
+                items:4
+            },
+            1000:{
+                items:4
+            }
+        }
+    });
+});
+</script>

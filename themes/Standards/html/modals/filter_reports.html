@@ -1,0 +1,19 @@
+<div class="block-container clear2">
+    <div class="block-title">
+        <div class="h7 b3 dark-font-only padding-10">{$TEXT->_uni-Add_filter}</div>
+    </div>
+    <div class="h6 b2">
+        <div class="admin-filter-item tin-light-font padding-10 bottom-divider pointer" filter-key="2" ><i class="fa fa-users img-14"></i> <span >{$TEXT->_uni-Reported_users}</span></div>
+        <div class="admin-filter-item tin-light-font padding-10 bottom-divider pointer" filter-key="3" ><i class="fa fa-credit-card img-14"></i> <span >{$TEXT->_uni-Reported_posts}</span></div>
+        <div class="admin-filter-item tin-light-font padding-10 bottom-divider pointer" filter-key="4" ><i class="fa fa-comment img-14"></i> <span >{$TEXT->_uni-Reported_comments}</span></div>
+        <div class="admin-filter-item tin-light-font padding-10 bottom-divider pointer" filter-key="1" ><i class="fa fa-calendar-o img-14"></i> <span >{$TEXT->_uni-All_reports}</span></div>
+    </div>
+</div>
+
+<script>
+$('.admin-filter-item').on('click',function() {
+    scrollToTop();
+	_admin(51,$(this).attr('filter-key'),0,'load','reports',1,5);
+    $(this).removeClass('tin-light-font').addClass('dark-font-only active-side').siblings().removeClass('dark-font-only active-side').addClass('tin-light-font');
+})
+</script>

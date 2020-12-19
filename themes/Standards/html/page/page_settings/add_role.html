@@ -1,0 +1,63 @@
+<div class="block-container-2 clear">
+	<div class="block-title">
+		<div class="h7 b3 dark-font-only padding-10">
+			{$TEXT->_uni-Assign_roles}
+		</div>
+	</div>
+</div>        
+
+<div class="block-container-2 clear">				
+	
+	<div class="block-box-2 trans settings-20 bottom-divider">			
+		<div class="left full padding-10">			
+			<div class="input-title left h6 b1 dark-font-only">
+				{$TEXT->_uni-Add_as}
+			</div>
+			<div class="input-container">
+				
+				<div class="block left">
+					<select id="settings-page-2" class="small h5 b1 tin-light-font-only">
+    					<option value="" class="brz-text-bold brz-text-red" disabled selected>{$TEXT->_uni-Select_role}</option>
+    					<option value="2" data-cs="{$TEXT->_uni-ttl-Analyst}" class="brz-text-bold brz-text-red">{$TEXT->_uni-Page_role-2}</option>
+    					<option value="3" data-cs="{$TEXT->_uni-ttl-Moderator}" class="brz-text-bold brz-text-red">{$TEXT->_uni-Page_role-3}</option>
+    					<option value="4" data-cs="{$TEXT->_uni-ttl-Editor}" class="brz-text-bold brz-text-red">{$TEXT->_uni-Page_role-4}</option>
+    					<option value="5" data-cs="{$TEXT->_uni-ttl-Admin}" class="brz-text-bold brz-text-red">{$TEXT->_uni-Page_role-5}</option>
+    		    	</select>
+    		    </div>
+				
+				<div id="page_role_container_tipe" class="input-description block full left h4 b1 tin-light-font-only">
+					{$TEXT->_uni-Select_role_description}
+				</div>
+			</div>
+		</div>	
+	</div>
+	
+	<script>
+	$('#settings-page-2').on('change', function() {
+    	$('#page_role_container_tipe').html(function() {return $('#settings-page-2').find(":selected").attr("data-cs");});
+	})
+	</script>
+
+
+	<div class="block-box-2 trans settings-20">			
+		<div class="left full padding-10">			
+			<div class="input-title left h6 b1 dark-font-only">
+				{$TEXT->_uni-Username}
+			</div>
+			<div class="input-container">
+				<input id="settings-page-1" class="h5 b1 light-font-only" value="{$TEXT->temp-page_name}">
+				<div class="input-description h4 b1 tin-light-font-only">
+					{$TEXT->_uni-Add_role_description}
+				</div>
+			</div>
+		</div>	
+	</div>
+	
+	<div class="center" id="settings-content-space-1"></div>
+	<div id="settings-content-mess-1"></div>
+	
+	<div class="full noselect btn btn-dark h6 b3 center padding-10 round-in-bottom" id="settings-content-save-1" onclick="savePage({$TEXT->temp-page_id},4);">
+		<span>{$TEXT->_uni-Add_role}</span>
+	</div>
+	
+</div>

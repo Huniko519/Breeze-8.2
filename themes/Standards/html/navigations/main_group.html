@@ -1,0 +1,57 @@
+<div id="S_LEFT_CONTENT" class="G-PAGE-NAV margin-10-0-0-0 padding-0-0-0-10">
+    <div class="padding-15-0 margin-5-0-0-0 h9 b2 dark-font-only">{$TEXT->temp-group-name}
+		<div class="h6 b1 light-font-only">        
+			{$TEXT->temp-group-type}							
+		</div>
+	</div>
+	
+	
+	<div class="clear">
+	    
+		<!-- EXT_SLOT_NAV_1 -->
+	
+		<div>
+			<a id="brz-add-GNav-15" class="btn-nav btn-nav-active padding-5 h7 b1 dark-font-only" onclick="groupFeeds({$TEXT->TEMP_GROUP_ID},0,5);">
+				&nbsp; {$TEXT->_uni-Discussions}
+				<img class="right padding-5 img-25 preloader" style="display:none;" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/loader-small.svg"></img>
+			</a>
+		</div>
+	
+		<div>
+			<a id="brz-add-GNav-11" class="btn-nav padding-5 h7 b1 dark-font-only" onclick="groupMembers({$TEXT->TEMP_GROUP_ID},0,5);">
+				&nbsp; {$TEXT->_uni-Members}
+				<img class="right padding-5 img-25 preloader" style="display:none;" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/loader-small.svg"></img>
+			</a>
+		</div>
+		
+		<!-- EXT_SLOT_NAV_2 -->
+		
+		{$TEXT->TEMP-NAV-ITEMS}
+		
+		<!-- EXT_SLOT_NAV_3 -->
+
+	</div>	
+	
+	<div class="margin-10-0-0-0 dark-font-only">
+	
+	    <span style="margin-5-0-0-0" class="h6 b2 block" >
+			{$TEXT->_uni-Shortcuts}
+		</span>
+
+		<div class="padding-10-0">
+		{$TEXT->TEMP-NAV-SHORTCUTS}
+		</div>
+	    
+		<span style="margin-5-0-0-0" class="h6 b2 block" >
+			{$TEXT->_uni-Create}
+		</span>
+
+		<div class="block h5 b1 padding-10">
+			<span onclick="locate('{$TEXT->installation}/?new=page');" class="pointer dark-font">{$TEXT->_uni-Page}</span> -
+			<span onclick="loadModal(1);loadGroup(0,14,32);" class="pointer dark-font">{$TEXT->_uni-Group}</span>
+		</div>		
+
+	</div>
+	<br><br><br>
+	
+</div>

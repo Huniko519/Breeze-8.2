@@ -1,0 +1,56 @@
+<style>body{background:#fff;}</style>
+
+<div id="settings-nav" class="h6 b1 clear brz-settings-nav margin-mob noselect left-divider no-border-mob">
+    
+	<div class="padding-15-10 hide-small"></div>
+	
+	<!-- EXT_SLOT_NAV_1 -->
+	
+	
+	<div id="settings-nav-1" onclick="loadSettings(1);scrollToTop();" class="pointer margin-10-0 settings-nav-element padding-10 tin-light-font">
+        <img class="img-22" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/gear.svg">
+	    <span class="padding-0-6">
+	        {$TEXT->_uni-General_Settings}
+        </span>
+    </div>
+	
+	<div id="settings-nav-2" onclick="loadSettings(2);scrollToTop();" class="pointer margin-10-0 settings-nav-element padding-10 tin-light-font">
+        <img class="img-22" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/info.svg">
+	    <span class="padding-0-6">
+	        {$TEXT->_uni-Profile_information}
+        </span>
+    </div>
+
+	<div id="settings-nav-3" onclick="loadSettings(3);scrollToTop();" class="pointer margin-10-0 settings-nav-element padding-10 tin-light-font">
+        <img class="img-22" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/padlock.svg">
+	    <span class="padding-0-6">
+	        {$TEXT->_uni-Privacy_settings}
+        </span>
+    </div>
+	
+	<div id="settings-nav-4" onclick="loadSettings(4);scrollToTop();" class="pointer margin-10-0 settings-nav-element padding-10 tin-light-font">
+        <img class="img-22" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/notification.svg">
+	    <span class="padding-0-6">
+	        {$TEXT->_uni-Notifications_settings}
+        </span>
+	</div>
+	
+	<div id="settings-nav-6" onclick="scrollToTop();loadBlockSettings();" class="pointer margin-10-0 settings-nav-element padding-10 tin-light-font">
+        <img class="img-22" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/block.svg">
+	    <span class="padding-0-6">
+	        {$TEXT->_uni-Blocked_Users}
+        </span>
+	</div>
+	
+	<div id="settings-nav-5" onclick="loadModal(1);scrollToTop();ajaxProtocol('/require/requests/delete/account.php',0,0,0,0,0,0,0,0,0,0,0,0,0,'confirm',0,1,32);" class="pointer margin-10-0 settings-nav-element padding-10 tin-light-font">
+        <img class="img-22" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/trash.svg">
+	    <span class="padding-0-6">
+	        {$TEXT->_uni-Delete_account}
+        </span>
+    </div>
+
+	<!-- EXT_SLOT_NAV_2 -->
+	
+	<div class="padding-15-10 hide-small"></div>
+	
+</div>

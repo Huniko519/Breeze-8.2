@@ -1,0 +1,37 @@
+<div class="bottom-divider user-main block-container-3 white-color">
+    <div class="clear padding-10 inner-padding">
+        <div style="min-width:50px;min-height:50px;" onclick="{$TEXT->temp-function_1}" title="{$TEXT->temp-title}" class="left search-picture noflow pointer">
+            <img class="circle" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-user_img}&fol={$TEXT->temp-img_src}&w=200&h=200">
+        </div>
+        <span class="">
+			<div class="search-padding">
+	            <div class="clear2">
+					<div class="right">
+						<div class="options-drop inline padding-10 drop-hover brz-show dark-svg left">
+			    			<img class="svg img-14 post-options hide" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/buttons/expand.svg">
+							<div style="right:0;" class="drop-content h5 b2 tin-light-font padding-15-0 shadow border rounded noflow">			
+                    			<a href="{$TEXT->installation}/{$TEXT->temp-u_nm}" target="_blank" class="padding-10 tin-light-font drop-item">{$TEXT->_uni-opn_ne_tb}</a>
+                    			<a onclick="profileLoadTimeline({$TEXT->temp-id});javascript:void(0);" class="padding-10 tin-light-font drop-item" href="javascript:void(0);">{$TEXT->_uni-Timeline}</a>
+                    			<a onclick="profileLoadGallery({$TEXT->temp-id});javascript:void(0);" class="padding-10 tin-light-font drop-item" href="javascript:void(0);">{$TEXT->_uni-Gallery}</a>
+                    			<a onclick="profileLoadFollowers({$TEXT->temp-id},0,0);javascript:void(0);" class="padding-10 tin-light-font drop-item" href="javascript:void(0);">{$TEXT->_uni-Followers}</a>
+                    			<a onclick="profileLoadFollowings({$TEXT->temp-id},0,1);javascript:void(0);" class="padding-10 tin-light-font drop-item" href="javascript:void(0);">{$TEXT->_uni-Followings}</a>
+                    			<a onclick="profileLoadAbout({$TEXT->temp-id});javascript:void(0);" class="padding-10 tin-light-font drop-item" href="javascript:void(0);">{$TEXT->_uni-About}</a>	    	
+                    			<a onclick="copyToClipboard('{$TEXT->installation}/{$TEXT->temp-u_nm}','{$TEXT->_uni-Profile_URL_copied}');javascript:void(0);" class="padding-10 tin-light-font drop-item" href="javascript:void(0);">{$TEXT->_uni-Copy_URL_profile}</a>
+							</div>				
+						</div>
+						{$TEXT->temp-r_btn}
+					</div>
+                    <div title="{$TEXT->temp-title}" class="h6 b2">
+                        <a href="{$TEXT->installation}/{$TEXT->temp-id}" class="dark-font" onclick="{$TEXT->temp-function_1}return false;">{$TEXT->temp-nm}</a>
+                        {$TEXT->temp-v_bt}
+                    </div>
+                    <div class="tin-light-font-only b1 h4">
+                        <div class="light-font-only">{$TEXT->temp-ab1}</div>
+                        <div>{$TEXT->temp-ab2}</div>
+                        <div class="hide-small">{$TEXT->temp-ab3}</div>
+                    </div>
+                </div>
+            </div>
+        </span>
+    </div>
+</div>

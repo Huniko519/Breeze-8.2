@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Set charset -->
+    <meta charset="UTF-8" />
+
+	<!-- Attach FAVICON -->
+	<link rel="shortcut icon" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/favicon.ico">
+
+	<!-- Website title -->  
+	<title>{$TEXT->_uni-Welcome_to} {$TEXT->title} | {$TEXT->_uni-web_ttl_l_s_free}</title>
+	
+	<meta name="description" content="Connect with friends, family and other people you know. Share photos and videos, send messages and get updates.">
+    <meta name="keyword" content="social network,social networking,social site,friends,family,photos,lifestyle,photo sharing">
+	
+	<!-- Set window width to device width --> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- EXT_SLOT_SHEET_1 -->
+	
+	<!-- Import CSS styles -->
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/main.css{$TEXT->REFRESH_CODE}">
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/colors.css{$TEXT->REFRESH_CODE}">
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/fonts.css{$TEXT->REFRESH_CODE}">
+    <link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/welcome.css{$TEXT->REFRESH_CODE}">
+    <link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/jelly-radios.css{$TEXT->REFRESH_CODE}">
+    <link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/nice-select.css{$TEXT->REFRESH_CODE}">
+
+	<!-- EXT_SLOT_SHEET_2 -->
+
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/font-awesome.css">
+	
+	<!-- Installation URl-->
+	<script type="text/javascript">var installation = '{$TEXT->installation}';var theme = '{$TEXT->theme}';</script>
+
+	<!-- EXT_SLOT_JS_1 -->
+
+		<script>
+function importLang() {
+    return lang = ["{$TEXT->_uni-You_and}", "{$TEXT->_uni-You_liked_this}"
+	               ,"{$TEXT->_uni-Like}", 
+				   "{$TEXT->_uni-Liked}", 
+				   "{$TEXT->_uni-read_more}", 
+				   "{$TEXT->_uni-show_less}",
+				   "{$TEXT->_uni-Profile_URL_copied}",
+				   "{$TEXT->_uni-Save_changes}",
+				   "{$TEXT->DATA-IMG-7}",
+				   "{$TEXT->DATA-IMG-5}",
+				   "{$TEXT->_uni-Be_fir_like}",   
+				   ];
+}
+var seconds = "{$TEXT->_uni_time-seconds}",a_minute = "{$TEXT->_uni_time-a_minute}",minutes = "%d {$TEXT->_uni_time-minutes}",
+an_hour = "{$TEXT->_uni_time-an_hour}",hours = "%d {$TEXT->_uni_time-hours}",a_day = "{$TEXT->_uni_time-a_day}",
+days = "%d {$TEXT->_uni_time-days}",a_month = "{$TEXT->_uni_time-a_month}",months = "%d {$TEXT->_uni_time-months}",
+a_year = "{$TEXT->_uni_time-a_year}",years = "%d {$TEXT->_uni_time-years}";
+</script>
+
+<!-- Import main open source projects -->
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.timeago.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/nice-select.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.slick.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.initialize.min.js"></script>
+
+<!-- Import Navigation -->
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/navigation.js{$TEXT->REFRESH_CODE}"></script>
+<!-- Import Main script -->
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/feeds.js{$TEXT->REFRESH_CODE}"></script>
+<!-- Import Emoji script -->
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/emoji.js{$TEXT->REFRESH_CODE}"></script>
+
+<!-- EXT_SLOT_JS_3 -->
+
+</head>
+
+<!-- Apply font -->
+<style>
+html,body{font-size:{$TEXT->FONT_SIZE}px;}
+</style>
+
+<body class="header-color">
+
+    <audio id="sound-unsure" src="{$TEXT->installation}/themes/{$TEXT->theme}/sound/unsure.mp3" preload="auto"></audio>
+    <audio id="sound-to_the_pont" src="{$TEXT->installation}/themes/{$TEXT->theme}/sound/to-the-point.mp3" preload="auto"></audio>
+    <audio id="sound-all-eyes-on-me" src="{$TEXT->installation}/themes/{$TEXT->theme}/sound/all-eyes-on-me.mp3" preload="auto"></audio>
+
+    <!-- Installation URl-->	
+    <input id="installation_select" class="hidden" value="{$TEXT->installation}"></input>
+
+    <!-- Active theme directory-->
+    <input id="theme_select" class="hidden" value="{$TEXT->theme}"></input>
+	
+    <div align="center">
+        <div class="white-color win-1050 round-in-bottom">
+            <a href="{$TEXT->installation}" class="padding-10 block full">
+			<img class="img-30" alt="" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/brz.png{$TEXT->REFRESH_CODE}"> 
+			<img style="height:30px;" alt="" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/brz-text.png{$TEXT->REFRESH_CODE}">
+			</a>
+        </div>
+		
+        <div class="divider hide-m transparent "></div>
+		
+        <div class="header-color win-1050 rounded">
+            
+			
+			<div class="clear2">
+				<div class="block full">
+					<div class="brz-page-third brz-page-wrap margin-10">
+						<div class="brz-page-type noflow theme-x-svg tin-light-font header-color rounded brz-page-container full border-create-page"> 
+							<div class="padding-10 pointer center brz-page-container2 background-x">  
+								<div class="padding-20">
+									<img class="svg brz-page-type-icon" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/page/store.svg" >
+									<div class="margin-10-0-0-0 h7 b2">{$TEXT->_uni-Page_categories-Local_Place}</div>
+								</div>
+							</div>
+							<div class="padding-10 pointer center brz-page-container3 brz-page-container2 brz-page-ride-overflow hide">
+							    <div class="clear2 ">
+								    
+									<div class="h6 b2 white-font-only padding-10">{$TEXT->_uni-Page_categories-Local_Place}</div>
+
+									<div class="margin-5-0-0-0">
+									    <input id="page_name_1" class="full input h5 b1 tin-light-font" value="" placeholder="{$TEXT->_uni-Pag_name_plc}">
+									</div>
+									<div class="margin-5-0-0-0">
+									    <input id="page_category" class="full input h5 b1 tin-light-font" value="" placeholder="{$TEXT->_uni-Pag_cat_plc}">
+									</div>
+									
+									<div class="margin-5-0-0-0">
+									    <input id="page_address" class="full input h5 b1 tin-light-font" value="" placeholder="{$TEXT->_uni-Pag_addr_plc}">
+									</div>
+									
+									<div class="margin-5-0-0-0 h5 b1 text-left white-font-only">
+									    {$TEXT->temp-terms_title}
+									</div>
+									
+									<div class="margin-5-0-0-0 left">
+										<span onclick="createPage(1);" id="settings-content-save-1" class="btn btn-small btn-x-theme margin-5-0-0-0"><span>{$TEXT->_uni-Get_started}</span></span>
+						    			<span class="brz-right" id="settings-content-space-1"></span>
+						    			<div id="settings-content-mess-1"></div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="brz-padding brz-page-third brz-page-wrap margin-10">
+						<div class="brz-page-type theme-x-svg noflow tin-light-font header-color rounded brz-page-container full border-create-page"> 
+							<div class="padding-10 pointer center brz-page-container2 background-x">  
+								<div class="padding-20">
+									<img src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/page/company.svg" class="svg brz-page-type-icon" >
+									<div class="margin-10-0-0-0 h7 b2">{$TEXT->_uni-Page_categories-institute}</div>
+								</div>
+							</div>
+							<div class="padding-10 pointer center full brz-page-container3 brz-page-container2 brz-page-ride-overflow hide">    
+								<div class="h6 b2 white-font-only padding-10">{$TEXT->_uni-Page_categories-institute}</div>
+								<div class="clear">
+									<div class="margin-5-0-0-0 clear2">
+										<select id="pag_cat_2" class="wide small h5 b1 tin-light-font-only">
+											<option value="" class="" disabled selected>{$TEXT->_uni-Create_a_page_cat_chs}</option>
+											{$TEXT->temp-selects2}	
+										</select> 
+									</div>
+									
+									<div class="margin-5-0-0-0">
+										<input id="page_name_2" class="full input h5 b1 tin-light-font" value="" placeholder="{$TEXT->_uni-Pag_name_plc}">
+									</div>
+								
+									<div class="margin-5-0-0-0 h5 b1 text-left white-font-only">
+										{$TEXT->temp-terms_title}
+									</div>
+									
+									<div class="margin-5-0-0-0 left">
+										<span onclick="createPage(2);" id="settings-content-save-2" class="btn btn-small btn-x-theme margin-5-0-0-0"><span>{$TEXT->_uni-Get_started}</span></span>
+						    			<span class="brz-right" id="settings-content-space-2"></span>
+						    			<div id="settings-content-mess-2"></div>
+									</div>								
+								
+								</div>	
+							</div>
+						</div>
+					</div>
+					
+						<div class="brz-padding brz-page-third brz-page-wrap margin-10">
+						    <div class="brz-page-type theme-x-svg noflow tin-light-font header-color rounded brz-page-container full border-create-page"> 
+								<div class="padding-10 pointer center brz-page-container2 background-x">  
+									<div class="padding-20">
+									    <img src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/page/brand.svg" class="svg brz-page-type-icon" >
+									    <div class="margin-10-0-0-0 h7 b2">{$TEXT->_uni-Page_categories-brand}</div>
+									</div>
+								</div>
+								<div class="padding-10 pointer center full brz-page-container3 brz-page-container2 brz-page-ride-overflow hide">				    
+									<div class="h6 b2 white-font-only padding-10">{$TEXT->_uni-Page_categories-brand}</div>
+									<div class="clear">
+									
+									    <div class="margin-5-0-0-0 clear2">
+										    <select id="pag_cat_3" class="wide small h5 b1 tin-light-font-only">
+											    <option value="" class="" disabled selected>{$TEXT->_uni-Create_a_page_cat_chs}</option>									
+											    {$TEXT->temp-selects3}	
+											</select>
+									    </div>
+										
+									    <div class="margin-5-0-0-0">
+										    <input id="page_name_3" class="full input h5 b1 tin-light-font" value="" placeholder="{$TEXT->_uni-Pag_name_plc}">
+									    </div>
+								
+									    <div class="margin-5-0-0-0 h5 b1 text-left white-font-only">
+										    {$TEXT->temp-terms_title}
+									    </div>
+									
+									    <div class="margin-5-0-0-0 left">
+										    <span onclick="createPage(3);" id="settings-content-save-3" class="btn btn-small btn-x-theme margin-5-0-0-0"><span>{$TEXT->_uni-Get_started}</span></span>
+						    			    <span class="brz-right" id="settings-content-space-3"></span>
+						    			    <div id="settings-content-mess-3"></div>
+									    </div>
+
+									</div>	
+								</div>
+							</div>
+						</div>
+						<div class="brz-padding brz-page-third brz-page-wrap margin-10">
+						    <div class="brz-page-type theme-x-svg noflow tin-light-font header-color rounded brz-page-container full border-create-page"> 
+								<div class="padding-10 pointer center brz-page-container2 background-x">  
+									<div class="padding-20">
+									    <img src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/page/artist.svg" class="svg brz-page-type-icon" >
+									    <div class="margin-10-0-0-0 h7 b2">{$TEXT->_uni-Page_categories-Public_Figure}</div>
+									</div>
+								</div>
+								<div class="padding-10 pointer center full brz-page-container3 brz-page-container2 brz-page-ride-overflow hide">								    
+									<div class="h6 b2 white-font-only padding-10">{$TEXT->_uni-Page_categories-Public_Figure}</div>
+									<div class="clear">
+									<div class="margin-5-0-0-0 clear2">
+										<select id="pag_cat_4" class="wide small h5 b1 tin-light-font-only">
+											<option value="" class="" disabled selected>{$TEXT->_uni-Create_a_page_cat_chs}</option>
+											{$TEXT->temp-selects4}	
+										</select> 
+									</div>
+									
+									<div class="margin-5-0-0-0">
+										<input id="page_name_4" class="full input h5 b1 tin-light-font" value="" placeholder="{$TEXT->_uni-Pag_name_plc}">
+									</div>
+								
+									<div class="margin-5-0-0-0 h5 b1 text-left white-font-only">
+										{$TEXT->temp-terms_title}
+									</div>
+									
+									<div class="margin-5-0-0-0 left">
+										<span onclick="createPage(4);" id="settings-content-save-4" class="btn btn-small btn-x-theme margin-5-0-0-0"><span>{$TEXT->_uni-Get_started}</span></span>
+						    			<span class="brz-right" id="settings-content-space-4"></span>
+						    			<div id="settings-content-mess-4"></div>
+									</div>								
+								
+									</div>
+								
+								</div>
+							</div>
+						</div>						
+						<div class="brz-padding brz-page-third brz-page-wrap margin-10">
+						    <div class="brz-page-type theme-x-svg noflow tin-light-font header-color rounded brz-page-container full border-create-page"> 
+								<div class="padding-10 pointer center brz-page-container2 background-x">  
+									<div class="padding-20">
+									    <img src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/page/ticket.svg" class="svg brz-page-type-icon" >
+									    <div class="margin-10-0-0-0 h7 b2">{$TEXT->_uni-Page_categories-Entertainment}</div>
+									</div>
+								</div> 
+								<div class="padding-10 pointer center full brz-page-container3 brz-page-container2 brz-page-ride-overflow hide">								    
+									<div class="h6 b2 white-font-only padding-10">{$TEXT->_uni-Page_categories-Entertainment}</div>
+									<div class="clear">
+									<div class="margin-5-0-0-0 clear2">
+										<select id="pag_cat_5" class="wide small h5 b1 tin-light-font-only">
+											<option value="" class="" disabled selected>{$TEXT->_uni-Create_a_page_cat_chs}</option>
+											{$TEXT->temp-selects5}	
+										</select> 
+									</div>
+									
+									<div class="margin-5-0-0-0">
+										<input id="page_name_5" class="full input h5 b1 tin-light-font" value="" placeholder="{$TEXT->_uni-Pag_name_plc}">
+									</div>
+								
+									<div class="margin-5-0-0-0 h5 b1 text-left white-font-only">
+										{$TEXT->temp-terms_title}
+									</div>
+									
+									<div class="margin-5-0-0-0 left">
+										<span onclick="createPage(5);" id="settings-content-save-5" class="btn btn-small btn-x-theme margin-5-0-0-0"><span>{$TEXT->_uni-Get_started}</span></span>
+						    			<span class="brz-right" id="settings-content-space-5"></span>
+						    			<div id="settings-content-mess-5"></div>
+									</div>								
+								
+									</div>
+								</div>
+							</div>
+						</div>							
+						<div class="brz-padding brz-page-third brz-page-wrap margin-10">
+						    <div class="brz-page-type noflow theme-x-svg tin-light-font header-color rounded brz-page-container full border-create-page"> 
+								<div class="padding-10 pointer center brz-page-container2 background-x">  
+									<div class="padding-20">
+									    <img src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/page/placard.svg" class="svg brz-page-type-icon" >
+									    <div class="margin-10-0-0-0 h7 b2">{$TEXT->_uni-Page_categories-Cause_Community}</div>
+									</div>
+								</div>
+								<div class="padding-10 pointer center full brz-page-container3 brz-page-container2 brz-page-ride-overflow hide">								    
+									<div class="h6 b2 white-font-only padding-10">{$TEXT->_uni-Page_categories-Cause_Community}</div>
+									<div class="clear">
+									<div class="margin-5-0-0-0 clear2">
+										<select id="pag_cat_6" class="wide small h5 b1 tin-light-font-only">
+											<option value="" class="" disabled selected>{$TEXT->_uni-Create_a_page_cat_chs}</option>
+											{$TEXT->temp-selects6}	
+										</select> 
+									</div>
+									
+									<div class="margin-5-0-0-0">
+										<input id="page_name_6" class="full input h5 b1 tin-light-font" value="" placeholder="{$TEXT->_uni-Pag_name_plc}">
+									</div>
+								
+									<div class="margin-5-0-0-0 h5 b1 text-left white-font-only">
+										{$TEXT->temp-terms_title}
+									</div>
+									
+									<div class="margin-5-0-0-0 left">
+										<span onclick="createPage(6);" id="settings-content-save-6" class="btn btn-small btn-x-theme margin-5-0-0-0"><span>{$TEXT->_uni-Get_started}</span></span>
+						    			<span class="brz-right" id="settings-content-space-6"></span>
+						    			<div id="settings-content-mess-6"></div>
+									</div>																	
+									</div>																	
+								</div>
+							</div>
+						</div>												
+					</div>
+				</div>
+		</div>
+		<br><br><br><br><br><br>
+		<div class="win-1050 dark-pages">
+            {$TEXT->temp-i_pages}
+			<br><br><br>
+        </div>
+    </div>
+	
+	
+
+<!-- Attach AJAX response -->
+<div id="attach-response"></div>
+
+<!-- EXT_SLOT_JS_3 -->
+
+<!-- Check for captcha test -->
+<script>
+// Reload placeholder plugin if IE<10
+$('input, textarea').placeholder({customClass:'my-placeholder'});
+$('select').niceSelect();
+
+$(document).ready(function(){
+
+    $('.brz-page-type').on('click', function(e) {
+
+        $('.brz-page-type').not(this).removeClass('active-page-tab');
+		
+		if($(this).hasClass('active-page-tab')) {
+		    return true;
+		} else {
+		    $(this).addClass('active-page-tab');
+	   
+	        $('.brz-page-container3').hide();
+		
+		    $(this).find('.background-x').slideUp(450,function() {$(this).next().fadeIn();});
+
+	        $(this).parent().siblings().find('.background-x').slideDown(450); 
+        }			
+		
+    });
+	
+
+	jQuery('img.svg').each(function(){
+		
+		if($(this).hasClass('replaced-svg')) {
+			// IGNORE
+		} else {
+            var $img = jQuery(this);
+            var imgID = $img.attr('id');
+            var imgClass = $img.attr('class');
+            var imgURL = $img.attr('src');
+
+            jQuery.get(imgURL, function(data) {
+
+                var $svg = jQuery(data).find('svg');
+
+                if(typeof imgID !== 'undefined') {
+                    $svg = $svg.attr('id', imgID);
+                }
+
+                if(typeof imgClass !== 'undefined') {
+                    $svg = $svg.attr('class', imgClass+' replaced-svg');
+                }
+
+                $svg = $svg.removeAttr('xmlns:a');
+
+                if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+                    $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+                }
+
+                $img.replaceWith($svg);
+
+            }, 'xml');
+		}
+    });
+	
+});
+
+</script>
+
+<!-- EXT_SLOT_PAGE_END -->
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<div id="CHAT_INFO" class="hide-small">
+
+<div class="block-container white-color clear2">
+
+    <div class="padding-6-0 clear2">
+		
+	    <div class="padding-0-6" >
+	        <img id="chat-cover" class="chat-cover-{$TEXT->temp-form_id}" onclick="$('#chat-cover-file').click();" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-form_cover}&fol=e&w=750&h=300" style="width:100%;min-height:80px!important;" class="relative center noflow full">                  
+	    </div>
+
+        <div align="center" class="block">
+            <div style="margin-top:-60px;" align="center" class="relative">
+                <div style="max-width:90px;" class="rounded noflow circle center">
+                    <img id="chat-icon" onclick="$('#chat-icon-file').click();" style="width:100%;" class="border-bold chat-icon-{$TEXT->temp-form_id} circle" src="{$TEXT->temp-form_icon}">
+                </div>
+            </div>
+        </div>
+
+        <input id="active-form" value="{$TEXT->temp-form_id}" class="hide">
+
+	</div>
+
+    <div class="padding-10 center">
+		<span id="chat-name" class="h7 b2 chat-name-{$TEXT->temp-form_id} dark-font-only">{$TEXT->temp-form_name}</span>
+    </div>
+	
+	<div class="center padding-10 hide" id="chat_upload-loader">
+	    <img src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/loader-small.svg" class="load-tin">
+	</div>
+	
+	<div class="padding-10 post-heading top-divider center">
+		<span id="chat-desc" class="h5 b1 tin-light-font-only">{$TEXT->temp-form_text}</span>
+    </div>
+
+<div class="noselect block-container-no top-divider timeline-deskstop round-in-bottom">
+    <div class="background-x timeline center clear2 full round-in-bottom">  
+		<div class="center padding-0-6">
+			<div class="noflow inline h4 inline-in">
+			    <a id="profile_view_tab_0" onclick="toggleFormData('CHAT_PEOPLE');updateProfileTab(0);" class="activable-tab-white active-down b2 light-x-font padding-10" href="javascript:returnFalse();">{$TEXT->_uni-People}</a>
+			    <a id="profile_view_tab_4" onclick="loadChat({$TEXT->temp-form_id});" class="activable-tab-white hide-large hide-medium light-x-font padding-10" href="javascript:returnFalse();">{$TEXT->_uni-Chat}</a>
+			    <a id="profile_view_tab_3" onclick="toggleFormData('CHAT_EDITE');updateProfileTab(3);" class="activable-tab-white light-x-font padding-10" href="javascript:returnFalse();">{$TEXT->_uni-Manage}</a>
+			    <a id="profile_view_tab_1" onclick="toggleFormData('CHAT_OPTIONS');updateProfileTab(1);" class="activable-tab-white light-x-font padding-10" href="javascript:returnFalse();">{$TEXT->_uni-More}</a>
+			    <a id="profile_view_tab_2" onclick="toggleFormData('CHAT_EDITOR');updateProfileTab(2);" class="activable-tab-white light-x-font padding-10" href="javascript:returnFalse();">{$TEXT->_uni-Edit}</a>
+			    {$TEXT->temp-timeline_ops}
+			</div>
+		</div>
+	</div>
+</div>
+	
+</div>
+
+<div id="CHAT_PEOPLE" class="white-color movable block-container">
+
+    <div class="padding-10 bottom-divider h4 b2 light-font-only">
+        <div class="padding-10">{$TEXT->_uni-PEOPLE}</div>
+    </div>
+	
+	<div id="chat-members" class="clear">
+	    {$TEXT->temp-form_people}
+    </div>
+
+</div>
+
+<div id="CHAT_EDITE" class="white-color movable padding-10 block-container">
+
+<div class="padding-10 bottom-divider h4 b2 light-font-only">
+    {$TEXT->_uni-ADD_MEMBERS}
+</div>
+<div class="padding-10 h4 b1 tin-light-font-only" style="width:100%;overflow:hidden">
+    <table style="width:100%;" role="presentation" cellspacing="0">
+        <tbody>
+            <tr>
+                <td style="width:100%">
+                    <input placeholder="{$TEXT->_uni-Add_members_ttl}" id="add-members-search" value="" class="input full transparent no-border">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="addable-members" class="">
+    </div>	
+</div>
+
+<div class="padding-10 bottom-divider h4 b2 light-font-only">
+    {$TEXT->_uni-REMOVE_MEMBERS}
+</div>
+<div class="padding-10 h4 b1 tin-light-font-only" style="width:100%;overflow:hidden">
+    <table style="width:100%;" role="presentation" cellspacing="0">
+        <tbody>
+            <tr>
+                <td style="width:100%">
+                    <input placeholder="{$TEXT->_uni-Remove_members_ttl3}" id="remove-members-search" value="" class="input full transparent no-border">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="removable-members" class="">
+    </div>	
+</div>
+
+</div>
+
+<div id="CHAT_OPTIONS" class="white-color movable padding-10 block-container">
+    
+	<div class="bottom-divider h4 b2 light-font-only">
+        <div class="padding-10">{$TEXT->_uni-OPTIONS}</div>
+    </div>
+	
+	<div onclick="$('#chat-icon-file').click();scrollToTop();" class="pointer padding-10 h5 b1 tin-light-font">
+        <img class="img-20" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/photo-upload.svg">
+	    <span class="padding-0-6">
+	        {$TEXT->_uni-Update_photo}
+	    </span>
+    </div>
+
+	<div onclick="$('#chat-cover-file').click();scrollToTop();" class="pointer padding-10 h5 b1 tin-light-font">
+        <img class="img-20" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/cover-upload.svg">
+	    <span class="padding-0-6">
+	        {$TEXT->_uni-Update_cover}
+	    </span>
+    </div>
+
+    {$TEXT->temp-actions}	
+	
+</div>
+
+<div id="CHAT_EDITOR" class="white-color movable padding-10 block-container">
+    
+	<div class="padding-10 bottom-divider h4 b2 light-font-only">
+        <div class="padding-10">{$TEXT->_uni-EDIT_CHAT}</div>
+    </div>
+
+	<div class="h5 b1 light-font-only">
+        <div class="full padding-10 bottom-divider">
+		    <input id="chat-edit-modal-name" class="input no-border transparent" placeholder="{$TEXT->_uni-Chat_name}" value="{$TEXT->temp-form_name}"></input>
+	    </div>
+	    <textarea id="chat-edit-modal-description" class="top-divider no-border padding-10-15" style="width:100%;height:120px;max-width:100%" placeholder="{$TEXT->_uni-No_description}">{$TEXT->temp-form_text}</textarea>
+    </div> 
+
+	<div id="confirmLoaders5-id" class="load confirmLoaders5-class"></div>
+
+	<div id="chat-edit-modal-msg" class="padding-10 h4 b1 tin-light-font-only"></div>
+	
+	<div id="chat-submiter" class="clear block noflow inline-in full h6 b2">
+		<div id="confirm-edit-chat-submit" onclick="editChatFormSubmit({$TEXT->temp-form_id});" class="right btn btn-small btn-dark">{$TEXT->_uni-Save_changes}</div>
+	</div>		
+	
+</div>
+
+
+<script>
+function toggleFormData(t) {  
+	var edite = $("#"+t);
+	edite.prevAll('.movable').slideUp(300,function() {
+		edite.prevAll('.movable').detach().insertAfter("#"+t).slideDown(300);
+	});   	
+}
+</script>

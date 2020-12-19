@@ -1,0 +1,31 @@
+<div class="h7 b3 dark-font-only bottom-divider clear full inline-in noflow">
+	<div class="padding-10 noflow" >{$TEXT->_uni-LOGIN} | {$TEXT->_uni-SIGNUP}</div>
+	<div onclick="loadModal(0);" class="hvr-opacity trans padding-10 right noflow btn-dark pointer">X</div>                    
+</div>
+
+<div class="nicescrollit noflow mi-modal-inner">
+
+<div id="new-modal-inner-content" class="clear padding-10 relative" style="width:100%;height:300px;">
+
+<div class="full display-middle">
+    <div class="padding-20 clear2 center full">
+        <img src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-image}&fol=a&w=245&h=245&q=100" class="circle img-45">
+    </div>
+    <div class="h6 b1 tin-light-font-only padding-20">
+	    {$TEXT->temp-title}
+	</div> 
+		
+    <div class="paddding-10 full center">
+        <div onclick="locate('{$TEXT->installation}/index.php?profile={$TEXT->temp-id}&ref=login');" style="width:50%;" class="btn btn-medium btn-theme">{$TEXT->_uni-LOGIN}</div>
+    </div>
+			
+    <div class="paddding-10 full center">	
+        <div onclick="locate('{$TEXT->installation}/index.php?profile={$TEXT->temp-id}&ref=signup');" style="width:50%;" class="btn btn-medium btn-light margin-5-0-0-0">{$TEXT->_uni-SIGNUP}</div>
+    </div>
+		
+</div>
+
+
+</div>				
+		
+</div>

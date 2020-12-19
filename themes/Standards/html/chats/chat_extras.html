@@ -1,0 +1,26 @@
+<form id="chat-icon-update-form" name="chat-icon-update-form" action="{$TEXT->installation}/require/requests/update/chat_icon.php" onsubmit ="return false;" method="POST" enctype="multipart/form-data" target="chat-icon-target">  
+	<input id="chat-icon-form-id" name="chat-icon-form-id" value="{$TEXT->temp-form_id}" class="hide" />
+	<input id="chat-icon-file" name="chat-icon-file" type="file" class="hide"/>
+	<iframe id="chat-icon-target" name="chat-icon-target" src="" style="display: none"></iframe>
+</form> 
+<form id="chat-cover-update-form" name="chat-cover-update-form" action="{$TEXT->installation}/require/requests/update/chat_cover.php" onsubmit ="return false;" method="POST" enctype="multipart/form-data" target="chat-cover-target">  
+	<input id="chat-cover-form-id" name="chat-cover-form-id" value="{$TEXT->temp-form_id}" class="hide" />
+	<input id="chat-cover-file" name="chat-cover-file" type="file" class="hide"/>
+	<iframe id="chat-cover-target" name="chat-cover-target" src="" style="display: none"></iframe>
+</form> 
+<script>
+$("#chat-icon-file").on('change', function(event){	
+	$(document).on('change', ':file', function () {
+		if($("#chat-icon-file").val()) {
+			chatIcon();
+		}
+	}); 
+});	
+$("#chat-cover-file").on('change', function(event){	
+	$(document).on('change', ':file', function () {
+		if($("#chat-cover-file").val()) {
+			chatCover();
+		}
+	}); 
+});	
+</script>

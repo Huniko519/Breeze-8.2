@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Set charset -->
+    <meta charset="UTF-8" />
+
+	<!-- Attach FAVICON -->
+	<link rel="shortcut icon" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/favicon.ico">
+
+	<!-- Website title -->  
+	<title>{$TEXT->_uni-Welcome_to} {$TEXT->title} | {$TEXT->_uni-web_ttl_l_s_free}</title>
+	
+	<meta name="description" content="Общайтесь с друзьями, семьей и другими людьми, которых вы знаете. Делитесь фотографиями и видео, отправляйте сообщения и получайте обновления.">
+    <meta name="keyword" content="social network,social networking,social site,friends,family,photos,lifestyle,photo sharing">
+	
+	<!-- Set window width to device width --> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- EXT_SLOT_SHEET_1 -->
+	
+	<!-- Import CSS styles -->
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/fonts.css{$TEXT->REFRESH_CODE}">
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/main.css{$TEXT->REFRESH_CODE}">
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/colors.css{$TEXT->REFRESH_CODE}">
+    <link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/welcome.css{$TEXT->REFRESH_CODE}">
+    <link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/jelly-radios.css{$TEXT->REFRESH_CODE}">
+	
+	<!-- EXT_SLOT_SHEET_2 -->
+
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/font-awesome.css">
+	
+	<!-- Installation URl-->
+	<script type="text/javascript">var installation = '{$TEXT->installation}';var theme = '{$TEXT->theme}';</script>
+
+	<!-- EXT_SLOT_JS_1 -->
+	
+	<!-- Import JS scripts -->
+	<script src='{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.js'></script>
+	<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.initialize.min.js"></script>
+	<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.placeholder.js"></script>
+	<script src="{$TEXT->installation}/themes/{$TEXT->theme}/js/welcome.js{$TEXT->REFRESH_CODE}"></script>
+
+	<!-- EXT_SLOT_JS_2 -->
+	
+</head>
+
+<!-- Apply font  -->
+<style>html,body{font-size:{$TEXT->FONT_SIZE}px;}</style>
+
+<body class="back sadd-gradient">
+	
+	<div class="header-controller-wc shadow header-color ">
+		<div class="cnt" >
+			<div class="int-left">
+				<div class="nav-item-pri inline hide-small rounded-x theme-x-color">
+					<div class="padding-10">
+						<div class="img-wrap"><img class="full" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/brz-white.png{$TEXT->REFRESH_CODE}"></div>
+					</div>
+				</div>
+				<div class="inline padding-10">
+					<a href="{$TEXT->installation}" class="pointer inline"><img style="height:30px;" class="margin-5-0-0-0" alt="" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/brz-text-white.png{$TEXT->REFRESH_CODE}"></a>
+				</div>
+			</div>
+			<div class="int-right padding-10">
+				<span class="dark-pages padding-0-10 hide-small hide-medium white-pages-3">
+					<a onclick="toggleForms('ADMIN_FORM');return false;" >{$TEXT->_uni-Manage}</a>
+					{$TEXT->temp-i_pages} 
+				</span>
+				<a onclick="toggleForms('REGISTERATION_FORM')" class="btn btn-x-theme btn-medium">{$TEXT->_uni-Create_Account}</a>
+			</div>	
+		</div>
+	</div>
+
+	<audio id="sound-unsure" src="{$TEXT->installation}/themes/{$TEXT->theme}/sound/unsure.mp3" preload="auto"></audio>
+    
+	<div align="center" class="caclh">
+
+		<div class="main-section full left clear">
+			<div class="win-1000 main-holder">
+
+				<div class="hide-small hide-medium left" style="max-width:55%">
+					
+					<div class="brz-welome-padd-in2">
+						<div id="CONTENT_MAIN_DISPLAY" class="full left" style="display:none;padding-top:50px;">
+							<div class="block full left white-font-only">
+								<div style="max-width:450px;padding-left:30px;" class="left h20 text-left full b3">
+									{$TEXT->_uni-Welcome_exla}
+								</div>					
+							</div>
+							<div class="block full left  white-font-only">
+								<div style="max-width:450px;padding-left:30px;" class="text-left left h9 b1">
+									{$TEXT->web_name} {$TEXT->_uni-Welcome_notice}
+								</div>					
+							</div>
+							<div class="block full noselect padding-10-0-0-0 left">
+								<div style="padding-left:30px;" class="b1 h5 text-left">
+									<span onclick="toggleForms('LOGIN_FORM')" class="btn btn-medium btn-theme">{$TEXT->_uni-LOGIN}</span> 
+									<span onclick="toggleForms('REGISTERATION_FORM')" class="btn btn-medium btn-active">{$TEXT->_uni-SIGNUP}</span> 
+								</div>			
+							</div>							
+							
+							
+							<div class="block full center">
+								<img style="max-width:370px;margin-top:25px;" class="noselect hide" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/backgrounds/people.png"></img>
+						    </div>
+						</div>	
+						{$TEXT->content_main_page}
+					</div>
+					
+				</div>
+				<div id="response" class=""></div>
+				
+				<div id="main-module" class="main-width right rounded">
+					
+					<div class="">{$TEXT->content_redirect}</div>
+							
+					<div class="modal-box hm-container hide" style="margin-bottom:3px;">
+					
+						<div class="padding-10">
+							<img class="center" style="max-width:100px;" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/brz-text.png"></img>
+						</div>
+						
+					</div>			
+					
+					<div class="modal-box hm-container">
+					
+						<div id="ALL_FORMS" class="box-inner trans relative">
+							
+							<div id="LOAD_FORM" class="load-form display-middle relative center hide noselect">
+								<div class="padding-20 rounded shadow background-x display-middle" style="width:200px">
+					    		    <img src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/loader-small.svg" class="img-45">
+							    </div>
+						    </div>			
+	
+							<div id="ADMIN_FORM" class="padding-20 clear hide main-forms">
+			        			
+								<div class="hm-marzin-input h15 text-left full b3 dark-font-only">{$TEXT->_uni-Manage}</div>
+								
+								<div class="hm-marzin-input full text-left block">
+									<div class="btn-x-theme hx-divider"></div>
+								</div>
+								
+								<div class="divider transparent"></div>
+								
+								<div class="hm-marzin-input h6 text-left full b1 x-tin-light-font-only">{$TEXT->_uni-Manage_ttl}</div>
+								
+								<div class="divider transparent"></div>
+	
+                    			<form onsubmit="return submitAdmin(event);" class="form clear padding-10-0">
+    		
+									<div class="text-left max-350 hm-marzin-input">
+										<input id="admin-page-name" class="hm-input trans" placeholder="{$TEXT->_uni-Adminstration_username}">
+									</div>
+									
+									<div class="divider transparent"></div>
+
+									<div class="text-left max-350 hm-marzin-input">
+						    			<input id="admin-page-password" type="password" class="hm-input trans" placeholder="{$TEXT->_uni-Adminstration_password}">
+									</div>
+						
+									<div class="divider transparent"></div>
+									
+									<div class="max-350 hm-marzin-input">
+										<button type="submit" class="btn btn-theme rounded-x hm-btn full h7 b2">{$TEXT->_uni-Manage}</button>
+									</div>
+								</form>
+
+			        			<div class="hm-marzin-input center">
+									<hr class="hm-hr">
+									<div class="hm-up"><span class="hm-or b2 x-tin-light-font-only ">{$TEXT->_uni-OR}</span></div>
+								</div>
+								
+								
+								<div style="margin-top:20px;" >
+									<div class="b1 h5 hm-marzin-input text-left">
+										<span onclick="toggleForms('LOGIN_FORM')" class="dark-font pointer">{$TEXT->_uni-Log_in_diff}</span>
+									</div>
+				        		</div>
+
+							</div>
+
+							<div id="RECENT_FORM" class="padding-20 clear hide main-forms">
+			        			
+								<div class="hm-marzin-input h15 text-left full b3 dark-font-only">{$TEXT->_uni-RE-LOGIN}</div>
+								
+								<div class="hm-marzin-input full text-left block">
+									<div class="btn-x-theme hx-divider"></div>
+								</div>
+								
+								<div class="divider transparent"></div>
+								
+								<div class="hm-marzin-input h6 text-left full b1 x-tin-light-font-only">{$TEXT->_uni-INTO_ACCOUNT_a}</div>
+								
+								<div class="divider transparent"></div>
+								
+                    			<form onsubmit="return reLogin(event);" class="form clear padding-10-0">
+    			
+									<div id="login-user-ctrls" class="block no-border padding-8-10 modal-box-color">
+				            			<img class="circle img-45 block center" id="login-modal-recent-img" alt="" src="">
+				            			<div id="login-modal-recent-name" class="h8 b1 text-left inline dark-font-only">
+										</div>
+									</div>
+									
+									<div class="divider transparent"></div>
+
+									<div class="text-left max-350 hm-marzin-input">
+										<input id="login-modal-recent-add-name" class="hide">
+										<input id="login-modal-recent-add-pass" type="password" class="hm-input trans" placeholder="{$TEXT->_uni-Your_account_password}">
+									</div>
+						
+									<div class="divider transparent"></div>
+									
+									<div class="max-350 hm-marzin-input">
+										<button type="submit" class="btn btn-theme rounded-x hm-btn full h7 b2">{$TEXT->_uni-Log_in}</button>
+									</div>
+								</form>
+
+			        			<div class="hm-marzin-input center">
+									<hr class="hm-hr">
+									<div class="hm-up"><span class="hm-or b2 x-tin-light-font-only ">{$TEXT->_uni-OR}</span></div>
+								</div>
+								
+								
+								<div style="margin-top:20px;" >
+									<div class="b1 h5 hm-marzin-input text-left">
+										<span onclick="toggleForms('LOGIN_FORM')" class="dark-font b1 pointer">{$TEXT->_uni-Log_in_diff}</span> 
+									</div>
+				        		</div>
+
+							</div>
+							
+							<div id="LOGIN_FORM" class="padding-20 clear DOT main-forms">
+
+								<div class="hm-marzin-input h15 text-left full b3 dark-font-only">{$TEXT->_uni-Log_in}</div>
+								
+								<div class="hm-marzin-input full text-left block">
+									<div class="btn-x-theme hx-divider"></div>
+								</div>
+								
+								<div class="divider transparent"></div>
+								
+								<div class="hm-marzin-input h6 text-left full b1 x-tin-light-font-only">{$TEXT->_uni-INTO_ACCOUNT}</div>
+								
+								<div class="divider transparent"></div>
+								
+                    			<form onsubmit="return submitLogin(event);" class="form clear padding-10-0">
+    			
+									<div class="text-left max-350 hm-marzin-input">
+										<input id="login-page-name" class="hm-input trans" placeholder="{$TEXT->_uni-Username_or_email}">
+									</div>
+									
+									<div class="divider transparent"></div>
+
+									<div class="text-left max-350 hm-marzin-input">
+						    			<input id="login-page-password" type="password" class="hm-input trans" placeholder="{$TEXT->_uni-Your_account_password}">
+									</div>
+						
+									<div class="divider transparent"></div>
+									
+									<div class="max-350 hm-marzin-input">
+										<button type="submit" class="btn btn-theme rounded-x hm-btn full h7 b2">{$TEXT->_uni-Log_in}</button>
+									</div>
+								</form>
+								
+								<div class="hm-marzin-input center">
+									<hr class="hm-hr">
+									<div class="hm-up"><span class="hm-or b2 x-tin-light-font-only ">{$TEXT->_uni-OR}</span></div>
+								</div>
+								
+								
+								<div style="margin-top:20px;" >
+
+									<!-- EXT_SLOT_LOGIN_1 -->
+
+									<div class="b1 h5 hm-marzin-input text-left">
+										<span onclick="toggleForms('REGISTERATION_FORM')" class="dark-font pointer">{$TEXT->_uni-Create_Account}</span> &nbsp;&middot;&nbsp;
+										<span title="{$TEXT->_uni-Your_account_password}" onclick="toggleForms('FORGOT_FORM')" class="dark-font pointer">{$TEXT->_uni-Forgot_login}</span>
+									</div>	
+								</div>
+
+							</div>
+
+							<div id="REGISTERATION_FORM" class="padding-20 clear hide main-forms">
+			        			
+								<div class="hm-marzin-input h15 text-left full b3 dark-font-only">{$TEXT->_uni-Create_Account}</div>
+								
+								<div class="hm-marzin-input full text-left block">
+									<div class="btn-x-theme hx-divider"></div>
+								</div>
+								
+								<div class="divider transparent"></div>
+								
+								<div class="hm-marzin-input h6 text-left full b1 x-tin-light-font-only">{$TEXT->_uni-IT_FREE_ALWAYS}</div>
+								
+								<div class="divider transparent"></div>		
+								
+								<form class="form padding-10-0" onsubmit="return submitRegistration(event);">
+			
+									<div class="text-left max-350 hm-marzin-input">
+										<input id="signup-page-email" class="hm-input trans" placeholder="{$TEXT->_uni-Your_account_email}">
+									</div>
+						
+									<div class="divider transparent"></div>
+
+									<div class="text-left max-350 hm-marzin-input">
+						   				<input id="signup-page-name" class="hm-input trans" placeholder="{$TEXT->_uni-Choose_username}">
+									</div>
+
+									<div class="divider transparent"></div>
+						
+									<div class="text-left max-350 hm-marzin-input">
+						    			<input type="password" id="signup-page-password" class="hm-input trans" placeholder="{$TEXT->_uni-Choose_password}">
+									</div>
+
+									<div class="divider transparent element_captcha hide"></div>
+						
+									<div id="element_captcha" class="element_captcha hide text-left max-350 hm-marzin-input">
+						                 
+									</div>
+						
+									<div class="divider transparent"></div>
+						
+									<div class="jelly-radios b4">
+	    								<ul style="margin: 10px auto auto -13px !important;">
+		    								<li class="tin-light-font theme-radio inline" style="margin:0px 10px 0px 0px;">
+			    								<input id="gender_radio1" value="1" type="radio" name="gender_radio">
+			    								<label class="h5">{$TEXT->_uni-MALE}</label>
+			    								<div class="bullet theme-bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+		    								</li>
+		    								<li class="tin-light-font theme-radio inline" >
+			    								<input id="gender_radio2" value="2" type="radio" name="gender_radio">
+			    								<label class="h5">{$TEXT->_uni-FEMALE}</label>
+			    								<div class="bullet theme-bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+		    								</li>
+										</ul>
+									</div>
+						
+									<div class="divider transparent"></div>
+						
+									<div class="max-350 hm-marzin-input">
+										<button type="submit" class="btn btn-theme rounded-x hm-btn full h7 b2">{$TEXT->_uni-SIGNUP}</button>
+									</div>
+									
+									<div class="hm-marzin-input center">
+										<hr class="hm-hr">
+										<div class="hm-up"><span class="hm-or b2 x-tin-light-font-only ">{$TEXT->_uni-OR}</span></div>
+									</div>
+								
+									<div style="margin-top:20px;" >
+
+										<!-- EXT_SLOT_SINGUP_1 -->
+
+										<div class="b1 h5 hm-marzin-input text-left">
+											<span onclick="toggleForms('LOGIN_FORM')" class="dark-font b1 pointer">{$TEXT->_uni-Alread_accn}</span> 
+										</div>
+									</div>
+
+	
+                    			</form>
+					
+							</div>
+
+							<div id="FORGOT_FORM" class="padding-20 clear hide main-forms">
+
+								<div class="hm-marzin-input h15 text-left full b3 dark-font-only">{$TEXT->_uni-Forgot_login}</div>
+								
+								<div class="hm-marzin-input full text-left block">
+									<div class="btn-x-theme hx-divider"></div>
+								</div>
+								
+								<div class="divider transparent"></div>
+								
+								<div class="hm-marzin-input h6 text-left full b1 x-tin-light-font-only">{$TEXT->_uni-Reset_password_ttl}</div>
+								
+								<div class="divider transparent"></div>
+								
+                    			<form onsubmit="return resetPassword(event);" class="form clear padding-10-0">
+						    			
+									<div class="text-left max-350 hm-marzin-input">
+										<input id="forgot-password-page-username" class="hm-input trans" placeholder="{$TEXT->_uni-Your_account_username}">
+									</div>
+									
+									<div class="divider transparent"></div>
+
+									<div class="max-350 hm-marzin-input">
+										<button type="submit" class="btn btn-theme rounded-x hm-btn full h7 b2">{$TEXT->_uni-Reset}</button>
+									</div>
+								</form>
+
+			        			<div class="hm-marzin-input center">
+									<hr class="hm-hr">
+									<div class="hm-up"><span class="hm-or b2 x-tin-light-font-only ">{$TEXT->_uni-OR}</span></div>
+								</div>
+								
+								
+								<div style="margin-top:20px;" >
+									<div class="b1 h5 hm-marzin-input text-left">
+										<span onclick="toggleForms('LOGIN_FORM')" class="dark-font b1 pointer">{$TEXT->_uni-Log_in_diff}</span> 
+									</div>
+				        		</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="center hide full left">
+					<div style="width:40%;height:4px;margin:40px auto;" class="clock rounded-x center add-gradient"></div>
+				</div>
+				
+			</div>
+		</div>
+
+        <!-- Languages model -->
+ 		<div id="other-data">
+			<div id="languages" class="pop-modal hide clear">
+				<div class="simple-modal white-color shadow noflow">
+					<div class="block padding-20 h7 b3 dark-font-only">
+			 		    {$TEXT->_uni-Languages}
+					</div>
+					<div class="full left padding-20 dual-divider">
+						{$TEXT->TEMP-available-languages}
+					</div>	
+					<div class="clear block noflow inline-in full h6 b2">
+						<div onclick="$('#languages').fadeOut();" class="right full pointer center padding-15-10 background-x tin-light-font">{$TEXT->_uni-Cancel}</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+		
+        <!-- Footer -->
+		<div class="transparent full left padding-10">
+			<div class="win-1200 clear white-font-only">
+				<span class="center">	
+					<nav class="skesw-menu dark-pages" id="sinfo_pages_all">
+						<i class="fa fa-language h7 b1 white-font-only"></i>
+						<a onclick="$('#languages').fadeIn();" >{$TEXT->TEMP-active_lang}</a> &middot;
+						<a onclick="toggleForms('ADMIN_FORM');return false;" >{$TEXT->_uni-Manage}</a> &middot;
+						{$TEXT->temp-i_pages}
+					</nav>
+				</span>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- Attach AJAX response -->
+	<div id="attach-response"></div>
+
+	<!-- EXT_SLOT_JS_3 -->
+
+	<!-- Check for captcha test -->
+	<script>
+		{$TEXT->temp-CAPTCHA_AVAIL}
+		{$TEXT->temp-REF_AVAIL}
+
+		// Reload placeholder plugin if IE<10
+		$('input, textarea').placeholder({customClass:'my-placeholder'});
+
+	</script>
+
+	<!-- EXT_SLOT_PAGE_END -->
+
+</body>
+</html>

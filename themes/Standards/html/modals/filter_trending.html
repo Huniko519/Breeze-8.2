@@ -1,0 +1,36 @@
+<div id="RIGHT_TRENDS_TYPE" class="block-container">
+
+	<div class="block-title">
+        <div class="h7 b3 dark-font-only padding-10">{$TEXT->_uni-Filter_trends}</div>
+    </div>
+	
+    <div class="padding-10 jelly-radios">
+	    <ul>
+		    <li class="tin-light-font" >
+			    <input checked id="chat_radio1" value="1" onclick="loadTrending(0,1,1);scrollToTop();" type="radio" name="radio_1">
+			    <label class="h5 b3">{$TEXT->_uni-Trending-today}</label>
+			    <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+		    </li>
+		    <li class="tin-light-font">
+			    <input id="chat_radio2" value="2" onclick="loadTrending(0,2,25);scrollToTop();" type="radio" name="radio_1">
+			    <label class="h5 b3">{$TEXT->_uni-Trending-yesterday}</label>
+			    <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+		    </li>
+		    <li class="tin-light-font">
+			    <input id="chat_radio3" value="3" onclick="loadTrending(0,3,25);scrollToTop();" type="radio" name="radio_1">
+			    <label class="h5 b3">{$TEXT->_uni-Trending-month}</label>
+			    <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+		    </li>
+		    <li class="tin-light-font">
+			    <input id="chat_radio4" value="4" onclick="loadTrending(0,4,25);scrollToTop();" type="radio" name="radio_1">
+			    <label class="h5 b3">{$TEXT->_uni-Trending-year}</label>
+			    <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+		    </li>
+		    <li class="tin-light-font">
+			    <input id="chat_radio4" value="5" onclick="loadTrending(0,5,25);scrollToTop();" type="radio" name="radio_1">
+			    <label class="h5 b3">{$TEXT->_uni-Trending-alltime}</label>
+			    <div class="bullet"><div class="line zero"></div><div class="line one"></div><div class="line two"></div><div class="line three"></div><div class="line four"></div><div class="line five"></div><div class="line six"></div><div class="line seven"></div></div>
+		    </li>
+	    </ul>
+    </div>	
+</div>

@@ -1,0 +1,23 @@
+<div class="display-bottomright">					 
+    <form id="uGp-2" name="uGp-2" action="{$TEXT->installation}/require/requests/update/page_profile_photo.php" onsubmit ="return false;" method="POST" enctype="multipart/form-data" target="uGp-t-2">   
+		<label id="btn-photo-chn" style="padding:8px 10px!important;" class="btn btn-small btn-x-theme circle border-min" for="uGp-f-2" >
+		    <i class="fa h6 fa-camera"></i>
+		</label>
+        <input style="display:none!important;" name="uGp-f-2" id="uGp-f-2" type="file"/>
+        <input id="page-pic-form-id" name="page-pic-form-id" class="hide" value="{$TEXT->TEMP_PAGE_ID}"/>
+        <iframe id="uGp-t-2" name="uGp-t-2" src="" style="display: none"></iframe>
+    </form>	
+</div>
+<script>
+$("#uGp-f-2").on('change', function(event){	
+    $(document).on('change', ':file', function () {
+        if($("#uGp-f-2").val()) {
+            // Start buttonloader
+            smartLoader(1,'#btn-photo-chn');
+	
+            // Submit photo form	
+            document.getElementById("uGp-2").submit();				
+        }
+    });
+});
+</script>

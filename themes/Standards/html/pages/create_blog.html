@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Set charset -->
+    <meta charset="UTF-8" />
+
+	<!-- Attach FAVICON -->
+	<link rel="shortcut icon" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/favicon.ico">
+
+	<!-- Website title -->  
+	<title>{$TEXT->_uni-Welcome_to} {$TEXT->title} | {$TEXT->_uni-web_ttl_l_s_free}</title>
+	
+	<meta name="description" content="Connect with friends, family and other people you know. Share photos and videos, send messages and get updates.">
+    <meta name="keyword" content="social network,social networking,social site,friends,family,photos,lifestyle,photo sharing">
+	
+	<!-- Set window width to device width --> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- EXT_SLOT_SHEET_1 -->
+	
+	<!-- Import CSS styles -->
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/main.css{$TEXT->REFRESH_CODE}">
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/colors.css{$TEXT->REFRESH_CODE}">
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/fonts.css{$TEXT->REFRESH_CODE}">
+    <link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/welcome.css{$TEXT->REFRESH_CODE}">
+    <link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/jelly-radios.css{$TEXT->REFRESH_CODE}">
+    <link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/nice-select.css{$TEXT->REFRESH_CODE}">
+
+	<!-- EXT_SLOT_SHEET_2 -->
+
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/font-awesome.css">
+	
+	<!-- Installation URl-->
+	<script type="text/javascript">var installation = '{$TEXT->installation}';var theme = '{$TEXT->theme}';</script>
+
+	<!-- EXT_SLOT_JS_1 -->
+
+		<script>
+function importLang() {
+    return lang = ["{$TEXT->_uni-You_and}", "{$TEXT->_uni-You_liked_this}"
+	               ,"{$TEXT->_uni-Like}", 
+				   "{$TEXT->_uni-Liked}", 
+				   "{$TEXT->_uni-read_more}", 
+				   "{$TEXT->_uni-show_less}",
+				   "{$TEXT->_uni-Profile_URL_copied}",
+				   "{$TEXT->_uni-Save_changes}",
+				   "{$TEXT->DATA-IMG-7}",
+				   "{$TEXT->DATA-IMG-5}",
+				   "{$TEXT->_uni-Be_fir_like}",   
+				   ];
+}
+var seconds = "{$TEXT->_uni_time-seconds}",a_minute = "{$TEXT->_uni_time-a_minute}",minutes = "%d {$TEXT->_uni_time-minutes}",
+an_hour = "{$TEXT->_uni_time-an_hour}",hours = "%d {$TEXT->_uni_time-hours}",a_day = "{$TEXT->_uni_time-a_day}",
+days = "%d {$TEXT->_uni_time-days}",a_month = "{$TEXT->_uni_time-a_month}",months = "%d {$TEXT->_uni_time-months}",
+a_year = "{$TEXT->_uni_time-a_year}",years = "%d {$TEXT->_uni_time-years}";
+</script>
+
+<!-- Import main open source projects -->
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.timeago.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/nice-select.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.slick.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.initialize.min.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/includes/tinymce/tinymce.min.js"></script>
+
+<!-- Import Navigation -->
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/navigation.js{$TEXT->REFRESH_CODE}"></script>
+<!-- Import Main script -->
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/feeds.js{$TEXT->REFRESH_CODE}"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/blogs.js{$TEXT->REFRESH_CODE}"></script>
+<!-- Import Emoji script -->
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/emoji.js{$TEXT->REFRESH_CODE}"></script>
+
+<!-- EXT_SLOT_JS_3 -->
+
+</head>
+
+<!-- Apply font -->
+<style>
+html,body{font-size:{$TEXT->FONT_SIZE}px;}
+</style>
+
+<body class="header-color">
+
+    <audio id="sound-unsure" src="{$TEXT->installation}/themes/{$TEXT->theme}/sound/unsure.mp3" preload="auto"></audio>
+    <audio id="sound-to_the_pont" src="{$TEXT->installation}/themes/{$TEXT->theme}/sound/to-the-point.mp3" preload="auto"></audio>
+    <audio id="sound-all-eyes-on-me" src="{$TEXT->installation}/themes/{$TEXT->theme}/sound/all-eyes-on-me.mp3" preload="auto"></audio>
+
+    <!-- Installation URl-->	
+    <input id="installation_select" class="hidden" value="{$TEXT->installation}"></input>
+
+    <!-- Active theme directory-->
+    <input id="theme_select" class="hidden" value="{$TEXT->theme}"></input>
+	
+    <div align="center">
+        <div class="white-color win-1050 round-in-bottom">
+            <a href="{$TEXT->installation}" class="padding-10 block full">
+			<img class="img-30" alt="" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/brz.png{$TEXT->REFRESH_CODE}"> 
+			<img style="height:30px;" alt="" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/brz-text.png{$TEXT->REFRESH_CODE}">
+			</a>
+        </div>
+		
+        <div class="divider hide-m transparent "></div>
+		
+        <div class="header-color win-1050 rounded">
+            
+			<div id="form-blogger" class="clear2">
+				<div class="block full">
+					<div class="rounded clear2 block-container padding-10"> 
+					    <div class="full text-left h7 b2 dark-font-only padding-10">
+						    {$TEXT->_uni-Create_a_blog}
+						</div>
+						<div class="top-big clear2 padding-20 center block">
+						    <form id="blog-form-data" class="form center-div win-700 padding-10-0" action="{$TEXT->installation}/require/requests/update/blog.php" method="POST" target="blog-form-target" method="POST"  enctype="multipart/form-data">
+								<div class="padding-10-0 clear left full block">
+									<div class="h6 b4 text-left clear full block main-font dark-font-only">
+				           				{$TEXT->_uni-HEADING}
+				        			</div>
+						
+									<div class="bc-divider text-left clear left full block">
+						   				<input id="blog-form-heading" name="blog-form-heading" class="border left trans h6 full b1 dark-x-font transparent rounded padding-10-0" placeholder="{$TEXT->_uni-Blog_ttl_tl}">
+									</div>
+								</div>
+								
+								<div class="padding-10-0 clear left full block">
+									<div class="h6 b4 margin-5-0-0-0 text-left main-font dark-font-only clear left full block">
+				           				{$TEXT->_uni-DESCRIPTION}
+				        			</div>
+						
+									<div class="bc-divider text-left clear left full block">
+						   				<input id="blog-form-description" name="blog-form-description" class="border left trans h6 full b1 dark-x-font transparent padding-10-0" placeholder="{$TEXT->_uni-Blog_ttl_t2}">
+									</div>
+								</div>
+								
+								<div class="padding-10-0 clear left full block">
+									<div class="h6 b4 margin-5-0-0-0 text-left main-font dark-font-only clear left full block">
+				           				{$TEXT->_uni-TAGS}
+				        			</div>
+						
+									<div class="bc-divider text-left clear left full block">
+						   				<input id="blog-form-tags" name="blog-form-tags" class="border left trans h6 full b1 dark-x-font transparent padding-10-0" placeholder="{$TEXT->_uni-Blog_ttl_t3}">
+									</div>
+								</div>
+								
+		                        <input name="image" id="upload" class="hide" type="file">
+								<input type="file" name="blog-form-file" class="hide" id="blog-form-file" />
+					            
+								<div class="padding-10-0 clear left full block">
+									<div class="h6 b4 margin-5-0-0-0 text-left dark-font-only">
+				           				<span class="main-font">{$TEXT->_uni-SELECT_IMAGE}</span> <span class="h5 b1 tin-light-font-only">{$TEXT->_uni-SELECT_IMAGE_ttl}</span>
+				        			</div>
+								
+									<div class="margin-5-0-0-0 left">
+										<label id="blog-file" for="blog-form-file" class="btn btn-small btn-light">
+						            		{$TEXT->_uni-Add_photo}
+					            		</label> 
+									</div>
+								</div>
+								
+								<div class="padding-10-0 clear left full block">
+									<div class="h6 b4 margin-5-0-0-0 block text-left main-font dark-font-only clear left full block">
+				           				{$TEXT->_uni-CATEGORY}
+				        			</div>
+						
+									<div class="bc-divider text-left clear left full block">
+										<div class="margin-5-0-0-0 clear2">
+											<select id="blog-form-category" name="blog-form-category" class="wide small h5 b1 tin-light-font-only">
+												<option value="" class="" disabled selected>{$TEXT->_uni-Create_a_page_cat_chs}</option>
+												{$TEXT->temp-add_select}	
+											</select> 
+										</div>
+									</div>
+								</div>
+
+								<div class="padding-10-0 clear left full block">
+									<div class="h6 b4 margin-5-0-0-0 block text-left main-font dark-font-only clear left full block">
+				           				{$TEXT->_uni-SHARE}
+				        			</div>
+						
+									<div class="bc-divider text-left clear left full block">
+										<div class="margin-5-0-0-0 clear2">
+											<select id="blog-form-share" name="blog-form-share" class="wide small h5 b1 tin-light-font-only">
+												<option value="1" class="" selected>{$TEXT->_uni-Add_post_1}</option>
+												<option value="0" >{$TEXT->_uni-Add_post_2}</option>	
+											</select> 
+										</div>
+									</div>
+								</div>
+								
+								<div class="padding-10-0 clear left full block">
+									<div class="margin-5-0-0-0 clear left full block">
+										<div class="h6 b4 margin-5-0-0-0 text-left main-font dark-font-only">
+				           					{$TEXT->_uni-CONTENT}
+				        				</div>
+				        			</div>
+								
+									<div class="bc-divider margin-5-0-0-0 text-left clear left full block">
+										<textarea id="blog-content" name="blog-content" class="full"></textarea>
+									</div>
+								</div>
+								
+								<div class="clear left full block padding-20">
+									<div id="blog-form-submit" onclick="createBlog();" name="blog-form-submit" class="btn btn-medium btn-x-theme center">
+                                    	{$TEXT->_uni-Publish_it}
+                                	</div>
+                                </div>
+					
+						    </form>
+							<iframe id="blog-form-target" name="blog-form-target" src="" style="display: none"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br><br><br><br><br>
+		<div class="win-1050 dark-pages">
+            {$TEXT->temp-i_pages}
+			<br><br><br>
+        </div>
+    </div>
+	
+	
+
+<!-- Attach AJAX response -->
+<div id="attach-response"></div>
+
+<!-- EXT_SLOT_JS_3 -->
+
+<!-- Check for captcha test -->
+<script>
+
+var file_input = $("#blog-form-file");
+	
+// Reload placeholder plugin if IE<10
+$('input, textarea').placeholder({customClass:'my-placeholder'});
+
+$('select').niceSelect();
+
+file_input.on('change', function(event){	
+	$(document).on('change', ':file', function () {
+		if(file_input.val()) {
+			$('#blog-file').addClass('btn-active').removeClass('btn-light').html(file_input[0].files.length +' {$TEXT->_uni-Selected}');
+		} else {
+		    $('#log-file').removeClass('btn-active').addClass('btn-light').html('{$TEXT->_uni-Add_photo}');
+		}
+	}); 
+});
+
+tinymce.init({
+    selector: '#blog-content',
+    height: 280,
+    images_upload_credentials: true,
+    paste_data_images: true,
+    image_advtab: true,
+    theme_url: '{$TEXT->installation}/themes/{$TEXT->theme}/includes/tinymce/theme.min.js',
+    images_upload_url:'{$TEXT->installation}/require/requests/recieve/image.php?type=blog-image',
+    toolbar1: "insertfile fullscreen undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media print preview ",
+    
+	plugins: [
+        "advlist fullscreen autolink lists link image charmap print preview hr anchor pagebreak",
+        "searchreplace wordcount visualblocks visualchars code fullscreen",
+        "insertdatetime media nonbreaking save table contextmenu directionality",
+        "emoticons paste textcolor colorpicker textpattern"
+    ],
+    
+	file_picker_callback: function(callback, value, meta) {
+        if (meta.filetype == 'image') {
+            $('#upload').trigger('click');
+            $('#upload').on('change', function() {
+                var file = this.files[0];
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    callback(e.target.result, {
+                        alt: ''
+                    });
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+    },
+});
+
+$(document).ready(function(){
+
+    $('.brz-page-type').on('click', function(e) {
+
+        $('.brz-page-type').not(this).removeClass('active-page-tab');
+		
+		if($(this).hasClass('active-page-tab')) {
+		    return true;
+		} else {
+		    $(this).addClass('active-page-tab');
+	   
+	        $('.brz-page-container3').hide();
+		
+		    $(this).find('.background-x').slideUp(450,function() {$(this).next().fadeIn();});
+
+	        $(this).parent().siblings().find('.background-x').slideDown(450); 
+        }			
+		
+    });
+	
+
+	jQuery('img.svg').each(function(){
+		
+		if($(this).hasClass('replaced-svg')) {
+			// IGNORE
+		} else {
+            var $img = jQuery(this);
+            var imgID = $img.attr('id');
+            var imgClass = $img.attr('class');
+            var imgURL = $img.attr('src');
+
+            jQuery.get(imgURL, function(data) {
+
+                var $svg = jQuery(data).find('svg');
+
+                if(typeof imgID !== 'undefined') {
+                    $svg = $svg.attr('id', imgID);
+                }
+
+                if(typeof imgClass !== 'undefined') {
+                    $svg = $svg.attr('class', imgClass+' replaced-svg');
+                }
+
+                $svg = $svg.removeAttr('xmlns:a');
+
+                if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+                    $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+                }
+
+                $img.replaceWith($svg);
+
+            }, 'xml');
+		}
+    });
+	
+});
+
+</script>
+
+<!-- EXT_SLOT_PAGE_END -->
+
+</body>
+</html>

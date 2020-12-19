@@ -1,0 +1,45 @@
+<style>
+#cover-container,#cover-container-loader {display: block;max-height: 290px!important;min-height:200px;width: 100%;margin: 0px auto;overflow: hidden;box-sizing: border-box;position: relative;}
+.cover-container{display: block;max-height: 290px!important;min-height:200px;width: 100%;margin: 0px auto;overflow: hidden;box-sizing: border-box;position: relative;}
+#cover-container img,#cover-container-loader img {left: 0;position: relative!important;}
+#cover-container-loader img{pointer-events: none!important;-moz-user-select: none!important;}
+#cover-containee, .cover-containee {display: block;max-height: 290px!important;width: 100%;margin: 0px auto;overflow: hidden;box-sizing: border-box;position: relative;}
+.enabled{cursor:move;}
+.enabled img {left: 0;position: relative;top: 0;pointer-events: none;-moz-user-select: none;}
+</style>
+<div class="clear relative no-border block-container-3">
+	<div id="cover-container" class="cover-container" style="display:none">
+	</div>
+	
+    <div id="cover-containee" class="cover-containee" >
+	    <img src="{$TEXT->installation}/uploads/profile/covers/{$TEXT->temp-cover_photo}" {$TEXT->temp-onclick1} style="width:100%;min-height:200px!important;" id="profile_view_cover_{$TEXT->temp-user_id}" class="relative center noflow full">                  
+	</div>	
+	
+    <div id="cover-container-loader" class="cover-container" style="display:none">
+	</div>
+
+	<div class="display-bottommiddle noselect timeline-desktop">
+        <div class="background-0 timeline noflow full">
+		    <div class="noflow inline right inline-in padding-0-6">
+			    <a id="profile_view_tab_1" onclick="loadModal(1);loadLogin(1,{$TEXT->temp-user_id});" class="activable-tab active-down b2 white-x-font padding-10" href="javascript:returnFalse();">{$TEXT->_uni-Timeline}</a>
+			    <a id="profile_view_tab_2" onclick="loadModal(1);loadLogin(1,{$TEXT->temp-user_id});" class="activable-tab white-x-font padding-10" href="javascript:returnFalse();">{$TEXT->_uni-Photos}</a>
+			    <a id="profile_view_tab_3" onclick="loadModal(1);loadLogin(1,{$TEXT->temp-user_id});" class="activable-tab white-x-font padding-10" href="javascript:returnFalse();">{$TEXT->_uni-Followers}</a>
+			    <a id="profile_view_tab_4" onclick="loadModal(1);loadLogin(1,{$TEXT->temp-user_id});" class="activable-tab white-x-font padding-10" href="javascript:returnFalse();">{$TEXT->_uni-Followings}</a>
+			    <a id="profile_view_tab_5" onclick="loadModal(1);loadLogin(1,{$TEXT->temp-user_id});" class="activable-tab white-x-font padding-10" href="javascript:returnFalse();">{$TEXT->_uni-About}</a>	
+			</div>		    
+		</div>
+	</div>
+	
+	{$TEXT->temp-updateable}
+	
+	<div class="display-profile-picture relative center">
+        <img {$TEXT->temp-onclick2} id="profile_view_main_{$TEXT->temp-user_id}" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-profile_picture}&fol=a&w=245&h=245&q=100" class="relative circle border-bold">
+	</div>
+</div>
+<div class="white-color timeline-head padding-10 round-in-bottom block-container-3">
+    <div class="h12 b2 dark-font timeline-name inline">
+	    <a href="javascript:returnFalse();" onclick="loadModal(1);loadLogin(1,{$TEXT->temp-user_id});return false;">{$TEXT->temp-user_name_25}</a> {$TEXT->temp-verified}
+	</div>
+    <div class="right-big inline">
+	</div>
+</div>

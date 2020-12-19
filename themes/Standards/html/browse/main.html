@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Set charset -->
+    <meta charset="UTF-8" />
+
+	<!-- Attach FAVICON -->
+	<link rel="shortcut icon" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/favicon.ico">
+
+	<!-- Website title -->  
+	<title>{$TEXT->_uni-Welcome_to} {$TEXT->title} | {$TEXT->_uni-web_ttl_l_s_free}</title>
+	
+	<meta name="description" content="Connect with friends, family and other people you know. Share photos and videos, send messages and get updates.">
+    <meta name="keyword" content="social network,social networking,social site,friends,family,photos,lifestyle,photo sharing">
+	
+	<!-- Set window width to device width --> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- EXT_SLOT_SHEET_1 -->
+	
+	<!-- Import CSS styles -->
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/main.css{$TEXT->REFRESH_CODE}">
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/colors.css{$TEXT->REFRESH_CODE}">
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/fonts.css{$TEXT->REFRESH_CODE}">
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/welcome.css{$TEXT->REFRESH_CODE}">
+  
+	<!-- EXT_SLOT_SHEET_2 -->
+
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/font-awesome.css">
+	
+	<!-- Installation URl-->
+	<script type="text/javascript">var installation = '{$TEXT->installation}';var theme = '{$TEXT->theme}';</script>
+
+	<!-- EXT_SLOT_JS_1 -->
+	
+	<!-- Import JS scripts -->
+	<script src='{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.js'></script>
+	<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.initialize.min.js"></script>
+	<script src="{$TEXT->installation}/themes/{$TEXT->theme}/js/welcome.js{$TEXT->REFRESH_CODE}"></script>
+
+	<!-- EXT_SLOT_JS_2 -->
+	
+</head>
+
+<!-- Apply font -->
+<style>html,body{font-size:{$TEXT->FONT_SIZE}px;}h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}</style>
+
+<body align="center" class="header-color full">
+
+    <div align="center">
+	
+	    <div class="win-900 white-color noflow clear2 margin-mob-10 round-in-bottom">
+		    
+			<a class="padding-10 noflow clear2 block noselect" href="{$TEXT->installation}">
+		    		
+				<div class="inline padding-0-6">
+					<img class="img-30" alt="" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/brz.png{$TEXT->REFRESH_CODE}">
+		    	</div>
+					
+				<div class="inline hide-m">
+					<img style="height:30px;" alt="" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/brz-text.png{$TEXT->REFRESH_CODE}">
+				</div>
+					
+			</a>
+			
+		</div>
+		
+		
+	    <div class="win-900 noflow clear2 margin-mob-10 round-in-bottom">
+			
+			
+			<div id="browse_container" class="twothird padding-20 white-color rounded text-left block left">
+			
+			</div>
+			
+			<div id="browse_nav" class="onethird text-left block right">
+				<div id="settings-nav" class="h6 text-left b1 clear margin-mob noselect no-border-mob">
+    
+					{$TEXT->temp-navitems}
+
+				</div>
+			</div>			
+			
+
+			
+			
+			
+			
+		</div>
+		
+    </div>
+
+	<div class="">  
+		{$TEXT->temp-browseto}	
+	</div>
+
+	<!-- Attach AJAX response -->
+	<div id="attach-response"></div>
+
+	<!-- EXT_SLOT_JS_3 -->
+
+</body>
+</html>

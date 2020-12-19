@@ -1,0 +1,53 @@
+<div id="S_LEFT_CONTENT" class="G-PAGE-NAV margin-10-0-0-0 padding-0-0-0-10">
+    
+	<div class="relative center margin-5">
+		<div style="max-width:165px;margin:0;" class="circle relative border-bold">
+			<img style="width:100%;" id="profile_view_main_{$TEXT->TEMP_PAGE_ID}" class="circle" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-image}&fol=pa&w=400&h=400">
+            {$TEXT->TEMP-NAV-UPDATE}
+		</div>
+	</div>
+	
+	<div onclick="loadPage({$TEXT->TEMP_PAGE_ID},1,1)" class="padding-15-0 margin-5-0-0-0 h9 b2 dark-font-only">{$TEXT->temp-page-name}
+		<div class="h5 b2 tin-light-font-only">        
+			{$TEXT->temp-page-type}							
+		</div>
+	</div>
+	
+	<div id="brz-GNAV_ALL" class="brz-margin-top">
+	    
+		<!-- EXT_SLOT_NAV_1 -->
+		
+		<div>
+			<a id="brz-add-GNav-15" class="btn-nav btn-nav-active padding-5 h7 b1 dark-font-only" onclick="loadPage({$TEXT->TEMP_PAGE_ID},1,1);">
+				&nbsp; {$TEXT->_uni-Home}
+				<img class="right padding-5 img-25 preloader" style="display:none;" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/loader-small.svg"></img>
+			</a>
+		</div>
+		
+		<div>
+			<a id="brz-add-GNav-151" class="btn-nav padding-5 h7 b1 dark-font-only" onclick="pageFeeds({$TEXT->TEMP_PAGE_ID},0,5,1);">
+				&nbsp; {$TEXT->_uni-Photos}
+				<img class="right padding-5 img-25 preloader" style="display:none;" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/loader-small.svg"></img>
+			</a>
+		</div>
+		
+		<div>
+			<a id="brz-add-GNav-152" class="btn-nav padding-5 h7 b1 dark-font-only" onclick="pageFeeds({$TEXT->TEMP_PAGE_ID},0,5,2);">
+				&nbsp; {$TEXT->_uni-Videos}
+				<img class="right padding-5 img-25 preloader" style="display:none;" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/loader-small.svg"></img>
+			</a>
+		</div>
+
+		<!-- EXT_SLOT_NAV_2 -->
+		
+		{$TEXT->TEMP-NAV-ITEMS}
+		
+	</div>
+	
+	<div class="clear padding-20-0-0-0">
+		<div onclick="locate('{$TEXT->installation}/?new=page');" class="btn btn-medium btn-dark">{$TEXT->_uni-Create_Page}</div>
+	</div>
+	
+	<br><br><br>
+	
+</div>

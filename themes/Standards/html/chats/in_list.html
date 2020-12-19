@@ -1,0 +1,16 @@
+<div class="margin-5-0-0-0 padding-10">
+    <div onclick="loadChat({$TEXT->temp-id});" class="left noflow pointer padding-0-6">
+        <img class="rounded img-35" src="{$TEXT->temp-image}">
+    </div>
+    <span class="">
+        <div class="clear2 h5 b1 tin-light-font-only">
+            <div class="right">
+                {$TEXT->temp-new_messages}
+            </div>
+            <div>
+                <div class="h7 b2 pointer dark-font" onclick="loadChat({$TEXT->temp-id});">{$TEXT->temp-name}</div>
+                <span title="{$TEXT->temp-info}" class="h5 b1 timeago pointer tin-light-font-only">{$TEXT->temp-info}</span>
+            </div>	
+        </div>
+    </span>
+</div>

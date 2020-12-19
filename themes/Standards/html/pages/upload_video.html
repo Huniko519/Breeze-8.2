@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Set charset -->
+    <meta charset="UTF-8" />
+
+	<!-- Attach FAVICON -->
+	<link rel="shortcut icon" href="{$TEXT->installation}/themes/{$TEXT->theme}/img/favicon/favicon.ico">
+
+	<!-- Website title -->  
+	<title>{$TEXT->_uni-Upload_a_track} | {$TEXT->title}</title>
+	
+	<meta name="description" content="Connect with friends, family and other people you know. Share photos and videos, send messages and get updates.">
+    <meta name="keyword" content="social network,social networking,social site,friends,family,photos,lifestyle,photo sharing">
+	
+	<!-- Set window width to device width --> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- EXT_SLOT_SHEET_1 -->
+	
+	<!-- Import CSS styles -->
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/main.css{$TEXT->REFRESH_CODE}">
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/colors.css{$TEXT->REFRESH_CODE}">
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/fonts.css{$TEXT->REFRESH_CODE}">
+    <link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/welcome.css{$TEXT->REFRESH_CODE}">
+    <link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/jelly-radios.css{$TEXT->REFRESH_CODE}">
+    <link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/nice-select.css{$TEXT->REFRESH_CODE}">
+
+	<!-- EXT_SLOT_SHEET_2 -->
+
+	<link rel="stylesheet" href="{$TEXT->installation}/themes/{$TEXT->theme}/main/css/font-awesome.css">
+	
+	<!-- Installation URl-->
+	<script type="text/javascript">var installation = '{$TEXT->installation}';var theme = '{$TEXT->theme}';</script>
+
+	<!-- EXT_SLOT_JS_1 -->
+
+		<script>
+function importLang() {
+    return lang = ["{$TEXT->_uni-You_and}", "{$TEXT->_uni-You_liked_this}"
+	               ,"{$TEXT->_uni-Like}", 
+				   "{$TEXT->_uni-Liked}", 
+				   "{$TEXT->_uni-read_more}", 
+				   "{$TEXT->_uni-show_less}",
+				   "{$TEXT->_uni-Profile_URL_copied}",
+				   "{$TEXT->_uni-Save_changes}",
+				   "{$TEXT->DATA-IMG-7}",
+				   "{$TEXT->DATA-IMG-5}",
+				   "{$TEXT->_uni-Be_fir_like}",   
+				   ];
+}
+var seconds = "{$TEXT->_uni_time-seconds}",a_minute = "{$TEXT->_uni_time-a_minute}",minutes = "%d {$TEXT->_uni_time-minutes}",
+an_hour = "{$TEXT->_uni_time-an_hour}",hours = "%d {$TEXT->_uni_time-hours}",a_day = "{$TEXT->_uni_time-a_day}",
+days = "%d {$TEXT->_uni_time-days}",a_month = "{$TEXT->_uni_time-a_month}",months = "%d {$TEXT->_uni_time-months}",
+a_year = "{$TEXT->_uni_time-a_year}",years = "%d {$TEXT->_uni_time-years}";
+</script>
+
+<!-- Import main open source projects -->
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.timeago.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/nice-select.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.slick.js"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/jquery.initialize.min.js"></script>
+
+<!-- Import Navigation -->
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/navigation.js{$TEXT->REFRESH_CODE}"></script>
+<!-- Import Main script -->
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/feeds.js{$TEXT->REFRESH_CODE}"></script>
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/video.js{$TEXT->REFRESH_CODE}"></script>
+<!-- Import Emoji script -->
+<script type="text/javascript" src="{$TEXT->installation}/themes/{$TEXT->theme}/js/emoji.js{$TEXT->REFRESH_CODE}"></script>
+
+<!-- EXT_SLOT_JS_3 -->
+
+</head>
+
+<!-- Apply font -->
+<style>
+html,body{font-size:{$TEXT->FONT_SIZE}px;}
+</style>
+
+<body class="header-color">
+
+    <audio id="sound-unsure" src="{$TEXT->installation}/themes/{$TEXT->theme}/sound/unsure.mp3" preload="auto"></audio>
+    <audio id="sound-to_the_pont" src="{$TEXT->installation}/themes/{$TEXT->theme}/sound/to-the-point.mp3" preload="auto"></audio>
+    <audio id="sound-all-eyes-on-me" src="{$TEXT->installation}/themes/{$TEXT->theme}/sound/all-eyes-on-me.mp3" preload="auto"></audio>
+
+    <!-- Installation URl-->	
+    <input id="installation_select" class="hidden" value="{$TEXT->installation}"></input>
+
+    <!-- Active theme directory-->
+    <input id="theme_select" class="hidden" value="{$TEXT->theme}"></input>
+	
+    <div align="center">
+        <div class="white-color win-1050 round-in-bottom">
+            <a href="{$TEXT->installation}" class="padding-10 block full">
+			<img class="img-30" alt="" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/brz.png{$TEXT->REFRESH_CODE}"> 
+			<img style="height:30px;" alt="" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/brz-text.png{$TEXT->REFRESH_CODE}">
+			</a>
+        </div>
+		
+        <div class="divider hide-m transparent "></div>
+		
+        <div class="header-color win-1050 rounded">
+            
+			<div id="form-blogger" class="clear2">
+				<div class="block full">
+					<div class="rounded clear2 block-container padding-10"> 
+					    <div class="full text-left h7 b2 dark-font-only padding-10">
+						    {$TEXT->_uni-Upload_a_track}
+						</div>
+						<div class="top-big clear2 padding-20 center block">
+						    <form id="video-form-data" class="form center-div win-700 padding-10-0" action="{$TEXT->installation}/require/requests/update/video.php" method="POST" target="video-form-target" method="POST"  enctype="multipart/form-data">
+								<div class="padding-10-0 clear left full block">
+									<div class="h6 b4 text-left clear full block main-font dark-font-only">
+				           				{$TEXT->_uni-TITLE}
+				        			</div>
+						
+									<div class="bc-divider text-left clear left full block">
+						   				<input id="video-form-heading" name="video-form-heading" class="border left trans h6 full b1 dark-x-font transparent rounded padding-10-0" placeholder="{$TEXT->_uni-Video_ttl}">
+									</div>
+								</div>
+
+								<div class="padding-10-0 clear left full block">
+									<div class="h6 b4 margin-5-0-0-0 text-left main-font dark-font-only clear left full block">
+				           				{$TEXT->_uni-DESCRIPTION}
+				        			</div>
+						
+									<div class="bc-divider text-left clear left full block">
+						   				<input id="video-form-description" name="video-form-description" class="border left trans h6 full b1 dark-x-font transparent padding-10-0" placeholder="{$TEXT->_uni-Video_ttl_2}">
+									</div>
+								</div>
+								
+								<div class="padding-10-0 clear left full block">
+									<div class="h6 b4 margin-5-0-0-0 text-left main-font dark-font-only clear left full block">
+				           				{$TEXT->_uni-TAGS}
+				        			</div>
+						
+									<div class="bc-divider text-left clear left full block">
+						   				<input id="video-form-tags" name="video-form-tags" class="border left trans h6 full b1 dark-x-font transparent padding-10-0" placeholder="{$TEXT->_uni-Video_ttl_3}">
+									</div>
+								</div>
+								
+		                        <input name="image" id="upload" class="hide" type="file">
+								<input type="file" name="video-photo-form-file" class="hide" id="video-photo-form-file" />
+								<input type="file" name="video-form-file" class="hide" id="video-form-file" />
+					            
+								<div class="padding-10-0 clear left full block">
+									<div class="h6 b4 margin-5-0-0-0 text-left dark-font-only">
+				           				<span class="main-font">{$TEXT->_uni-SELECT_IMAGE}</span> <span class="h5 b1 tin-light-font-only">{$TEXT->_uni-SELECT_IMAGE_ttl2}</span>
+				        			</div>
+								
+									<div class="margin-5-0-0-0 left">
+										<label id="video-photo-file" for="video-photo-form-file" class="btn btn-small btn-light">
+						            		{$TEXT->_uni-Add_photo}
+					            		</label> 
+									</div>
+								</div>
+								
+								<div class="padding-10-0 clear left full block">
+									<div class="h6 b4 margin-5-0-0-0 text-left dark-font-only">
+				           				<span class="main-font">{$TEXT->_uni-SELECT_VIDEO}</span> <span class="h5 b1 tin-light-font-only"></span>
+				        			</div>
+								
+									<div class="margin-5-0-0-0 left">
+										<label id="video-file" for="video-form-file" class="btn btn-small btn-light">
+						            		{$TEXT->_uni-Add_video}
+					            		</label> 
+									</div>
+								</div>
+
+								<div class="clear left full block padding-20">
+									<div id="video-form-submit" onclick="uploadVideo();" name="video-form-submit" class="btn btn-medium btn-x-theme center">
+                                    	<span>{$TEXT->_uni-Publish_it}</span>
+                                	</div>
+                                </div>
+					
+						    </form>
+							<iframe id="video-form-target" name="video-form-target" src="" style="display: none"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br><br><br><br><br>
+		<div class="win-1050 dark-pages">
+            {$TEXT->temp-i_pages}
+			<br><br><br>
+        </div>
+    </div>
+	
+	
+
+<!-- Attach AJAX response -->
+<div id="attach-response"></div>
+
+<!-- EXT_SLOT_JS_3 -->
+
+<!-- Check for captcha test -->
+<script>
+
+var file_input = $("#video-form-file");
+var file_photo = $("#video-photo-form-file");
+	
+// Reload placeholder plugin if IE<10
+$('input, textarea').placeholder({customClass:'my-placeholder'});
+
+$('select').niceSelect();
+
+var video_max = {$TEXT->temp-max_size};
+
+file_input.on('change', function(event){	
+	$(document).on('change', ':file', function () {
+		if(file_input.val()) {
+			$('#video-file').addClass('btn-active').removeClass('btn-light').html(file_input[0].files.length +' {$TEXT->_uni-Selected}');
+		} else {
+		    $('#video-file').removeClass('btn-active').addClass('btn-light').html('{$TEXT->_uni-Add_video}');
+		}
+
+		if(video_max <= file_input[0].files[0].size) {
+		    alert("{$TEXT->temp-max_size_title}");
+		}
+		
+	}); 
+});
+
+file_photo.on('change', function(event){	
+	$(document).on('change', ':file', function () {
+		if(file_photo.val()) {
+			$('#video-photo-file').addClass('btn-active').removeClass('btn-light').html(file_photo[0].files.length +' {$TEXT->_uni-Selected}');
+		} else {
+		    $('#video-photo-file').removeClass('btn-active').addClass('btn-light').html('{$TEXT->_uni-Add_photo}');
+		}
+	}); 
+});
+
+</script>
+
+<!-- EXT_SLOT_PAGE_END -->
+
+</body>
+</html>

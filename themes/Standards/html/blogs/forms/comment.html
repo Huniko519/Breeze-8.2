@@ -1,0 +1,17 @@
+<div class="noflow block-container-2">
+	<div class="full inline-in padding-5 noflow">
+	
+		<div style="width:45px;" onclick="submitBlogMessage(event,{$TEXT->temp-blog_id});" class="left padding-5 pointer inline dark-svg">
+		    <img class="img-35 border-min left circle" src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-user_image}&fol=a&w=70&h=70">
+		</div>
+		
+		<div class="inline noflow" style="width:-webkit-calc(100% - 45px);width:-moz-calc(100% - 45px);width:calc(100% - 45px);">		
+			<div class="padding-10-0 noflow">
+				<form id="form-add-comment-{$TEXT->temp-blog_id}" onsubmit="return submitBlogMessage(event,{$TEXT->temp-blog_id});">
+					<input id="form-add-comment-text-{$TEXT->temp-blog_id}" class="input transparent full no-border h6 b1 light-font-only" placeholder="Type a comment"></input>
+		    	</form>
+			</div>	
+		</div>
+
+	</div>
+</div>

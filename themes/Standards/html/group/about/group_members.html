@@ -1,0 +1,39 @@
+<div class="padding-10 bottom-divider h4 b2 light-font-only">
+    {$TEXT->_uni-ADD_MEMBERS}
+</div>
+<div class="padding-10 h4 b1 tin-light-font-only" style="width:100%;overflow:hidden">
+    <table style="width:100%;" role="presentation" cellspacing="0">
+        <tbody>
+            <script>              
+				function searchGroupForMembers() {
+                    $("#grp_sb_sr").html('<div class="center padding-20"><img class="center load-tin" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/loader-small.svg"></img></div>');						
+                    clearTimeout(typingTimer);						
+                    if ($('#grp_sb_sr-input').val()) {
+                        typingTimer = setTimeout(function() {ajaxProtocol(load_group_file,{$TEXT->temp-group_id},'SUGGESTIONS',0,$("#grp_sb_sr-input").val(),0,0,0,0,0,0,0,0,"#grp_sb_sr",3,0,1,13,function() {$('#grp_sb_sr-input').val('');alert();});}, typingInterval);
+                    } else {
+                        $("#grp_sb_sr").html("");
+                    }
+					
+                }
+				
+                var typingTimer;
+                var typingInterval = 1000;
+                $(document).on('keyup', '#grp_sb_sr-input', function(event) { searchGroupForMembers()});			
+            </script>
+            <tr>
+                <td style="width:90%">
+                    <input placeholder="{$TEXT->_uni-Add_members_ttl}" id="grp_sb_sr-input" value="" class="input-main">
+                </td>
+                <td style="width:10%">
+                    <button onclick="searchGroupForMembers();" style="height:25px !important;" type="submit" class="btn dark-svg btn-small btn-light">
+                        <img src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/misc/search.svg" class="svg img-14">
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="grp_sb_sr" class="">
+    </div>	
+</div>
+
+{$TEXT->temp-add_suggestions_system}

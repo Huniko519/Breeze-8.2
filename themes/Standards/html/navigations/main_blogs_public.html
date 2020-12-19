@@ -1,0 +1,66 @@
+<!-- Add CSS styles for search -->
+<style>
+.search-icon{background-image:url('{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/img_search.png')}
+.search-icon-loading{background-image:url('{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/search_loader.svg')}
+</style>
+<script>
+$.getScript("{$TEXT->installation}/themes/{$TEXT->theme}/js/blogs.js");
+</script>
+<div id="nav-for-mob" class="header header-color hide-large">  
+    <div class="full left" style="">
+	    <span id="mb_search_container" class="header-search full header-search-mob left">
+		    <form id="345234123" name="345234123" class="header-search-form" onsubmit="return submitArticleSearch(event);">
+			    <input id="search-articles-input" autocomplete="off" class="search-articles-input input header-search-input h4 b1 white-font-only input-icon search-icon" placeholder="Search articles on Breeze" type="search">
+			</form>
+		</span>
+	</div>
+</div>
+
+<ul class="header header-color hide-small">    
+	
+	<div class="clear win-1400 win-height-nav"> 
+	    <span>
+			<a class="header-icon-container left" target="_blank" href="{$TEXT->installation}">
+		    	<img style="width:27.5px;height:27px;" alt="" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/brz.png{$TEXT->REFRESH_CODE}">
+			</a>
+		</span>
+		
+        <span id="345234123_cnt" class="header-search left"> 
+		    <form id="345234123" name="345234123" class="header-search-form" onsubmit="return submitArticleSearch(event);" >
+			    <input id="search-articles-input" autocomplete="off" class="search-articles-input input header-search-input h4 b1 white-font-only input-icon search-icon" placeholder="{$TEXT->temp-Search_placeholder}" type="search"></input>
+			</form>
+		</span>
+		
+		<div class="header-right">
+           
+			<span class="right">
+
+				<a class="hide-medium header-fonts white-font" title="{$TEXT->_uni-Home}" href="{$TEXT->installation}/user/feeds" target="_blank">  
+				    <span>{$TEXT->_uni-Create_Account}</span>	     
+		        </a>
+				
+				<a title="{$TEXT->_uni-Create_Account}" style="line-height:45px!important;" class="hide-large header-fonts header-icon-container" href="{$TEXT->installation}/user/feeds" target="_blank">  
+				    <img class="svg header-icon activeable class-home" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/home.svg">
+		        </a>
+				
+                <span style="margin-left:10px;line-height:45px!important;" title="{$TEXT->_uni-Help_center}" class="header-fonts header-icon-container drop-hover hide-small hide-medium relative">
+				    <img style="display:none;" class="no-opacity drop-img carret-down carret-help" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/misc/drop-down-traingle.png">
+				    <img class="svg header-icon activeable class-help" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/v2/info.svg">
+					<div id="HELP_DESK" style="right:0;" class="drop-content border shadow">
+		                <div style="width:200px;" class="hide-small hide-medium">     
+				            <div class="drop-inner-heading h2 b2 bottom-divider">
+								<span class="tin-light-font-only">
+									{$TEXT->_uni-HELP_CENTER}
+								</span>
+							</div>
+							<div class="h5 b2 full drop-items">
+				                {$TEXT->temp-i_pages}
+								<a title="{$TEXT->_uni-Browse}" href="{$TEXT->installation}/browse/14w24" onclick="window.open('{$TEXT->installation}/browse/welcome');return false;" >{$TEXT->_uni-Browse}</a>
+				            </div>
+					   </div>
+                    </div>	
+				</span>	
+		    </span>
+	    </div>	
+	</div>
+</ul>

@@ -1,0 +1,137 @@
+<div id="CHAT_WINDOW" class="block-container-2 chat-form-{$TEXT->temp-form_id} clear">
+
+	<input class="active-form-{$TEXT->temp-form_id} hide" value="{$TEXT->temp-form_id}" >
+	<input class="latest-message-{$TEXT->temp-form_id} hide" value="0"></input>
+	<input class="typing-form-{$TEXT->temp-form_id} hide" value="0">
+
+    <div class="padding-20 bottom-divider">
+		<div class="messanger-heading inline-in">	    
+			<div class="user-img left">
+				<span href="#" onclick="loadChat({$TEXT->temp-form_id});" >
+					<img id="chat-icon2" class="chat-icon-{$TEXT->temp-form_id} circle img-42" src="{$TEXT->temp-icon}">
+				</span>
+			</div>
+			<div class="user-description">
+				<span id="chat-name2" class="chat-name-{$TEXT->temp-form_id} h6 b3 dark-font" onclick="loadChat({$TEXT->temp-form_id});" >
+					{$TEXT->temp-chat_name}
+				</span>
+				<div class="time">
+					{$TEXT->temp-time}
+				</div>
+			</div>	
+			<div onclick="$('#CHAT_WINDOW').hide();$('#CHAT_INFO').removeClass('hide-small');" class="padding-10 dark-svg pointer hide-large hide-medium right" onclick="toggleForm(1);">
+			    <img class="svg img-18" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/navigation/more.svg">	
+			</div>
+		</div>
+	</div>
+	
+	<div id="messages-container-{$TEXT->temp-form_id}"  class="message-container messages-container-{$TEXT->temp-form_id} messages-container-select">
+	   
+ 	    {$TEXT->temp-messages}
+		
+	</div>
+	
+	<div class="noflow">
+
+	    <div id="add-message-loader-{$TEXT->temp-form_id}" class="load add-message-loader-class" ></div>
+			
+		<div style="width:25px;" onclick="submitMessage(event,{$TEXT->temp-form_id}, 'window');" class="right padding-10 pointer inline dark-svg">
+		    <img class="right img-25 pointer svg" src="{$TEXT->installation}/themes/{$TEXT->theme}/img/icons/buttons/send.svg">
+		</div>
+		
+		<div class="inline padding-10" style="width:-webkit-calc(100% - 25px);width:-moz-calc(100% - 25px);width:calc(100% - 25px);">		
+			<form id="chat-form-window-{$TEXT->temp-form_id}" onsubmit="return submitMessage(event,{$TEXT->temp-form_id}, 'window');">
+				<input id="add-message-text-window-{$TEXT->temp-form_id}" class="input add-message-text-window-{$TEXT->temp-form_id} transparent no-border full h6 b1 tin-light-font" placeholder="Type a message"></input>
+		    </form>
+		</div>
+
+	</div>
+
+	<script>
+
+		if(websocketserver) {
+
+			initSocketServer();
+
+			// Registration message
+			var register_message = {
+				formid: "{$TEXT->temp-form_id}",
+				userid: "{$TEXT->temp-user_id}",
+				type: "REGISTER",
+				content: "NULL"
+			};
+
+			socket.send(JSON.stringify(register_message));		
+
+		}
+
+		doLiveChat({$TEXT->temp-form_id}, {$TEXT->temp-user_id}, websocketserver);
+
+		scrollFullClass(".message-container-{$TEXT->temp-form_id}");
+
+		// Adding real time functionality
+		$(document).ready(function() {
+
+			// If websockets are enabled
+			if(websocketserver == 1) {
+
+				// Universal search typing timer
+				var typingTimer;
+				
+				var typing = false;
+
+				// Time to wait for user typing response
+				var typingInterval = 800;
+				
+				// Live search General 
+				$(document).on('keyup', '#add-message-text-window-{$TEXT->temp-form_id}', function(event) { 
+					
+					// Clear timer
+					clearTimeout(typingTimer);
+					
+					var typing_message = {
+						formid: "{$TEXT->temp-form_id}",
+						userid: "{$TEXT->temp-user_id}",
+						type: "TYPING",
+						content: "NULL"
+					}
+
+					var notyping_message = {
+						formid: "{$TEXT->temp-form_id}",
+						userid: "{$TEXT->temp-user_id}",
+						type: "NOTYPING",
+						content: "NULL"
+					}
+
+					// If some typing response from user found
+					if ($('#add-message-text-window-{$TEXT->temp-form_id}').val()) {
+
+						$(".typing-form-{$TEXT->temp-form_id}").val("1");
+						
+						if(!typing) {
+							socket.send(JSON.stringify(typing_message));
+							typing = true;
+						}
+
+						// Add timer to trigger for end
+						typingTimer = setTimeout(function() {socket.send(JSON.stringify(notyping_message));typing = false;}, typingInterval);
+						
+					} else {
+
+						if($(".typing-form-{$TEXT->temp-form_id}").val() == "1") {
+							socket.send(JSON.stringify(notyping_message));
+							$(".typing-form-{$TEXT->temp-form_id}").val("0");
+						}
+						
+						typing = false;
+					
+					}
+				});
+
+			}
+
+		});
+
+	</script>
+
+</div>

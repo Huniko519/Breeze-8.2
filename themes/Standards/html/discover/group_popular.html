@@ -1,0 +1,17 @@
+<div class="item-slider forth  noflow">
+    <div class="imgTitle round-in-top article noflow relative">
+        <div class="h5 b1 blogTitle padding-10 clear background-0">          
+            <a class="white-font left" onclick="loadGroup({$TEXT->temp-id},1,1);return false;" href="{$TEXT->installation}/group/{$TEXT->temp-id}">
+                {$TEXT->temp-name}
+			</a>
+        </div>
+
+        <img src="{$TEXT->installation}/thumb.php?src={$TEXT->temp-src}&fol=f&w=500&h=500" alt="" />
+    
+	</div>
+    <div class="block-container background-x noflow clear round-in-bottom padding-10 h5 b1 dark-font-only">
+	    
+		<div class="h4 b0 black-font"><button id="fo32-{$TEXT->temp-id}" class="btn btn-small right btn-theme" onclick="joinGroup({$TEXT->temp-id},'fo32-{$TEXT->temp-id}','{$TEXT->_uni-Join}','{$TEXT->_uni-Joined}');">{$TEXT->_uni-Join}</button>
+		{$TEXT->temp-title}</div>
+	</div>
+</div>
